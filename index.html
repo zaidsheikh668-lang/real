@@ -815,6 +815,52 @@ img {
     transform: none;
   }
   } 
+ /* ===== AURA FINAL MOBILE POLISH ===== */
+
+@media (max-width: 640px) {
+
+  /* Improve section readability */
+  .story,
+  .story_grid,
+  .why,
+  .why_grid {
+    color: var(--charcoal) !important;
+  }
+
+  .story p,
+  .why p,
+  .story_grid p,
+  .why_grid p {
+    color: var(--grey) !important;
+    opacity: 1 !important;
+  }
+
+  .story h2,
+  .why h2,
+  .story_grid h2,
+  .why_grid h2 {
+    color: var(--charcoal) !important;
+    opacity: 1 !important;
+  }
+
+  /* Better CTA sizing */
+  .cta .btn,
+  .final_cta .btn {
+    min-height: 52px;
+    padding: 0 20px;
+  }
+
+  /* Better mobile spacing */
+  section {
+    scroll-margin-top: 80px;
+  }
+
+  /* Prevent text from touching screen edges */
+  .wrap {
+    width: min(100% - 30px, 1240px);
+  }
+
+} 
 </style>
 </head>
 <body>
