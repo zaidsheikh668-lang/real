@@ -615,7 +615,206 @@ body {
 
 .story {
   color: var(--charcoal);
-    }  
+    } 
+ /* =====================================================
+   AURA — PREMIUM MOTION UPGRADE
+   ===================================================== */
+
+/* Smooth page feel */
+* {
+  transition-timing-function: cubic-bezier(.22, 1, .36, 1);
+}
+
+/* ---------- NAV ---------- */
+
+.nav {
+  transition:
+    background .45s ease,
+    box-shadow .45s ease,
+    border-color .45s ease;
+}
+
+.nav__links a {
+  position: relative;
+}
+
+.nav__links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width .35s ease;
+}
+
+.nav__links a:hover::after {
+  width: 100%;
+}
+
+/* ---------- BUTTONS ---------- */
+
+.btn {
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(0);
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    background .35s ease,
+    border-color .35s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.16);
+}
+
+.btn:active {
+  transform: translateY(0) scale(.98);
+}
+
+/* ---------- PROPERTY CARDS ---------- */
+
+.card {
+  overflow: hidden;
+  transition:
+    transform .5s ease,
+    box-shadow .5s ease,
+    border-color .5s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 55px rgba(0,0,0,.16);
+}
+
+.card img {
+  transition: transform .8s ease;
+}
+
+.card:hover img {
+  transform: scale(1.045);
+}
+
+/* ---------- IMAGE HOVER ---------- */
+
+img {
+  transition: transform .8s ease;
+}
+
+/* ---------- HERO ---------- */
+
+.hero {
+  overflow: hidden;
+}
+
+.hero_media img,
+.hero_media video,
+.hero img,
+.hero video {
+  transform: scale(1.02);
+  transition: transform 1.4s ease;
+}
+
+.hero:hover img,
+.hero:hover video {
+  transform: scale(1.045);
+}
+
+/* ---------- GOLD DETAILS ---------- */
+
+.cta_eyebrow,
+.eyebrow {
+  letter-spacing: .18em;
+  transition: letter-spacing .4s ease;
+}
+
+.cta_eyebrow:hover,
+.eyebrow:hover {
+  letter-spacing: .24em;
+}
+
+/* ---------- STORY ---------- */
+
+.story_grid > * {
+  transition:
+    transform .5s ease,
+    opacity .5s ease;
+}
+
+.story_grid > *:hover {
+  transform: translateY(-5px);
+}
+
+/* ---------- DEVELOPMENT ---------- */
+
+.development,
+.development_card,
+.dev_specs {
+  transition:
+    transform .45s ease,
+    box-shadow .45s ease;
+}
+
+.development:hover,
+.development_card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0,0,0,.12);
+}
+
+/* ---------- SCROLL REVEAL ---------- */
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity .8s ease,
+    transform .8s ease;
+}
+
+[data-reveal].is-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 640px) {
+
+  .card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .card:hover img {
+    transform: none;
+  }
+
+  .hero:hover img,
+  .hero:hover video {
+    transform: scale(1.02);
+  }
+
+}
+
+/* ---------- REDUCED MOTION ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+  } 
 </style>
 </head>
 <body>
