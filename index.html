@@ -1,0 +1,573 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AURA Estates — Private Residences in Dubai</title>
+<meta name="description" content="AURA Estates — private residences and considered developments across Dubai. Architecture, location and everyday living.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23171512'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='18' fill='%23c9ac7d' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --charcoal:#171512;
+  --coal:#23201b;
+  --ivory:#f6f3ec;
+  --ivory-2:#ece7db;
+  --grey:#6c665b;
+  --gold:#a98f63;
+  --gold-text:#8c7346;
+  --gold-light:#c9ac7d;
+  --line:rgba(23,21,18,.14);
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Inter",-apple-system,"Segoe UI",Roboto,sans-serif;
+  --nav-h:80px;
+  --ease:cubic-bezier(.22,.61,.21,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:94px}
+body{font-family:var(--sans);font-weight:300;font-size:16px;line-height:1.7;background:var(--ivory);color:var(--charcoal);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.12}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+ul{list-style:none}
+::selection{background:var(--gold);color:var(--ivory)}
+:focus-visible{outline:1px solid var(--gold);outline-offset:3px}
+.wrap{width:min(1240px,92vw);margin-inline:auto}
+[hidden]{display:none!important}
+body.menu-open{overflow:hidden}
+
+/* ---------- shared ---------- */
+.eyebrow{display:flex;align-items:center;gap:14px;font-size:.66rem;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-text)}
+.eyebrow::before{content:"";width:38px;height:1px;background:currentColor;flex:none}
+.eyebrow--light{color:var(--gold-light)}
+.section{padding:130px 0}
+.section-title{font-size:clamp(2.2rem,4.4vw,3.4rem);margin-top:20px;letter-spacing:.01em}
+.section-head{margin-bottom:64px;max-width:720px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:17px 32px;font-size:.66rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;border:1px solid transparent;transition:background .35s var(--ease),color .35s var(--ease),border-color .35s var(--ease);white-space:nowrap}
+.btn__arr{transition:transform .3s var(--ease)}
+.btn:hover .btn__arr{transform:translateX(5px)}
+.btn--ivory{background:var(--ivory);color:var(--charcoal);border-color:var(--ivory)}
+.btn--ivory:hover{background:var(--gold);border-color:var(--gold);color:var(--charcoal)}
+.btn--dark{background:var(--charcoal);color:var(--ivory);border-color:var(--charcoal)}
+.btn--dark:hover{background:var(--gold);border-color:var(--gold);color:var(--charcoal)}
+.btn--ghost{border-color:rgba(246,243,236,.55);color:var(--ivory)}
+.btn--ghost:hover{background:var(--ivory);border-color:var(--ivory);color:var(--charcoal)}
+.btn--sm{padding:13px 24px}
+
+.link-arrow{display:inline-flex;align-items:center;gap:10px;font-size:.68rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;padding-bottom:7px;position:relative}
+.link-arrow::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .4s var(--ease)}
+.link-arrow:hover::after{transform:scaleX(1);transform-origin:left}
+.link-arrow .arr{color:var(--gold);transition:transform .3s var(--ease)}
+.link-arrow:hover .arr{transform:translateX(5px)}
+.link-arrow--light{color:var(--ivory)}
+
+[data-reveal]{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0s)}
+[data-reveal].is-in{opacity:1;transform:none}
+
+/* ---------- navbar ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:60;color:var(--ivory);border-bottom:1px solid transparent;transition:background .4s var(--ease),color .4s var(--ease),border-color .4s var(--ease)}
+.nav__inner{height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;gap:24px;position:relative;z-index:2}
+.nav.scrolled,.nav.menu-open{background:var(--ivory);color:var(--charcoal);border-bottom-color:var(--line)}
+.logo{font-family:var(--serif);font-size:1.3rem;letter-spacing:.4em;padding-left:.4em;position:relative;z-index:2}
+.nav__links{display:flex;align-items:center;gap:44px}
+.nav__links a{font-size:.66rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;position:relative;padding:6px 0}
+.nav__links a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .35s var(--ease)}
+.nav__links a:hover::after{transform:scaleX(1);transform-origin:left}
+.nav__actions{position:relative;z-index:1}
+.nav__cta-item{display:none}
+.nav__toggle{display:none;width:44px;height:44px;position:relative;z-index:2}
+.nav__toggle span{position:absolute;left:9px;right:9px;height:1.5px;background:currentColor;transition:top .3s var(--ease),transform .3s var(--ease)}
+.nav__toggle span:nth-child(1){top:17px}
+.nav__toggle span:nth-child(2){top:26px}
+body.menu-open .nav__toggle span:nth-child(1){top:21px;transform:rotate(45deg)}
+body.menu-open .nav__toggle span:nth-child(2){top:21px;transform:rotate(-45deg)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;color:var(--ivory);overflow:hidden}
+.hero__media{position:absolute;inset:0;background:var(--coal)}
+.hero__media img{width:100%;height:100%;object-fit:cover;animation:heroDrift 26s var(--ease) infinite alternate}
+@keyframes heroDrift{from{transform:scale(1.03)}to{transform:scale(1.12) translateX(-1.5%)}}
+.hero__scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,13,11,.5),rgba(15,13,11,.16) 45%,rgba(15,13,11,.66))}
+.hero__content{position:relative;z-index:2;padding:calc(var(--nav-h) + 56px) 0 110px}
+.hero h1{font-size:clamp(3rem,7vw,6rem);margin:24px 0 28px;max-width:14ch}
+.hero h1 em{font-style:italic}
+.hero .lede{max-width:520px;font-size:1.02rem}
+.hero__actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:44px}
+.hero__cue{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:12px;font-size:.58rem;letter-spacing:.34em;text-transform:uppercase;color:rgba(246,243,236,.65)}
+.hero__cue::after{content:"";width:1px;height:42px;background:linear-gradient(rgba(246,243,236,.7),rgba(246,243,236,0));animation:cuePulse 2.8s var(--ease) infinite}
+@keyframes cuePulse{0%,100%{transform:scaleY(.4);opacity:.5}50%{transform:scaleY(1);opacity:1}}
+@media (max-height:640px){.hero__cue{display:none}}
+
+/* ---------- properties ---------- */
+.prop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:72px 36px}
+.card{display:flex;flex-direction:column}
+.card__media{overflow:hidden;aspect-ratio:3/4;background:var(--coal)}
+.card__media img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.card:hover .card__media img{transform:scale(1.07)}
+.card__body{padding-top:26px;display:flex;flex-direction:column;flex:1}
+.card__name{font-size:1.65rem;letter-spacing:.01em;transition:color .3s var(--ease)}
+.card:hover .card__name{color:var(--gold-text)}
+.card__loc{margin-top:8px;font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:var(--grey)}
+.card__price{margin-top:14px;font-size:.78rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-text)}
+.card__cta{margin-top:auto;padding-top:26px}
+
+/* ---------- story ---------- */
+.story{background:var(--ivory-2)}
+.story__grid{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}
+.story__media{overflow:hidden;aspect-ratio:4/5;background:var(--coal)}
+.story__media img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.story__media:hover img{transform:scale(1.06)}
+.story__copy p{max-width:46ch}
+.story__copy p + p{margin-top:20px}
+.story__copy .link-arrow{margin-top:36px}
+
+/* ---------- why ---------- */
+.why{background:var(--charcoal);color:var(--ivory)}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:64px 36px}
+.why__item{border-top:1px solid rgba(246,243,236,.18);padding-top:26px}
+.why__num{font-family:var(--serif);font-style:italic;font-size:1rem;color:var(--gold-light);letter-spacing:.08em}
+.why__item h3{font-size:1.4rem;margin:16px 0 12px}
+.why__item p{font-size:.9rem;color:rgba(246,243,236,.72)}
+
+/* ---------- development ---------- */
+.dev{position:relative;min-height:88vh;display:flex;align-items:center;color:var(--ivory);overflow:hidden}
+.dev__media{position:absolute;inset:0;background:var(--coal)}
+.dev__media img{width:100%;height:100%;object-fit:cover}
+.dev__scrim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,12,10,.74),rgba(14,12,10,.3) 62%,rgba(14,12,10,.16)),linear-gradient(180deg,rgba(14,12,10,.32),rgba(14,12,10,.32))}
+.dev__content{position:relative;z-index:2;padding:130px 0}
+.dev h2{font-size:clamp(2.4rem,5vw,3.9rem);max-width:15ch;margin-top:20px}
+.dev__specs{display:flex;flex-wrap:wrap;margin:40px 0 46px}
+.dev__specs li{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;padding:2px 34px;border-left:1px solid rgba(246,243,236,.3)}
+.dev__specs li:first-child{padding-left:0;border-left:0}
+
+/* ---------- final cta ---------- */
+.cta{background:var(--charcoal);color:var(--ivory);text-align:center;padding:150px 0;border-top:1px solid rgba(246,243,236,.1)}
+.cta .eyebrow{justify-content:center}
+.cta .eyebrow::after{content:"";width:38px;height:1px;background:currentColor}
+.cta h2{font-size:clamp(2.6rem,5.5vw,4.4rem);margin:22px 0 20px}
+.cta p{max-width:460px;margin-inline:auto;color:rgba(246,243,236,.78)}
+.cta .btn{margin-top:44px}
+
+/* ---------- footer ---------- */
+.footer{background:var(--charcoal);color:var(--ivory);border-top:1px solid rgba(246,243,236,.12);padding:88px 0 40px}
+.footer__grid{display:grid;grid-template-columns:1.8fr 1fr 1.2fr 1.4fr;gap:56px}
+.footer__blurb{margin-top:20px;max-width:30ch;font-size:.92rem;color:rgba(246,243,236,.68)}
+.footer__head{font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;font-weight:500;color:var(--gold-light);margin-bottom:20px}
+.footer__col a{display:block;width:max-content;padding:4px 0;font-size:.92rem;color:rgba(246,243,236,.78);transition:color .3s}
+.footer__col a:hover{color:var(--gold-light)}
+.footer__col p{font-size:.92rem;color:rgba(246,243,236,.78)}
+.footer__col ul li{margin-bottom:10px}
+.footer__col p + .footer__head{margin-top:30px}
+.footer__bar{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;margin-top:72px;padding-top:28px;border-top:1px solid rgba(246,243,236,.12);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(246,243,236,.5)}
+.footer__bar a:hover{color:var(--gold-light)}
+
+/* ---------- modal ---------- */
+.modal{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:opacity .4s var(--ease),visibility .4s var(--ease)}
+.modal.open{opacity:1;visibility:visible}
+.modal__backdrop{position:absolute;inset:0;background:rgba(14,12,10,.72)}
+.modal__dialog{position:relative;width:min(600px,100%);max-height:92vh;overflow:auto;background:var(--ivory);padding:54px 52px 48px;transform:translateY(22px);transition:transform .45s var(--ease)}
+.modal.open .modal__dialog{transform:none}
+.modal__close{position:absolute;top:14px;right:18px;width:40px;height:40px;font-family:var(--serif);font-size:1.6rem;line-height:1;opacity:.55;transition:opacity .3s}
+.modal__close:hover{opacity:1}
+.modal h3{font-size:2rem;margin:18px 0 12px}
+.modal__sub{font-size:.94rem;color:var(--grey);margin-bottom:36px}
+.field{margin-bottom:24px}
+.field label{display:block;font-size:.62rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;margin-bottom:6px}
+.field label span{opacity:.55;letter-spacing:.12em;text-transform:none}
+.field input,.field select,.field textarea{width:100%;padding:10px 2px;background:transparent;border:0;border-bottom:1px solid rgba(23,21,18,.3);border-radius:0;font:inherit;font-size:.95rem;color:var(--charcoal);transition:border-color .3s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold)}
+.field textarea{resize:vertical;min-height:88px}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.modal .btn{width:100%;margin-top:12px}
+.success h3{font-size:2.2rem}
+.success p{color:var(--grey);margin:14px 0 30px}
+
+/* ---------- responsive ---------- */
+@media (max-width:1080px){
+  .prop-grid{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:repeat(2,1fr);gap:56px 36px}
+  .footer__grid{grid-template-columns:1fr 1fr;gap:44px}
+}
+@media (max-width:900px){
+  .section{padding:96px 0}
+  .nav__links{position:fixed;inset:0;z-index:1;background:var(--ivory);color:var(--charcoal);flex-direction:column;justify-content:center;gap:34px;transform:translateY(-102%);transition:transform .55s var(--ease)}
+  body.menu-open .nav__links{transform:translateY(0)}
+  .nav__links a{font-family:var(--serif);font-size:1.9rem;letter-spacing:.03em;text-transform:none}
+  .nav__links a::after{display:none}
+  .nav__cta-item{display:block;margin-top:18px}
+  .nav__toggle{display:block}
+  .nav__actions{display:none}
+  .story__grid{grid-template-columns:1fr;gap:48px}
+  .story__media{aspect-ratio:4/3}
+  .hero__actions .btn{flex:1 1 auto}
+}
+@media (max-width:640px){
+  .prop-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr;gap:44px}
+  .dev__specs{flex-direction:column;gap:0}
+  .dev__specs li{width:100%;padding:14px 0 2px;border-left:0;border-top:1px solid rgba(246,243,236,.3)}
+  .dev__specs li:first-child{border-top:0;padding-top:2px}
+  .footer__grid{grid-template-columns:1fr}
+  .field-row{grid-template-columns:1fr}
+  .modal__dialog{padding:46px 28px 38px}
+  .hero h1{font-size:clamp(2.6rem,11vw,3.3rem)}
+  .cta{padding:110px 0}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  [data-reveal]{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ======= Navbar ======= -->
+<header class="nav" id="siteNav">
+  <div class="wrap nav__inner">
+    <a class="logo" href="#top" aria-label="AURA Estates — home">AURA</a>
+    <ul class="nav__links" id="navMenu">
+      <li><a href="#properties">Properties</a></li>
+      <li><a href="#story">About</a></li>
+      <li><a href="#developments">Developments</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li class="nav__cta-item"><button class="btn btn--dark" data-modal="General enquiry">Private Viewing</button></li>
+    </ul>
+    <div class="nav__actions">
+      <button class="btn btn--dark btn--sm" data-modal="General enquiry">Private Viewing</button>
+    </div>
+    <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <!-- ======= Hero ======= -->
+  <section class="hero" id="top">
+    <div class="hero__media">
+      <img src="https://images.unsplash.com/photo-1512453979798-5e266f8880bb?auto=format&amp;fit=crop&amp;w=1920&amp;q=80" alt="Dubai skyline at dusk" fetchpriority="high">
+    </div>
+    <div class="hero__scrim"></div>
+    <div class="wrap hero__content">
+      <p class="eyebrow eyebrow--light" data-reveal>Private Residences &nbsp;•&nbsp; Dubai</p>
+      <h1 data-reveal style="--d:.12s">Spaces designed for <em>extraordinary</em> living.</h1>
+      <p class="lede" data-reveal style="--d:.24s">Discover contemporary residences crafted around architecture, comfort and exceptional city living.</p>
+      <div class="hero__actions" data-reveal style="--d:.36s">
+        <a class="btn btn--ghost" href="#properties">Explore Properties</a>
+        <button class="btn btn--ivory" data-modal="General enquiry">Schedule a Private Viewing <span class="btn__arr">&rarr;</span></button>
+      </div>
+    </div>
+    <div class="hero__cue" aria-hidden="true">Scroll</div>
+  </section>
+
+  <!-- ======= Featured Properties ======= -->
+  <section class="section" id="properties">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Featured Residences</p>
+        <h2 class="section-title">Exceptional residences.</h2>
+      </div>
+      <div class="prop-grid">
+        <article class="card" data-reveal>
+          <div class="card__media">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="AURA Palm Residence — modern villa with pool at dusk" loading="lazy" decoding="async">
+          </div>
+          <div class="card__body">
+            <h3 class="card__name">AURA Palm Residence</h3>
+            <p class="card__loc">Dubai Palm Jumeirah</p>
+            <p class="card__price">From AED 4.8M</p>
+            <div class="card__cta">
+              <button class="link-arrow" data-modal="AURA Palm Residence">View Property <span class="arr">&rarr;</span></button>
+            </div>
+          </div>
+        </article>
+        <article class="card" data-reveal style="--d:.12s">
+          <div class="card__media">
+            <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="AURA Skyline Villa — contemporary home exterior at dusk" loading="lazy" decoding="async">
+          </div>
+          <div class="card__body">
+            <h3 class="card__name">AURA Skyline Villa</h3>
+            <p class="card__loc">Dubai Hills</p>
+            <p class="card__price">From AED 7.2M</p>
+            <div class="card__cta">
+              <button class="link-arrow" data-modal="AURA Skyline Villa">View Property <span class="arr">&rarr;</span></button>
+            </div>
+          </div>
+        </article>
+        <article class="card" data-reveal style="--d:.24s">
+          <div class="card__media">
+            <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="AURA Marina Residence — landscaped pool at dusk" loading="lazy" decoding="async">
+          </div>
+          <div class="card__body">
+            <h3 class="card__name">AURA Marina Residence</h3>
+            <p class="card__loc">Dubai Marina</p>
+            <p class="card__price">From AED 3.9M</p>
+            <div class="card__cta">
+              <button class="link-arrow" data-modal="AURA Marina Residence">View Property <span class="arr">&rarr;</span></button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Our Story ======= -->
+  <section class="section story" id="story">
+    <div class="wrap story__grid">
+      <div class="story__media" data-reveal>
+        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=1100&amp;q=80" alt="Contemporary living space with floor-to-ceiling windows" loading="lazy" decoding="async">
+      </div>
+      <div class="story__copy">
+        <p class="eyebrow" data-reveal>The AURA Standard</p>
+        <h2 class="section-title" data-reveal style="--d:.1s">Architecture shaped around exceptional living.</h2>
+        <p data-reveal style="--d:.2s;margin-top:24px">We create residences where architecture, location and everyday living come together.</p>
+        <p data-reveal style="--d:.28s">From first sketch to final detail, every AURA residence begins with the same conviction — that luxury is restraint, light and proportion. We develop in dialogue with Dubai's fabric: quiet courtyards, sculpted facades and interiors that unfold slowly and live simply.</p>
+        <a class="link-arrow" href="#standard" data-reveal style="--d:.36s">Discover AURA <span class="arr">&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Why AURA ======= -->
+  <section class="section why" id="standard">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow eyebrow--light">Why AURA</p>
+        <h2 class="section-title">Considered in every detail.</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why__item" data-reveal>
+          <p class="why__num">01</p>
+          <h3>Architecture</h3>
+          <p>Contemporary design with attention to detail.</p>
+        </div>
+        <div class="why__item" data-reveal style="--d:.1s">
+          <p class="why__num">02</p>
+          <h3>Location</h3>
+          <p>Prime addresses selected for lifestyle and accessibility.</p>
+        </div>
+        <div class="why__item" data-reveal style="--d:.2s">
+          <p class="why__num">03</p>
+          <h3>Craftsmanship</h3>
+          <p>Materials and finishes chosen for lasting quality.</p>
+        </div>
+        <div class="why__item" data-reveal style="--d:.3s">
+          <p class="why__num">04</p>
+          <h3>Experience</h3>
+          <p>A considered journey from discovery to ownership.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Featured Development ======= -->
+  <section class="dev" id="developments">
+    <div class="dev__media">
+      <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&amp;fit=crop&amp;w=1920&amp;q=80" alt="AURA Skyline — modern residence at dusk" loading="lazy" decoding="async">
+    </div>
+    <div class="dev__scrim"></div>
+    <div class="wrap dev__content">
+      <p class="eyebrow eyebrow--light" data-reveal>AURA Skyline</p>
+      <h2 data-reveal style="--d:.1s">A new perspective on city living.</h2>
+      <ul class="dev__specs" data-reveal style="--d:.2s">
+        <li>4 Bedrooms</li>
+        <li>Private Pool</li>
+        <li>5,200 sq ft</li>
+      </ul>
+      <button class="btn btn--ghost" data-modal="AURA Skyline Development" data-reveal style="--d:.3s">Explore Development <span class="btn__arr">&rarr;</span></button>
+    </div>
+  </section>
+
+  <!-- ======= Final CTA ======= -->
+  <section class="cta" id="contact">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--light" data-reveal>Private Viewings</p>
+      <h2 data-reveal style="--d:.1s">Find your next address.</h2>
+      <p data-reveal style="--d:.2s">Speak with our property specialists and arrange a private viewing.</p>
+      <button class="btn btn--ivory" data-modal="General enquiry" data-reveal style="--d:.3s">Schedule a Private Viewing <span class="btn__arr">&rarr;</span></button>
+    </div>
+  </section>
+</main>
+
+<!-- ======= Footer ======= -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="logo" href="#top">AURA</a>
+        <p class="footer__blurb">Private residences and considered developments across Dubai.</p>
+      </div>
+      <div class="footer__col">
+        <p class="footer__head">Explore</p>
+        <ul>
+          <li><a href="#properties">Properties</a></li>
+          <li><a href="#story">About</a></li>
+          <li><a href="#developments">Developments</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#top">Privacy</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <p class="footer__head">Visit</p>
+        <p>Jumeirah 1<br>Dubai, United Arab Emirates</p>
+        <p class="footer__head">Contact</p>
+        <a href="mailto:hello@auraestates.ae">hello@auraestates.ae</a>
+        <a href="tel:+971400000000">+971 4 000 0000</a>
+      </div>
+      <div class="footer__col">
+        <p class="footer__head">Enquiries</p>
+        <p>Private viewings by appointment. Our specialists respond within one business day.</p>
+        <p class="footer__head" style="margin-top:28px">Book</p>
+        <button class="link-arrow link-arrow--light" data-modal="General enquiry">Book a Viewing <span class="arr">&rarr;</span></button>
+      </div>
+    </div>
+    <div class="footer__bar">
+      <span>&copy; <span id="year"></span> AURA Estates</span>
+      <span>Dubai &middot; UAE</span>
+      <a href="#top">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ======= Enquiry Modal ======= -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal__backdrop" data-close></div>
+  <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal__close" data-close aria-label="Close dialog">&times;</button>
+    <p class="eyebrow">Private Viewing</p>
+    <h3 id="modalTitle">Request a private viewing</h3>
+    <p class="modal__sub">Share your details and our specialists will arrange a time that suits you.</p>
+    <form id="enquiryForm">
+      <div class="field-row">
+        <div class="field">
+          <label for="fName">Full name</label>
+          <input id="fName" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="fEmail">Email</label>
+          <input id="fEmail" name="email" type="email" autocomplete="email" required>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="fPhone">Phone <span>(optional)</span></label>
+          <input id="fPhone" name="phone" type="tel" autocomplete="tel">
+        </div>
+        <div class="field">
+          <label for="interest">Interested in</label>
+          <select id="interest" name="interest">
+            <option>General enquiry</option>
+            <option>AURA Palm Residence</option>
+            <option>AURA Skyline Villa</option>
+            <option>AURA Marina Residence</option>
+            <option>AURA Skyline Development</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label for="fMsg">Message <span>(optional)</span></label>
+        <textarea id="fMsg" name="message"></textarea>
+      </div>
+      <button class="btn btn--dark" type="submit">Request Viewing <span class="btn__arr">&rarr;</span></button>
+    </form>
+    <div id="enquirySuccess" class="success" hidden>
+      <h3>Thank you.</h3>
+      <p>We have received your enquiry. A member of our specialists team will be in touch within one business day to arrange your private viewing.</p>
+      <button class="link-arrow" data-close>Close <span class="arr">&rarr;</span></button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var header=document.getElementById('siteNav');
+  var toggle=document.querySelector('.nav__toggle');
+
+  function closeMenu(){
+    document.body.classList.remove('menu-open');
+    header.classList.remove('menu-open');
+    toggle.setAttribute('aria-expanded','false');
+  }
+  window.addEventListener('scroll',function(){
+    header.classList.toggle('scrolled',window.scrollY>40);
+  },{passive:true});
+  header.classList.toggle('scrolled',window.scrollY>40);
+
+  toggle.addEventListener('click',function(){
+    var open=document.body.classList.toggle('menu-open');
+    header.classList.toggle('menu-open',open);
+    toggle.setAttribute('aria-expanded',String(open));
+    toggle.setAttribute('aria-label',open?'Close menu':'Open menu');
+  });
+  document.querySelectorAll('.nav__links a').forEach(function(a){
+    a.addEventListener('click',closeMenu);
+  });
+
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items=document.querySelectorAll('[data-reveal]');
+  if(reduce||!('IntersectionObserver' in window)){
+    items.forEach(function(el){el.classList.add('is-in');});
+  }else{
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target);}
+      });
+    },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+    items.forEach(function(el){io.observe(el);});
+  }
+
+  var modal=document.getElementById('modal');
+  var form=document.getElementById('enquiryForm');
+  var success=document.getElementById('enquirySuccess');
+  var interest=document.getElementById('interest');
+  var lastFocus=null;
+
+  function openModal(prop){
+    lastFocus=document.activeElement;
+    closeMenu();
+    if(prop){interest.value=prop;}
+    form.hidden=false;
+    success.hidden=true;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+    setTimeout(function(){
+      var f=document.getElementById('fName');
+      if(f){f.focus();}
+    },400);
+  }
+  function closeModal(){
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden','true');
+    document.body.style.overflow='';
+    if(lastFocus&&lastFocus.focus){lastFocus.focus();}
+  }
+  document.querySelectorAll('[data-modal]').forEach(function(b){
+    b.addEventListener('click',function(e){
+      e.preventDefault();
+      openModal(b.getAttribute('data-modal')||'');
+    });
+  });
+  document.querySelectorAll('[data-close]').forEach(function(b){
+    b.addEventListener('click',closeModal);
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){closeModal();closeMenu();}
+  });
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!form.reportValidity()){return;}
+    form.hidden=true;
+    success.hidden=false;
+    var c=success.querySelector('button');
+    if(c){c.focus();}
+  });
+
+  document.getElementById('year').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
