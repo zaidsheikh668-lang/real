@@ -952,6 +952,69 @@ img {
     width: 100%;
   }
   }  
+ /* ===== AURA MOBILE HERO CLEANUP ===== */
+
+@media (max-width: 640px) {
+
+  /* Navbar */
+  .nav {
+    background: rgba(23,21,18,.92);
+    color: var(--ivory);
+  }
+
+  .nav.scrolled {
+    background: rgba(23,21,18,.96);
+    color: var(--ivory);
+  }
+
+  /* Hero spacing */
+  .hero__content {
+    padding-top: 145px;
+    padding-bottom: 125px;
+  }
+
+  /* Eyebrow */
+  .hero .eyebrow {
+    margin-bottom: 18px;
+    font-size: .58rem;
+    letter-spacing: .22em;
+  }
+
+  /* Main heading */
+  .hero h1 {
+    margin-top: 18px;
+    margin-bottom: 24px;
+    font-size: clamp(3rem, 13vw, 4.5rem);
+    line-height: .98;
+  }
+
+  /* Description */
+  .hero .lede {
+    font-size: .92rem;
+    line-height: 1.65;
+    max-width: 34ch;
+  }
+
+  /* Buttons */
+  .hero__actions {
+    gap: 12px;
+    margin-top: 32px;
+  }
+
+  .hero__actions .btn {
+    min-height: 58px;
+  }
+
+  /* Scroll indicator */
+  .hero__cue {
+    bottom: 16px;
+    font-size: .5rem;
+  }
+
+  .hero__cue::after {
+    height: 25px;
+  }
+  } 
 </style>
 </head>
 <body>
