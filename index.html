@@ -1143,6 +1143,108 @@ img {
     transform: none;
   }
   }  
+ /* ===== AURA STORY — EDITORIAL LUXURY ===== */
+
+.story {
+  position: relative;
+  overflow: hidden;
+}
+
+.story__grid {
+  gap: clamp(50px, 8vw, 110px);
+}
+
+.story__media {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 25px 70px rgba(23,21,18,.12);
+}
+
+.story__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,.08),
+    transparent 45%,
+    rgba(23,21,18,.12)
+  );
+  pointer-events: none;
+}
+
+.story__media img {
+  transform: scale(1.02);
+  transition: transform 1.4s cubic-bezier(.22,1,.36,1);
+}
+
+.story__media:hover img {
+  transform: scale(1.07);
+}
+
+.story__copy {
+  position: relative;
+}
+
+.story__copy::before {
+  content: "AURA";
+  position: absolute;
+  top: -75px;
+  left: -35px;
+  font-family: var(--serif);
+  font-size: clamp(5rem, 12vw, 10rem);
+  font-weight: 400;
+  color: rgba(23,21,18,.035);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.story__copy > * {
+  position: relative;
+  z-index: 1;
+}
+
+.story__copy p {
+  font-size: .98rem;
+  line-height: 1.85;
+  color: var(--grey);
+}
+
+.story__copy .link-arrow {
+  margin-top: 40px;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+
+  .story {
+    padding: 90px 0;
+  }
+
+  .story__grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .story__media {
+    aspect-ratio: 4 / 5;
+  }
+
+  .story__copy::before {
+    top: -35px;
+    left: -5px;
+    font-size: 5rem;
+  }
+
+  .story__copy p {
+    font-size: .92rem;
+    line-height: 1.75;
+  }
+
+  .story__copy .link-arrow {
+    margin-top: 30px;
+  }
+  } 
 </style>
 </head>
 <body>
