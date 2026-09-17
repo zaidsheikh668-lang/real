@@ -1343,10 +1343,65 @@ img {
   .why__item p {
     max-width: 34ch;
   }
-  }  
+  } 
+ /* ===== GLOBAL CINEMATIC BACKGROUND ===== */
+.site-bg-video{
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:-2;
+  pointer-events:none;
+  filter:brightness(.42) contrast(1.05) saturate(.8);
+}
+
+.site-bg-overlay{
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:rgba(12,11,9,.42);
+}
+
+/* Let the cinematic background show through */
+body{
+  background:transparent !important;
+}
+
+.story{
+  background:rgba(236,231,219,.92) !important;
+}
+
+.why,
+.cta,
+.footer{
+  background:rgba(23,21,18,.78) !important;
+}
+
+@media(max-width:640px){
+  .site-bg-video{
+    filter:brightness(.34) contrast(1.04) saturate(.78);
+  }
+
+  .site-bg-overlay{
+    background:rgba(12,11,9,.48);
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .site-bg-video{
+    display:none;
+  }
+  } 
 </style>
 </head>
 <body>
+ <video class="site-bg-video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+  <source src="109803326_1789660265221549.mp4" type="video/mp4">
+</video>
+
+<div class="site-bg-overlay" aria-hidden="true"></div> 
 
 <!-- ======= Navbar ======= -->
 <header class="nav" id="siteNav">
