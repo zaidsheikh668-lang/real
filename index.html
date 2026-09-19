@@ -1,14 +1,25 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>AURA Estates — Private Residences in Dubai</title>
-<meta name="description" content="AURA Estates — private residences and considered developments across Dubai. Architecture, location and everyday living.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23171512'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='18' fill='%23c9ac7d' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+
+<meta name="description"
+content="AURA Estates — private residences and considered developments across Dubai. Architecture, location and everyday living.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <style>
+
+/* =========================================================
+   AURA ESTATES — COMPLETE PREMIUM WEBSITE
+   ========================================================= */
+
 :root{
   --charcoal:#171512;
   --coal:#23201b;
@@ -19,1520 +30,206 @@
   --gold-text:#8c7346;
   --gold-light:#c9ac7d;
   --line:rgba(23,21,18,.14);
+
   --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
   --sans:"Inter",-apple-system,"Segoe UI",Roboto,sans-serif;
+
   --nav-h:80px;
   --ease:cubic-bezier(.22,.61,.21,1);
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:94px}
-body{font-family:var(--sans);font-weight:300;font-size:16px;line-height:1.7;background:var(--ivory);color:var(--charcoal);overflow-x:hidden;-webkit-font-smoothing:antialiased}
-h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.12}
-img{display:block;max-width:100%}
-a{color:inherit;text-decoration:none}
-button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
-ul{list-style:none}
-::selection{background:var(--gold);color:var(--ivory)}
-:focus-visible{outline:1px solid var(--gold);outline-offset:3px}
-.wrap{width:min(1240px,92vw);margin-inline:auto}
-[hidden]{display:none!important}
-body.menu-open{overflow:hidden}
 
-/* ---------- shared ---------- */
-.eyebrow{display:flex;align-items:center;gap:14px;font-size:.66rem;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-text)}
-.eyebrow::before{content:"";width:38px;height:1px;background:currentColor;flex:none}
-.eyebrow--light{color:var(--gold-light)}
-.section{padding:130px 0}
-.section-title{font-size:clamp(2.2rem,4.4vw,3.4rem);margin-top:20px;letter-spacing:.01em}
-.section-head{margin-bottom:64px;max-width:720px}
+/* ================= RESET ================= */
 
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:17px 32px;font-size:.66rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;border:1px solid transparent;transition:background .35s var(--ease),color .35s var(--ease),border-color .35s var(--ease);white-space:nowrap}
-.btn__arr{transition:transform .3s var(--ease)}
-.btn:hover .btn__arr{transform:translateX(5px)}
-.btn--ivory{background:var(--ivory);color:var(--charcoal);border-color:var(--ivory)}
-.btn--ivory:hover{background:var(--gold);border-color:var(--gold);color:var(--charcoal)}
-.btn--dark{background:var(--charcoal);color:var(--ivory);border-color:var(--charcoal)}
-.btn--dark:hover{background:var(--gold);border-color:var(--gold);color:var(--charcoal)}
-.btn--ghost{border-color:rgba(246,243,236,.55);color:var(--ivory)}
-.btn--ghost:hover{background:var(--ivory);border-color:var(--ivory);color:var(--charcoal)}
-.btn--sm{padding:13px 24px}
-
-.link-arrow{display:inline-flex;align-items:center;gap:10px;font-size:.68rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;padding-bottom:7px;position:relative}
-.link-arrow::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .4s var(--ease)}
-.link-arrow:hover::after{transform:scaleX(1);transform-origin:left}
-.link-arrow .arr{color:var(--gold);transition:transform .3s var(--ease)}
-.link-arrow:hover .arr{transform:translateX(5px)}
-.link-arrow--light{color:var(--ivory)}
-
-[data-reveal]{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0s)}
-[data-reveal].is-in{opacity:1;transform:none}
-
-/* ---------- navbar ---------- */
-.nav{position:fixed;inset:0 0 auto 0;z-index:60;color:var(--ivory);border-bottom:1px solid transparent;transition:background .4s var(--ease),color .4s var(--ease),border-color .4s var(--ease)}
-.nav__inner{height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;gap:24px;position:relative;z-index:2}
-.nav.scrolled,.nav.menu-open{background:var(--ivory);color:var(--charcoal);border-bottom-color:var(--line)}
-.logo{font-family:var(--serif);font-size:1.3rem;letter-spacing:.4em;padding-left:.4em;position:relative;z-index:2}
-.nav__links{display:flex;align-items:center;gap:44px}
-.nav__links a{font-size:.66rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;position:relative;padding:6px 0}
-.nav__links a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .35s var(--ease)}
-.nav__links a:hover::after{transform:scaleX(1);transform-origin:left}
-.nav__actions{position:relative;z-index:1}
-.nav__cta-item{display:none}
-.nav__toggle{display:none;width:44px;height:44px;position:relative;z-index:2}
-.nav__toggle span{position:absolute;left:9px;right:9px;height:1.5px;background:currentColor;transition:top .3s var(--ease),transform .3s var(--ease)}
-.nav__toggle span:nth-child(1){top:17px}
-.nav__toggle span:nth-child(2){top:26px}
-body.menu-open .nav__toggle span:nth-child(1){top:21px;transform:rotate(45deg)}
-body.menu-open .nav__toggle span:nth-child(2){top:21px;transform:rotate(-45deg)}
-
-/* ---------- hero ---------- */
-.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;color:var(--ivory);overflow:hidden}
-.hero__media{position:absolute;inset:0;background:var(--coal)}
-.hero__media img{width:100%;height:100%;object-fit:cover;animation:heroDrift 26s var(--ease) infinite alternate}
-@keyframes heroDrift{from{transform:scale(1.03)}to{transform:scale(1.12) translateX(-1.5%)}}
-.hero__scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,13,11,.5),rgba(15,13,11,.16) 45%,rgba(15,13,11,.66))}
-.hero__content{position:relative;z-index:2;padding:calc(var(--nav-h) + 56px) 0 110px}
-.hero h1{font-size:clamp(3rem,7vw,6rem);margin:24px 0 28px;max-width:14ch}
-.hero h1 em{font-style:italic}
-.hero .lede{max-width:520px;font-size:1.02rem}
-.hero__actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:44px}
-.hero__cue{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:12px;font-size:.58rem;letter-spacing:.34em;text-transform:uppercase;color:rgba(246,243,236,.65)}
-.hero__cue::after{content:"";width:1px;height:42px;background:linear-gradient(rgba(246,243,236,.7),rgba(246,243,236,0));animation:cuePulse 2.8s var(--ease) infinite}
-@keyframes cuePulse{0%,100%{transform:scaleY(.4);opacity:.5}50%{transform:scaleY(1);opacity:1}}
-@media (max-height:640px){.hero__cue{display:none}}
-
-/* ---------- properties ---------- */
-.prop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:72px 36px}
-.card{display:flex;flex-direction:column}
-.card__media{overflow:hidden;aspect-ratio:3/4;background:var(--coal)}
-.card__media img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
-.card:hover .card__media img{transform:scale(1.07)}
-.card__body{padding-top:26px;display:flex;flex-direction:column;flex:1}
-.card__name{font-size:1.65rem;letter-spacing:.01em;transition:color .3s var(--ease)}
-.card:hover .card__name{color:var(--gold-text)}
-.card__loc{margin-top:8px;font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:var(--grey)}
-.card__price{margin-top:14px;font-size:.78rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-text)}
-.card__cta{margin-top:auto;padding-top:26px}
-
-/* ---------- story ---------- */
-.story{background:var(--ivory-2)}
-.story__grid{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}
-.story__media{overflow:hidden;aspect-ratio:4/5;background:var(--coal)}
-.story__media img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
-.story__media:hover img{transform:scale(1.06)}
-.story__copy p{max-width:46ch}
-.story__copy p + p{margin-top:20px}
-.story__copy .link-arrow{margin-top:36px}
-
-/* ---------- why ---------- */
-.why{background:var(--charcoal);color:var(--ivory)}
-.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:64px 36px}
-.why__item{border-top:1px solid rgba(246,243,236,.18);padding-top:26px}
-.why__num{font-family:var(--serif);font-style:italic;font-size:1rem;color:var(--gold-light);letter-spacing:.08em}
-.why__item h3{font-size:1.4rem;margin:16px 0 12px}
-.why__item p{font-size:.9rem;color:rgba(246,243,236,.72)}
-
-/* ---------- development ---------- */
-.dev{position:relative;min-height:88vh;display:flex;align-items:center;color:var(--ivory);overflow:hidden}
-.dev__media{position:absolute;inset:0;background:var(--coal)}
-.dev__media img{width:100%;height:100%;object-fit:cover}
-.dev__scrim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,12,10,.74),rgba(14,12,10,.3) 62%,rgba(14,12,10,.16)),linear-gradient(180deg,rgba(14,12,10,.32),rgba(14,12,10,.32))}
-.dev__content{position:relative;z-index:2;padding:130px 0}
-.dev h2{font-size:clamp(2.4rem,5vw,3.9rem);max-width:15ch;margin-top:20px}
-.dev__specs{display:flex;flex-wrap:wrap;margin:40px 0 46px}
-.dev__specs li{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;padding:2px 34px;border-left:1px solid rgba(246,243,236,.3)}
-.dev__specs li:first-child{padding-left:0;border-left:0}
-
-/* ---------- final cta ---------- */
-.cta{background:var(--charcoal);color:var(--ivory);text-align:center;padding:150px 0;border-top:1px solid rgba(246,243,236,.1)}
-.cta .eyebrow{justify-content:center}
-.cta .eyebrow::after{content:"";width:38px;height:1px;background:currentColor}
-.cta h2{font-size:clamp(2.6rem,5.5vw,4.4rem);margin:22px 0 20px}
-.cta p{max-width:460px;margin-inline:auto;color:rgba(246,243,236,.78)}
-.cta .btn{margin-top:44px}
-
-/* ---------- footer ---------- */
-.footer{background:var(--charcoal);color:var(--ivory);border-top:1px solid rgba(246,243,236,.12);padding:88px 0 40px}
-.footer__grid{display:grid;grid-template-columns:1.8fr 1fr 1.2fr 1.4fr;gap:56px}
-.footer__blurb{margin-top:20px;max-width:30ch;font-size:.92rem;color:rgba(246,243,236,.68)}
-.footer__head{font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;font-weight:500;color:var(--gold-light);margin-bottom:20px}
-.footer__col a{display:block;width:max-content;padding:4px 0;font-size:.92rem;color:rgba(246,243,236,.78);transition:color .3s}
-.footer__col a:hover{color:var(--gold-light)}
-.footer__col p{font-size:.92rem;color:rgba(246,243,236,.78)}
-.footer__col ul li{margin-bottom:10px}
-.footer__col p + .footer__head{margin-top:30px}
-.footer__bar{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;margin-top:72px;padding-top:28px;border-top:1px solid rgba(246,243,236,.12);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(246,243,236,.5)}
-.footer__bar a:hover{color:var(--gold-light)}
-
-/* ---------- modal ---------- */
-.modal{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:opacity .4s var(--ease),visibility .4s var(--ease)}
-.modal.open{opacity:1;visibility:visible}
-.modal__backdrop{position:absolute;inset:0;background:rgba(14,12,10,.72)}
-.modal__dialog{position:relative;width:min(600px,100%);max-height:92vh;overflow:auto;background:var(--ivory);padding:54px 52px 48px;transform:translateY(22px);transition:transform .45s var(--ease)}
-.modal.open .modal__dialog{transform:none}
-.modal__close{position:absolute;top:14px;right:18px;width:40px;height:40px;font-family:var(--serif);font-size:1.6rem;line-height:1;opacity:.55;transition:opacity .3s}
-.modal__close:hover{opacity:1}
-.modal h3{font-size:2rem;margin:18px 0 12px}
-.modal__sub{font-size:.94rem;color:var(--grey);margin-bottom:36px}
-.field{margin-bottom:24px}
-.field label{display:block;font-size:.62rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;margin-bottom:6px}
-.field label span{opacity:.55;letter-spacing:.12em;text-transform:none}
-.field input,.field select,.field textarea{width:100%;padding:10px 2px;background:transparent;border:0;border-bottom:1px solid rgba(23,21,18,.3);border-radius:0;font:inherit;font-size:.95rem;color:var(--charcoal);transition:border-color .3s}
-.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold)}
-.field textarea{resize:vertical;min-height:88px}
-.field-row{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.modal .btn{width:100%;margin-top:12px}
-.success h3{font-size:2.2rem}
-.success p{color:var(--grey);margin:14px 0 30px}
-
-/* ---------- responsive ---------- */
-@media (max-width:1080px){
-  .prop-grid{grid-template-columns:repeat(2,1fr)}
-  .why-grid{grid-template-columns:repeat(2,1fr);gap:56px 36px}
-  .footer__grid{grid-template-columns:1fr 1fr;gap:44px}
-}
-@media (max-width:900px){
-  .section{padding:96px 0}
-  .nav__links{position:fixed;inset:0;z-index:1;background:var(--ivory);color:var(--charcoal);flex-direction:column;justify-content:center;gap:34px;transform:translateY(-102%);transition:transform .55s var(--ease)}
-  body.menu-open .nav__links{transform:translateY(0)}
-  .nav__links a{font-family:var(--serif);font-size:1.9rem;letter-spacing:.03em;text-transform:none}
-  .nav__links a::after{display:none}
-  .nav__cta-item{display:block;margin-top:18px}
-  .nav__toggle{display:block}
-  .nav__actions{display:none}
-  .story__grid{grid-template-columns:1fr;gap:48px}
-  .story__media{aspect-ratio:4/3}
-  .hero__actions .btn{flex:1 1 auto}
-}
-@media (max-width:640px){
-  .prop-grid{grid-template-columns:1fr}
-  .why-grid{grid-template-columns:1fr;gap:44px}
-  .dev__specs{flex-direction:column;gap:0}
-  .dev__specs li{width:100%;padding:14px 0 2px;border-left:0;border-top:1px solid rgba(246,243,236,.3)}
-  .dev__specs li:first-child{border-top:0;padding-top:2px}
-  .footer__grid{grid-template-columns:1fr}
-  .field-row{grid-template-columns:1fr}
-  .modal__dialog{padding:46px 28px 38px}
-  .hero h1{font-size:clamp(2.6rem,11vw,3.3rem)}
-  .cta{padding:110px 0}
-}
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  *,*::before,*::after{animation:none!important;transition:none!important}
-  [data-reveal]{opacity:1;transform:none}
-}
-/* =====================================================
-   AURA ESTATES — PREMIUM EDIT v2
-   ===================================================== */
-
-/* Premium page feel */
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background: var(--charcoal);
-}
-
-/* ================= NAVBAR ================= */
-
-.nav {
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  background: rgba(23,21,21,.78);
-  border-bottom: 1px solid rgba(246,243,236,.08);
-  transition: background .35s ease, box-shadow .35s ease;
-}
-
-.nav.scrolled {
-  background: rgba(23,21,21,.94);
-  box-shadow: 0 10px 40px rgba(0,0,0,.22);
-}
-
-.nav_links a {
-  transition: color .3s ease, transform .3s ease;
-}
-
-.nav_links a:hover {
-  color: var(--gold-light);
-  transform: translateY(-1px);
-}
-
-.logo {
-  transition: letter-spacing .35s ease, color .35s ease;
-}
-
-.logo:hover {
-  color: var(--gold-light);
-  letter-spacing: .27em;
-}
-
-/* ================= HERO ================= */
-
-.hero {
-  position: relative;
-  min-height: 88vh;
-  overflow: hidden;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  width: 520px;
-  height: 520px;
-  right: -180px;
-  top: 5%;
-  background: rgba(201,169,106,.07);
-  filter: blur(100px);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.hero h1 {
-  text-wrap: balance;
-  letter-spacing: -.045em;
-}
-
-.hero h1 em {
-  position: relative;
-  color: var(--gold-light);
-}
-
-.hero p {
-  max-width: 560px;
-  line-height: 1.8;
-}
-
-.hero_actions .btn {
-  transition:
-    transform .35s cubic-bezier(.22,1,.36,1),
-    box-shadow .35s ease,
-    background .35s ease;
-}
-
-.hero_actions .btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 35px rgba(0,0,0,.28);
-}
-
-/* ================= HERO IMAGE ================= */
-
-.hero_media,
-.hero_visual,
-.hero_image {
-  overflow: hidden;
-  border-radius: 22px;
-}
-
-.hero_media img,
-.hero_media video,
-.hero_visual img,
-.hero_visual video,
-.hero_image img,
-.hero_image video {
-  transition: transform 1.2s cubic-bezier(.22,1,.36,1);
-}
-
-.hero_media:hover img,
-.hero_media:hover video,
-.hero_visual:hover img,
-.hero_visual:hover video,
-.hero_image:hover img,
-.hero_image:hover video {
-  transform: scale(1.045);
-}
-
-/* cinematic overlay */
-.hero_media::after,
-.hero_visual::after,
-.hero_image::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(0,0,0,0) 50%,
-      rgba(0,0,0,.30) 100%
-    );
-  pointer-events: none;
-}
-
-/* ================= SECTIONS ================= */
-
-section {
-  position: relative;
-}
-
-section h2,
-.section_title {
-  text-wrap: balance;
-}
-
-.section_head {
-  max-width: 780px;
-}
-
-.section_title {
-  letter-spacing: -.035em;
-}
-
-/* subtle gold line */
-.section_head::after {
-  content: "";
-  display: block;
-  width: 46px;
-  height: 1px;
-  margin-top: 26px;
-  background: var(--gold);
-}
-
-/* ================= PROPERTY CARDS ================= */
-
-.property_card,
-.property,
-.card {
-  overflow: hidden;
-  border: 1px solid rgba(246,243,236,.09);
-  background: rgba(255,255,255,.025);
-  border-radius: 18px;
-
-  transition:
-    transform .45s cubic-bezier(.22,1,.36,1),
-    border-color .45s ease,
-    box-shadow .45s ease;
-}
-
-.property_card:hover,
-.property:hover,
-.card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(201,169,106,.38);
-  box-shadow: 0 25px 65px rgba(0,0,0,.28);
-}
-
-.property_card img,
-.property img,
-.card img {
-  transition: transform .8s cubic-bezier(.22,1,.36,1);
-}
-
-.property_card:hover img,
-.property:hover img,
-.card:hover img {
-  transform: scale(1.04);
-}
-
-/* ================= BUTTONS ================= */
-
-.btn {
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
-}
-
-.btn::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255,255,255,.12);
-  transform: translateX(-105%);
-  transition: transform .45s cubic-bezier(.22,1,.36,1);
-  z-index: -1;
-}
-
-.btn:hover::before {
-  transform: translateX(0);
-}
-
-.btn-gold,
-.btn_primary,
-.btn-primary {
-  box-shadow: 0 8px 25px rgba(201,169,106,.13);
-}
-
-/* ================= GOLD DETAILS ================= */
-
-a:hover {
-  color: var(--gold-light);
-}
-
-::selection {
-  background: var(--gold);
-  color: var(--charcoal);
-}
-
-/* ================= SCROLL REVEAL ================= */
-
-[data-reveal] {
-  opacity: 0;
-  transform: translateY(28px);
-  transition:
-    opacity .8s cubic-bezier(.22,1,.36,1),
-    transform .8s cubic-bezier(.22,1,.36,1);
-}
-
-[data-reveal].is-in {
-  opacity: 1;
-  transform: none;
-}
-
-/* ================= FINAL CTA ================= */
-
-.cta,
-.final_cta,
-.final-cta {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid rgba(201,169,106,.20);
-}
-
-.cta::before,
-.final_cta::before,
-.final-cta::before {
-  content: "";
-  position: absolute;
-  width: 420px;
-  height: 420px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
-  border-radius: 50%;
-  background: rgba(201,169,106,.055);
-  filter: blur(80px);
-  pointer-events: none;
-}
-
-/* ================= FOOTER ================= */
-
-footer {
-  border-top: 1px solid rgba(246,243,236,.09);
-}
-
-footer a {
-  transition: color .25s ease;
-}
-
-footer a:hover {
-  color: var(--gold-light);
-}
-
-/* ================= MOBILE ================= */
-
-@media (max-width: 900px) {
-
-  .hero {
-    min-height: auto;
-  }
-
-  .hero h1 {
-    font-size: clamp(42px, 9vw, 68px);
-  }
-
-  .section {
-    padding-top: 90px;
-    padding-bottom: 90px;
-  }
-
-}
-
-@media (max-width: 640px) {
-
-  body {
-    overflow-x: hidden;
-  }
-
-  .hero {
-    min-height: auto;
-    padding-top: 55px;
-  }
-
-  .hero h1 {
-    font-size: clamp(40px, 12vw, 58px);
-    line-height: 1;
-  }
-
-  .hero p {
-    font-size: 14px;
-    line-height: 1.7;
-  }
-
-  .hero_actions {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .hero_actions .btn {
-    width: 100%;
-  }
-
-  .property_card,
-  .property,
-  .card {
-    border-radius: 16px;
-  }
-
-  .section_head::after {
-    margin-top: 20px;
-  }
-
-}
-
-/* ================= REDUCED MOTION ================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: .01ms !important;
-    transition-duration: .01ms !important;
-  }
-
-  [data-reveal] {
-    opacity: 1;
-    transform: none;
-  }
-
-  } 
-body {
-  background: var(--ivory) !important;
-  color: var(--charcoal) !important;
-}
-
-.card {
-  color: var(--charcoal);
-}
-
-.card__name {
-  color: var(--charcoal);
-}
-
-.story {
-  color: var(--charcoal);
-    } 
- /* =====================================================
-   AURA — PREMIUM MOTION UPGRADE
-   ===================================================== */
-
-/* Smooth page feel */
-* {
-  transition-timing-function: cubic-bezier(.22, 1, .36, 1);
-}
-
-/* ---------- NAV ---------- */
-
-.nav {
-  transition:
-    background .45s ease,
-    box-shadow .45s ease,
-    border-color .45s ease;
-}
-
-.nav__links a {
-  position: relative;
-}
-
-.nav__links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -8px;
-  width: 0;
-  height: 1px;
-  background: var(--gold);
-  transition: width .35s ease;
-}
-
-.nav__links a:hover::after {
-  width: 100%;
-}
-
-/* ---------- BUTTONS ---------- */
-
-.btn {
-  position: relative;
-  overflow: hidden;
-  transform: translateZ(0);
-  transition:
-    transform .35s ease,
-    box-shadow .35s ease,
-    background .35s ease,
-    border-color .35s ease;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(0,0,0,.16);
-}
-
-.btn:active {
-  transform: translateY(0) scale(.98);
-}
-
-/* ---------- PROPERTY CARDS ---------- */
-
-.card {
-  overflow: hidden;
-  transition:
-    transform .5s ease,
-    box-shadow .5s ease,
-    border-color .5s ease;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 24px 55px rgba(0,0,0,.16);
-}
-
-.card img {
-  transition: transform .8s ease;
-}
-
-.card:hover img {
-  transform: scale(1.045);
-}
-
-/* ---------- IMAGE HOVER ---------- */
-
-img {
-  transition: transform .8s ease;
-}
-
-/* ---------- HERO ---------- */
-
-.hero {
-  overflow: hidden;
-}
-
-.hero_media img,
-.hero_media video,
-.hero img,
-.hero video {
-  transform: scale(1.02);
-  transition: transform 1.4s ease;
-}
-
-.hero:hover img,
-.hero:hover video {
-  transform: scale(1.045);
-}
-
-/* ---------- GOLD DETAILS ---------- */
-
-.cta_eyebrow,
-.eyebrow {
-  letter-spacing: .18em;
-  transition: letter-spacing .4s ease;
-}
-
-.cta_eyebrow:hover,
-.eyebrow:hover {
-  letter-spacing: .24em;
-}
-
-/* ---------- STORY ---------- */
-
-.story_grid > * {
-  transition:
-    transform .5s ease,
-    opacity .5s ease;
-}
-
-.story_grid > *:hover {
-  transform: translateY(-5px);
-}
-
-/* ---------- DEVELOPMENT ---------- */
-
-.development,
-.development_card,
-.dev_specs {
-  transition:
-    transform .45s ease,
-    box-shadow .45s ease;
-}
-
-.development:hover,
-.development_card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 50px rgba(0,0,0,.12);
-}
-
-/* ---------- SCROLL REVEAL ---------- */
-
-[data-reveal] {
-  opacity: 0;
-  transform: translateY(24px);
-  transition:
-    opacity .8s ease,
-    transform .8s ease;
-}
-
-[data-reveal].is-in {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ---------- MOBILE ---------- */
-
-@media (max-width: 640px) {
-
-  .card:hover {
-    transform: none;
-    box-shadow: none;
-  }
-
-  .card:hover img {
-    transform: none;
-  }
-
-  .hero:hover img,
-  .hero:hover video {
-    transform: scale(1.02);
-  }
-
-}
-
-/* ---------- REDUCED MOTION ---------- */
-
-@media (prefers-reduced-motion: reduce) {
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: .01ms !important;
-    transition-duration: .01ms !important;
-  }
-
-  [data-reveal] {
-    opacity: 1;
-    transform: none;
-  }
-  } 
- /* ===== AURA FINAL MOBILE POLISH ===== */
-
-@media (max-width: 640px) {
-
-  /* Improve section readability */
-  .story,
-  .story_grid,
-  .why,
-  .why_grid {
-    color: var(--charcoal) !important;
-  }
-
-  .story p,
-  .why p,
-  .story_grid p,
-  .why_grid p {
-    color: var(--grey) !important;
-    opacity: 1 !important;
-  }
-
-  .story h2,
-  .why h2,
-  .story_grid h2,
-  .why_grid h2 {
-    color: var(--charcoal) !important;
-    opacity: 1 !important;
-  }
-
-  /* Better CTA sizing */
-  .cta .btn,
-  .final_cta .btn {
-    min-height: 52px;
-    padding: 0 20px;
-  }
-
-  /* Better mobile spacing */
-  section {
-    scroll-margin-top: 80px;
-  }
-
-  /* Prevent text from touching screen edges */
-  .wrap {
-    width: min(100% - 30px, 1240px);
-  }
-
-}
-/* ===== AURA CINEMATIC HERO ===== */
-
-.hero__media video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: scale(1.04);
-  filter: brightness(.82) contrast(1.05) saturate(.88);
-}
-
-.hero__scrim {
-  background:
-    linear-gradient(
-      180deg,
-      rgba(10,9,8,.62) 0%,
-      rgba(10,9,8,.18) 42%,
-      rgba(10,9,8,.78) 100%
-    );
-}
-
-.hero__content {
-  animation: auraHeroIn 1.2s cubic-bezier(.22,.61,.21,1) both;
-}
-
-.hero h1 {
-  letter-spacing: -.015em;
-  text-shadow: 0 8px 35px rgba(0,0,0,.25);
-}
-
-.hero .lede {
-  color: rgba(246,243,236,.82);
-}
-
-.hero__actions .btn {
-  transition:
-    transform .4s cubic-bezier(.22,.61,.21,1),
-    background .4s ease,
-    border-color .4s ease,
-    box-shadow .4s ease;
-}
-
-.hero__actions .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 35px rgba(0,0,0,.22);
-}
-
-@keyframes auraHeroIn {
-  from {
-    opacity: 0;
-    transform: translateY(28px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media (max-width:640px) {
-  .hero__media video {
-    transform: scale(1.08);
-    filter: brightness(.78) contrast(1.04) saturate(.88);
-  }
-
-  .hero__scrim {
-    background:
-      linear-gradient(
-        180deg,
-        rgba(10,9,8,.68),
-        rgba(10,9,8,.20) 40%,
-        rgba(10,9,8,.84)
-      );
-  }
-
-  .hero__content {
-    padding-top: 120px;
-    padding-bottom: 90px;
-  }
-
-  .hero h1 {
-    font-size: clamp(3rem, 14vw, 4.8rem);
-  }
-
-  .hero__actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .hero__actions .btn {
-    width: 100%;
-  }
-  }  
- /* ===== AURA MOBILE HERO CLEANUP ===== */
-
-@media (max-width: 640px) {
-
-  /* Navbar */
-  .nav {
-    background: rgba(23,21,18,.92);
-    color: var(--ivory);
-  }
-
-  .nav.scrolled {
-    background: rgba(23,21,18,.96);
-    color: var(--ivory);
-  }
-
-  /* Hero spacing */
-  .hero__content {
-    padding-top: 145px;
-    padding-bottom: 125px;
-  }
-
-  /* Eyebrow */
-  .hero .eyebrow {
-    margin-bottom: 18px;
-    font-size: .58rem;
-    letter-spacing: .22em;
-  }
-
-  /* Main heading */
-  .hero h1 {
-    margin-top: 18px;
-    margin-bottom: 24px;
-    font-size: clamp(3rem, 13vw, 4.5rem);
-    line-height: .98;
-  }
-
-  /* Description */
-  .hero .lede {
-    font-size: .92rem;
-    line-height: 1.65;
-    max-width: 34ch;
-  }
-
-  /* Buttons */
-  .hero__actions {
-    gap: 12px;
-    margin-top: 32px;
-  }
-
-  .hero__actions .btn {
-    min-height: 58px;
-  }
-
-  /* Scroll indicator */
-  .hero__cue {
-    bottom: 16px;
-    font-size: .5rem;
-  }
-
-  .hero__cue::after {
-    height: 25px;
-  }
-  } 
-/* ===== AURA PREMIUM PROPERTIES ===== */
-
-.prop-grid {
-  gap: 90px 32px;
-  align-items: start;
-}
-
-.card {
-  position: relative;
-  overflow: hidden;
-}
-
-.card__media {
-  position: relative;
-  aspect-ratio: 4 / 5;
-  overflow: hidden;
-}
-
-.card__media::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    transparent 55%,
-    rgba(0,0,0,.32)
-  );
-  pointer-events: none;
-  opacity: .65;
-  transition: opacity .5s ease;
-}
-
-.card:hover .card__media::after {
-  opacity: .25;
-}
-
-.card__media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: scale(1.01);
-  transition: transform 1.2s cubic-bezier(.22,1,.36,1);
-}
-
-.card:hover .card__media img {
-  transform: scale(1.075);
-}
-
-.card__body {
-  padding: 28px 2px 0;
-}
-
-.card__name {
-  font-size: clamp(1.5rem, 2.4vw, 2rem);
-  line-height: 1.05;
-  transition: transform .4s ease, color .4s ease;
-}
-
-.card:hover .card__name {
-  color: var(--gold-text);
-  transform: translateX(4px);
-}
-
-.card__loc {
-  margin-top: 11px;
-  font-size: .62rem;
-  letter-spacing: .24em;
-}
-
-.card__price {
-  margin-top: 16px;
-  font-size: .72rem;
-  letter-spacing: .18em;
-}
-
-.card__cta {
-  padding-top: 28px;
-}
-
-.card .link-arrow {
-  transition: transform .4s ease;
-}
-
-.card:hover .link-arrow {
-  transform: translateX(4px);
-}
-
-/* Editorial reveal */
-.prop-grid .card:nth-child(1) {
-  transition-delay: .05s;
-}
-
-.prop-grid .card:nth-child(2) {
-  transition-delay: .15s;
-}
-
-.prop-grid .card:nth-child(3) {
-  transition-delay: .25s;
-}
-
-/* Mobile */
-@media (max-width: 640px) {
-
-  .prop-grid {
-    grid-template-columns: 1fr;
-    gap: 64px;
-  }
-
-  .card__media {
-    aspect-ratio: 4 / 5;
-  }
-
-  .card__body {
-    padding-top: 22px;
-  }
-
-  .card__name {
-    font-size: 1.7rem;
-  }
-
-  .card:hover .card__media img {
-    transform: none;
-  }
-
-  .card:hover .card__name {
-    transform: none;
-  }
-  }  
- /* ===== AURA STORY — EDITORIAL LUXURY ===== */
-
-.story {
-  position: relative;
-  overflow: hidden;
-}
-
-.story__grid {
-  gap: clamp(50px, 8vw, 110px);
-}
-
-.story__media {
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 25px 70px rgba(23,21,18,.12);
-}
-
-.story__media::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(255,255,255,.08),
-    transparent 45%,
-    rgba(23,21,18,.12)
-  );
-  pointer-events: none;
-}
-
-.story__media img {
-  transform: scale(1.02);
-  transition: transform 1.4s cubic-bezier(.22,1,.36,1);
-}
-
-.story__media:hover img {
-  transform: scale(1.07);
-}
-
-.story__copy {
-  position: relative;
-}
-
-.story__copy::before {
-  content: "AURA";
-  position: absolute;
-  top: -75px;
-  left: -35px;
-  font-family: var(--serif);
-  font-size: clamp(5rem, 12vw, 10rem);
-  font-weight: 400;
-  color: rgba(23,21,18,.035);
-  pointer-events: none;
-  z-index: 0;
-}
-
-.story__copy > * {
-  position: relative;
-  z-index: 1;
-}
-
-.story__copy p {
-  font-size: .98rem;
-  line-height: 1.85;
-  color: var(--grey);
-}
-
-.story__copy .link-arrow {
-  margin-top: 40px;
-}
-
-/* Mobile */
-@media (max-width: 640px) {
-
-  .story {
-    padding: 90px 0;
-  }
-
-  .story__grid {
-    grid-template-columns: 1fr;
-    gap: 48px;
-  }
-
-  .story__media {
-    aspect-ratio: 4 / 5;
-  }
-
-  .story__copy::before {
-    top: -35px;
-    left: -5px;
-    font-size: 5rem;
-  }
-
-  .story__copy p {
-    font-size: .92rem;
-    line-height: 1.75;
-  }
-
-  .story__copy .link-arrow {
-    margin-top: 30px;
-  }
-  } 
-/* ===== AURA — WHY SECTION ===== */
-
-.why {
-  position: relative;
-  overflow: hidden;
-}
-
-.why::before {
-  content: "01";
-  position: absolute;
-  top: 70px;
-  right: 5vw;
-  font-family: var(--serif);
-  font-size: clamp(8rem, 20vw, 18rem);
-  line-height: 1;
-  color: rgba(246,243,236,.025);
-  pointer-events: none;
-}
-
-.why-grid {
-  gap: 0;
-  border-top: 1px solid rgba(246,243,236,.16);
-}
-
-.why__item {
-  min-height: 260px;
-  padding: 34px 30px 40px 0;
-  border-top: 0;
-  border-bottom: 1px solid rgba(246,243,236,.16);
-  transition:
-    padding-left .5s cubic-bezier(.22,1,.36,1),
-    background .5s ease;
-}
-
-.why__item + .why__item {
-  padding-left: 30px;
-  border-left: 1px solid rgba(246,243,236,.16);
-}
-
-.why__num {
-  font-size: 1.1rem;
-  transition: transform .4s ease;
-}
-
-.why__item h3 {
-  font-size: clamp(1.45rem, 2.5vw, 1.9rem);
-  margin: 28px 0 16px;
-}
-
-.why__item p {
-  max-width: 28ch;
-  line-height: 1.8;
-}
-
-.why__item:hover {
-  background: rgba(246,243,236,.025);
-  padding-left: 14px;
-}
-
-.why__item + .why__item:hover {
-  padding-left: 44px;
-}
-
-.why__item:hover .why__num {
-  transform: translateX(5px);
-  color: var(--gold);
-}
-
-/* Mobile */
-@media (max-width: 640px) {
-
-  .why {
-    padding: 90px 0;
-  }
-
-  .why-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .why__item,
-  .why__item + .why__item {
-    min-height: auto;
-    padding: 28px 0 32px;
-    border-left: 0;
-  }
-
-  .why__item:hover,
-  .why__item + .why__item:hover {
-    padding-left: 8px;
-  }
-
-  .why__item h3 {
-    margin-top: 18px;
-  }
-
-  .why__item p {
-    max-width: 34ch;
-  }
-  } 
- /* ===== GLOBAL CINEMATIC BACKGROUND ===== */
-.site-bg-video{
-  position:fixed;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  z-index:-2;
-  pointer-events:none;
-  filter:brightness(.42) contrast(1.05) saturate(.8);
-}
-
-.site-bg-overlay{
-  position:fixed;
-  inset:0;
-  z-index:-1;
-  pointer-events:none;
-  background:rgba(12,11,9,.42);
-}
-
-/* Let the cinematic background show through */
-body{
-  background:transparent !important;
-}
-
-.story{
-  background:rgba(236,231,219,.92) !important;
-}
-
-.why,
-.cta,
-.footer{
-  background:rgba(23,21,18,.78) !important;
-}
-
-@media(max-width:640px){
-  .site-bg-video{
-    filter:brightness(.34) contrast(1.04) saturate(.78);
-  }
-
-  .site-bg-overlay{
-    background:rgba(12,11,9,.48);
-  }
-}
-
-@media(prefers-reduced-motion:reduce){
-  .site-bg-video{
-    display:none;
-  }
-  } 
-/* GLOBAL BACKGROUND VIDEO */
-.site-bg-video{
-  position:fixed;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  z-index:0;
-  pointer-events:none;
-  filter:brightness(.40) contrast(1.05) saturate(.85);
-}
-
-.site-bg-overlay{
-  position:fixed;
-  inset:0;
-  z-index:1;
-  pointer-events:none;
-  background:rgba(10,9,8,.40);
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
-body > *:not(.site-bg-video):not(.site-bg-overlay){
-  position:relative;
-  z-index:2;
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:90px;
 }
 
 body{
-  background:transparent !important;
+  margin:0;
+  padding:0;
+  background:var(--ivory);
+  color:var(--charcoal);
+  font-family:var(--sans);
+  font-size:16px;
+  font-weight:300;
+  line-height:1.7;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
 }
 
-.story{
-  background:rgba(236,231,219,.88) !important;
-}
-
-.why,
-.cta,
-.footer{
-  background:rgba(23,21,18,.76) !important;
-}
-
-@media(max-width:640px){
-  .site-bg-video{
-    filter:brightness(.32) contrast(1.04) saturate(.8);
-  }
-
-  .site-bg-overlay{
-    background:rgba(10,9,8,.48);
-  }
-}
-/* ===== WHY AURA CINEMATIC VIDEO ===== */
-.why{
-  position:relative;
+body.menu-open{
   overflow:hidden;
 }
 
-.why-video{
-  position:absolute;
-  inset:0;
-  z-index:0;
-  overflow:hidden;
+h1,h2,h3{
+  font-family:var(--serif);
+  font-weight:400;
+  line-height:1.08;
 }
 
-.why-video video{
+img{
+  display:block;
   width:100%;
-  height:100%;
-  object-fit:cover;
-  filter:brightness(.42) contrast(1.08) saturate(.8);
+  max-width:100%;
 }
 
-.why-video::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(12,11,9,.42);
-}
-
-.why > .wrap{
-  position:relative;
-  z-index:1;
-}
-
-@media(max-width:640px){
-  .why-video video{
-    filter:brightness(.34) contrast(1.06) saturate(.78);
-  }
-  }  
-/* ===== AURA FINAL PREMIUM OVERRIDES ===== */
-
-.hero{
-  min-height:100vh;
-  min-height:100svh;
-}
-
-.hero__media video,
-.hero__media img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
+video{
   display:block;
 }
 
-.hero__media video{
-  transform:scale(1.04);
-  transition:transform 1.2s cubic-bezier(.22,.61,.21,1);
+a{
+  color:inherit;
+  text-decoration:none;
 }
 
-.hero:hover .hero__media video{
-  transform:scale(1.07);
+button{
+  font:inherit;
+  color:inherit;
+  background:none;
+  border:0;
+  cursor:pointer;
 }
 
-.hero__scrim{
-  z-index:1;
+ul{
+  list-style:none;
 }
 
-.hero__content{
-  z-index:2;
+::selection{
+  background:var(--gold);
+  color:var(--ivory);
 }
 
-.nav{
-  background:rgba(23,21,18,.5);
-  backdrop-filter:blur(14px);
-  -webkit-backdrop-filter:blur(14px);
-  border-bottom-color:rgba(246,243,236,.08);
+:focus-visible{
+  outline:1px solid var(--gold);
+  outline-offset:3px;
 }
 
-.nav.scrolled,
-.nav.menu-open{
-  background:rgba(246,243,236,.96);
-  color:var(--charcoal);
-  border-bottom-color:var(--line);
-  box-shadow:0 10px 40px rgba(0,0,0,.12);
+.wrap{
+  width:min(1240px,92vw);
+  margin-inline:auto;
 }
+
+section,
+footer,
+main{
+  margin:0;
+}
+
+
+/* =========================================================
+   SHARED
+   ========================================================= */
+
+.section{
+  padding:130px 0;
+}
+
+.eyebrow{
+  display:flex;
+  align-items:center;
+  gap:14px;
+
+  color:var(--gold-text);
+
+  font-size:.66rem;
+  font-weight:500;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+}
+
+.eyebrow::before{
+  content:"";
+  width:38px;
+  height:1px;
+  background:currentColor;
+  flex:none;
+}
+
+.eyebrow--light{
+  color:var(--gold-light);
+}
+
+.section-head{
+  max-width:720px;
+  margin-bottom:64px;
+}
+
+.section-title{
+  margin-top:20px;
+  font-size:clamp(2.2rem,4.4vw,3.5rem);
+  letter-spacing:.01em;
+}
+
+.section-head::after{
+  content:"";
+  display:block;
+
+  width:46px;
+  height:1px;
+
+  margin-top:26px;
+
+  background:var(--gold);
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
 
 .btn{
+  position:relative;
+  isolation:isolate;
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+
+  min-height:52px;
+  padding:16px 30px;
+
+  border:1px solid transparent;
+
+  font-size:.66rem;
+  font-weight:500;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+
+  white-space:nowrap;
+  overflow:hidden;
+
   transition:
-    transform .35s cubic-bezier(.22,.61,.21,1),
+    transform .35s var(--ease),
     background .35s ease,
     color .35s ease,
     border-color .35s ease,
     box-shadow .35s ease;
+}
+
+.btn::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:rgba(255,255,255,.1);
+
+  transform:translateX(-105%);
+
+  transition:transform .45s var(--ease);
+
+  z-index:-1;
+}
+
+.btn:hover::before{
+  transform:translateX(0);
 }
 
 .btn:hover{
@@ -1543,464 +240,2431 @@ body{
   transform:translateY(0) scale(.98);
 }
 
-.section-head::after{
-  content:"";
-  display:block;
-  width:46px;
-  height:1px;
-  margin-top:26px;
+.btn__arr{
+  transition:transform .3s var(--ease);
+}
+
+.btn:hover .btn__arr{
+  transform:translateX(5px);
+}
+
+.btn--ivory{
+  background:var(--ivory);
+  color:var(--charcoal);
+  border-color:var(--ivory);
+}
+
+.btn--ivory:hover{
   background:var(--gold);
+  border-color:var(--gold);
+}
+
+.btn--dark{
+  background:var(--charcoal);
+  color:var(--ivory);
+  border-color:var(--charcoal);
+}
+
+.btn--dark:hover{
+  background:var(--gold);
+  border-color:var(--gold);
+  color:var(--charcoal);
+}
+
+.btn--ghost{
+  color:var(--ivory);
+  border-color:rgba(246,243,236,.55);
+}
+
+.btn--ghost:hover{
+  background:var(--ivory);
+  border-color:var(--ivory);
+  color:var(--charcoal);
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.nav{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+
+  z-index:50;
+
+  color:var(--ivory);
+
+  background:rgba(23,21,18,.45);
+
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+
+  border-bottom:1px solid rgba(246,243,236,.08);
+
+  transition:
+    background .4s var(--ease),
+    color .4s var(--ease),
+    box-shadow .4s ease;
+}
+
+.nav.scrolled{
+  color:var(--charcoal);
+  background:rgba(246,243,236,.96);
+
+  border-bottom-color:var(--line);
+
+  box-shadow:0 10px 40px rgba(0,0,0,.1);
+}
+
+.nav__inner{
+  height:var(--nav-h);
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  gap:24px;
+}
+
+.logo{
+  font-family:var(--serif);
+  font-size:1.35rem;
+  letter-spacing:.4em;
+
+  padding-left:.4em;
+
+  transition:color .3s ease;
+}
+
+.logo:hover{
+  color:var(--gold-light);
+}
+
+.nav__links{
+  display:flex;
+  align-items:center;
+  gap:44px;
+}
+
+.nav__links a{
+  position:relative;
+
+  padding:6px 0;
+
+  font-size:.65rem;
+  font-weight:500;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+}
+
+.nav__links a::after{
+  content:"";
+
+  position:absolute;
+  left:0;
+  bottom:0;
+
+  width:100%;
+  height:1px;
+
+  background:currentColor;
+
+  transform:scaleX(0);
+  transform-origin:right;
+
+  transition:transform .35s var(--ease);
+}
+
+.nav__links a:hover::after{
+  transform:scaleX(1);
+  transform-origin:left;
+}
+
+.nav__actions{
+  display:flex;
+}
+
+.nav__toggle{
+  display:none;
+
+  width:44px;
+  height:44px;
+
+  position:relative;
+}
+
+.nav__toggle span{
+  position:absolute;
+
+  left:9px;
+  right:9px;
+
+  height:1.5px;
+
+  background:currentColor;
+
+  transition:
+    top .3s var(--ease),
+    transform .3s var(--ease);
+}
+
+.nav__toggle span:first-child{
+  top:17px;
+}
+
+.nav__toggle span:last-child{
+  top:26px;
+}
+
+body.menu-open .nav__toggle span:first-child{
+  top:21px;
+  transform:rotate(45deg);
+}
+
+body.menu-open .nav__toggle span:last-child{
+  top:21px;
+  transform:rotate(-45deg);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero{
+  position:relative;
+
+  min-height:100vh;
+  min-height:100svh;
+
+  display:flex;
+  align-items:center;
+
+  color:var(--ivory);
+
+  overflow:hidden;
+}
+
+.hero__media{
+  position:absolute;
+  inset:0;
+
+  z-index:0;
+
+  background:var(--coal);
+
+  overflow:hidden;
+}
+
+.hero__media video,
+.hero__media img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+}
+
+.hero__media video{
+  transform:scale(1.04);
+
+  transition:
+    transform 1.2s var(--ease);
+}
+
+.hero:hover .hero__media video{
+  transform:scale(1.07);
+}
+
+.hero__scrim{
+  position:absolute;
+  inset:0;
+
+  z-index:1;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(15,13,11,.58),
+      rgba(15,13,11,.16) 45%,
+      rgba(15,13,11,.72)
+    );
+}
+
+.hero__content{
+  position:relative;
+
+  z-index:2;
+
+  padding:
+    calc(var(--nav-h) + 60px)
+    0
+    110px;
+}
+
+.hero h1{
+  max-width:14ch;
+
+  margin:24px 0 28px;
+
+  font-size:clamp(3rem,7vw,6rem);
+
+  letter-spacing:-.035em;
+}
+
+.hero h1 em{
+  color:var(--gold-light);
+  font-style:italic;
+}
+
+.hero .lede{
+  max-width:520px;
+
+  font-size:1.02rem;
+
+  color:rgba(246,243,236,.86);
+}
+
+.hero__actions{
+  display:flex;
+  flex-wrap:wrap;
+
+  gap:16px;
+
+  margin-top:44px;
+}
+
+.hero__cue{
+  position:absolute;
+
+  left:50%;
+  bottom:25px;
+
+  z-index:3;
+
+  transform:translateX(-50%);
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+
+  gap:12px;
+
+  color:rgba(246,243,236,.65);
+
+  font-size:.58rem;
+  letter-spacing:.34em;
+  text-transform:uppercase;
+}
+
+.hero__cue::after{
+  content:"";
+
+  width:1px;
+  height:42px;
+
+  background:
+    linear-gradient(
+      rgba(246,243,236,.7),
+      rgba(246,243,236,0)
+    );
+}
+
+
+/* =========================================================
+   PROPERTIES
+   ========================================================= */
+
+.properties{
+  background:var(--ivory);
+}
+
+.prop-grid{
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:72px 36px;
 }
 
 .card{
-  border:0;
-  border-radius:0;
+  display:flex;
+  flex-direction:column;
+
   background:transparent;
+
   overflow:hidden;
 }
 
 .card__media{
-  border-radius:0;
+  aspect-ratio:3/4;
+
+  overflow:hidden;
+
+  background:var(--coal);
 }
 
-.card:hover{
-  transform:none;
-  box-shadow:none;
-  border-color:transparent;
+.card__media img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transition:
+    transform 1.3s var(--ease);
+}
+
+.card:hover .card__media img{
+  transform:scale(1.06);
+}
+
+.card__body{
+  display:flex;
+  flex-direction:column;
+  flex:1;
+
+  padding-top:26px;
+}
+
+.card__name{
+  font-size:1.65rem;
+
+  transition:color .3s ease;
+}
+
+.card:hover .card__name{
+  color:var(--gold-text);
+}
+
+.card__loc{
+  margin-top:8px;
+
+  color:var(--grey);
+
+  font-size:.64rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+}
+
+.card__price{
+  margin-top:14px;
+
+  color:var(--gold-text);
+
+  font-size:.78rem;
+  font-weight:500;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+
+.card__cta{
+  margin-top:22px;
+}
+
+
+/* =========================================================
+   STORY
+   ========================================================= */
+
+.story{
+  background:var(--ivory-2);
+}
+
+.story__grid{
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:90px;
+
+  align-items:center;
 }
 
 .story__media{
-  border-radius:0;
+  aspect-ratio:4/5;
+
+  overflow:hidden;
+
+  background:var(--coal);
 }
+
+.story__media img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transition:
+    transform 1.3s var(--ease);
+}
+
+.story__media:hover img{
+  transform:scale(1.05);
+}
+
+.story__copy p{
+  max-width:46ch;
+}
+
+.story__copy p+p{
+  margin-top:20px;
+}
+
+.story__copy .link-arrow{
+  display:inline-flex;
+
+  margin-top:34px;
+
+  color:var(--charcoal);
+
+  font-size:.68rem;
+  font-weight:500;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   WHY AURA
+   ========================================================= */
 
 .why{
   position:relative;
+
+  background:var(--charcoal);
+
+  color:var(--ivory);
+
   overflow:hidden;
 }
 
 .why-video{
   position:absolute;
   inset:0;
+
   z-index:0;
+
   overflow:hidden;
 }
 
 .why-video video{
   width:100%;
   height:100%;
+
   object-fit:cover;
-  display:block;
-  filter:brightness(.42) contrast(1.08) saturate(.8);
+
+  filter:
+    brightness(.36)
+    contrast(1.08)
+    saturate(.8);
 }
 
 .why-video::after{
   content:"";
+
   position:absolute;
   inset:0;
-  background:linear-gradient(
-    180deg,
-    rgba(12,11,9,.35),
-    rgba(12,11,9,.62)
-  );
-  pointer-events:none;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(12,11,9,.35),
+      rgba(12,11,9,.75)
+    );
 }
 
 .why>.wrap{
   position:relative;
-  z-index:1;
+  z-index:2;
 }
 
-body{
-  background:var(--charcoal);
+.why .section-head{
+  max-width:700px;
 }
+
+.why .section-title{
+  color:var(--ivory);
+}
+
+.why-grid{
+  display:grid;
+
+  grid-template-columns:repeat(4,1fr);
+
+  gap:64px 36px;
+}
+
+.why__item{
+  padding-top:26px;
+
+  border-top:
+    1px solid
+    rgba(246,243,236,.18);
+}
+
+.why__num{
+  color:var(--gold-light);
+
+  font-family:var(--serif);
+
+  font-size:1rem;
+
+  font-style:italic;
+}
+
+.why__item h3{
+  margin:16px 0 12px;
+
+  font-size:1.4rem;
+}
+
+.why__item p{
+  color:rgba(246,243,236,.72);
+
+  font-size:.9rem;
+}
+
+
+/* =========================================================
+   DEVELOPMENT
+   ========================================================= */
+
+.dev{
+  position:relative;
+
+  min-height:88vh;
+
+  display:flex;
+  align-items:center;
+
+  color:var(--ivory);
+
+  overflow:hidden;
+}
+
+.dev__media{
+  position:absolute;
+  inset:0;
+
+  background:var(--coal);
+}
+
+.dev__media img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+}
+
+.dev__scrim{
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(14,12,10,.78),
+      rgba(14,12,10,.30) 65%,
+      rgba(14,12,10,.15)
+    );
+}
+
+.dev__content{
+  position:relative;
+
+  z-index:2;
+
+  padding:130px 0;
+}
+
+.dev h2{
+  max-width:15ch;
+
+  margin-top:20px;
+
+  font-size:clamp(2.4rem,5vw,3.9rem);
+}
+
+.dev__specs{
+  display:flex;
+  flex-wrap:wrap;
+
+  margin:40px 0 46px;
+}
+
+.dev__specs li{
+  padding:2px 34px;
+
+  border-left:
+    1px solid
+    rgba(246,243,236,.3);
+
+  font-size:.72rem;
+  font-weight:500;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+}
+
+.dev__specs li:first-child{
+  padding-left:0;
+
+  border-left:0;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.cta{
+  position:relative;
+
+  background:var(--charcoal);
+
+  color:var(--ivory);
+
+  text-align:center;
+
+  padding:150px 0;
+
+  border-top:
+    1px solid
+    rgba(246,243,236,.1);
+
+  overflow:hidden;
+}
+
+.cta::before{
+  content:"";
+
+  position:absolute;
+
+  width:420px;
+  height:420px;
+
+  left:50%;
+  top:50%;
+
+  transform:translate(-50%,-50%);
+
+  border-radius:50%;
+
+  background:rgba(201,169,106,.055);
+
+  filter:blur(80px);
+
+  pointer-events:none;
+}
+
+.cta>.wrap{
+  position:relative;
+  z-index:2;
+}
+
+.cta .eyebrow{
+  justify-content:center;
+}
+
+.cta .eyebrow::after{
+  content:"";
+
+  width:38px;
+  height:1px;
+
+  background:currentColor;
+}
+
+.cta h2{
+  margin:22px 0 20px;
+
+  font-size:clamp(2.6rem,5.5vw,4.4rem);
+}
+
+.cta p{
+  max-width:460px;
+
+  margin-inline:auto;
+
+  color:rgba(246,243,236,.78);
+}
+
+.cta .btn{
+  margin-top:44px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer{
+  margin:0;
+
+  padding:88px 0 40px;
+
+  background:var(--charcoal);
+
+  color:var(--ivory);
+
+  border-top:
+    1px solid
+    rgba(246,243,236,.12);
+}
+
+.footer__grid{
+  display:grid;
+
+  grid-template-columns:
+    1.8fr 1fr 1.2fr 1.4fr;
+
+  gap:56px;
+}
+
+.footer__blurb{
+  max-width:30ch;
+
+  margin-top:20px;
+
+  color:rgba(246,243,236,.68);
+
+  font-size:.92rem;
+}
+
+.footer__head{
+  margin-bottom:20px;
+
+  color:var(--gold-light);
+
+  font-size:.64rem;
+  font-weight:500;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+}
+
+.footer__col a{
+  display:block;
+
+  width:max-content;
+
+  padding:4px 0;
+
+  color:rgba(246,243,236,.78);
+
+  font-size:.92rem;
+
+  transition:color .3s ease;
+}
+
+.footer__col a:hover{
+  color:var(--gold-light);
+}
+
+.footer__col p{
+  color:rgba(246,243,236,.78);
+
+  font-size:.92rem;
+}
+
+.footer__col li{
+  margin-bottom:10px;
+}
+
+.footer__bar{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+
+  gap:14px;
+
+  margin-top:72px;
+  padding-top:28px;
+
+  border-top:
+    1px solid
+    rgba(246,243,236,.12);
+
+  color:rgba(246,243,236,.5);
+
+  font-size:.7rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+.modal{
+  position:fixed;
+  inset:0;
+
+  z-index:100;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:20px;
+
+  opacity:0;
+  visibility:hidden;
+
+  transition:
+    opacity .4s ease,
+    visibility .4s ease;
+}
+
+.modal.open{
+  opacity:1;
+  visibility:visible;
+}
+
+.modal__backdrop{
+  position:absolute;
+  inset:0;
+
+  background:rgba(14,12,10,.76);
+}
+
+.modal__dialog{
+  position:relative;
+
+  width:min(600px,100%);
+
+  max-height:92vh;
+
+  overflow:auto;
+
+  padding:54px 52px 48px;
+
+  background:var(--ivory);
+
+  transform:translateY(22px);
+
+  transition:
+    transform .45s var(--ease);
+}
+
+.modal.open .modal__dialog{
+  transform:none;
+}
+
+.modal__close{
+  position:absolute;
+
+  top:14px;
+  right:18px;
+
+  width:40px;
+  height:40px;
+
+  font-family:var(--serif);
+
+  font-size:1.6rem;
+
+  opacity:.55;
+}
+
+.modal h3{
+  margin:18px 0 12px;
+
+  font-size:2rem;
+}
+
+.modal__sub{
+  margin-bottom:36px;
+
+  color:var(--grey);
+
+  font-size:.94rem;
+}
+
+.field{
+  margin-bottom:24px;
+}
+
+.field label{
+  display:block;
+
+  margin-bottom:6px;
+
+  font-size:.62rem;
+  font-weight:500;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+}
+
+.field input,
+.field select,
+.field textarea{
+  width:100%;
+
+  padding:10px 2px;
+
+  background:transparent;
+
+  border:0;
+
+  border-bottom:
+    1px solid
+    rgba(23,21,18,.3);
+
+  border-radius:0;
+
+  color:var(--charcoal);
+
+  font:inherit;
+
+  font-size:.95rem;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+  outline:none;
+
+  border-color:var(--gold);
+}
+
+.field textarea{
+  min-height:88px;
+
+  resize:vertical;
+}
+
+.field-row{
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:24px;
+}
+
+.modal .btn{
+  width:100%;
+
+  margin-top:12px;
+}
+
+.success{
+  text-align:center;
+}
+
+.success h3{
+  font-size:2.2rem;
+}
+
+.success p{
+  margin:14px 0 30px;
+
+  color:var(--grey);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media(max-width:1080px){
+
+  .prop-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .why-grid{
+    grid-template-columns:repeat(2,1fr);
+
+    gap:56px 36px;
+  }
+
+  .footer__grid{
+    grid-template-columns:1fr 1fr;
+
+    gap:44px;
+  }
+}
+
+
+@media(max-width:900px){
+
+  .section{
+    padding:96px 0;
+  }
+
+  .nav__links{
+    position:fixed;
+
+    inset:0;
+
+    z-index:1;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    gap:30px;
+
+    background:var(--ivory);
+
+    color:var(--charcoal);
+
+    transform:translateY(-102%);
+
+    transition:
+      transform .55s var(--ease);
+  }
+
+  body.menu-open .nav__links{
+    transform:translateY(0);
+  }
+
+  .nav__links a{
+    font-family:var(--serif);
+
+    font-size:2rem;
+
+    letter-spacing:.03em;
+
+    text-transform:none;
+  }
+
+  .nav__links a::after{
+    display:none;
+  }
+
+  .nav__actions{
+    display:none;
+  }
+
+  .nav__toggle{
+    display:block;
+  }
+
+  .story__grid{
+    grid-template-columns:1fr;
+
+    gap:48px;
+  }
+
+  .story__media{
+    aspect-ratio:4/3;
+  }
+
+  .hero__actions .btn{
+    flex:1 1 auto;
+  }
+
+  .dev{
+    min-height:80vh;
+  }
+}
+
 
 @media(max-width:640px){
 
+  .wrap{
+    width:92vw;
+  }
+
+  .prop-grid{
+    grid-template-columns:1fr;
+  }
+
+  .why-grid{
+    grid-template-columns:1fr;
+
+    gap:44px;
+  }
+
+  .why-video video{
+    filter:
+      brightness(.32)
+      contrast(1.06)
+      saturate(.78);
+  }
+
   .hero__content{
-    padding:145px 0 125px;
+    padding:
+      140px
+      0
+      110px;
+  }
+
+  .hero h1{
+    font-size:clamp(2.6rem,11vw,3.3rem);
   }
 
   .hero__actions{
     flex-direction:column;
+
     gap:12px;
   }
 
   .hero__actions .btn{
     width:100%;
-    min-height:58px;
+
+    min-height:56px;
   }
 
-  .why-video video{
-    filter:brightness(.34) contrast(1.06) saturate(.78);
+  .hero__cue{
+    display:none;
+  }
+
+  .dev__specs{
+    flex-direction:column;
+
+    gap:0;
+  }
+
+  .dev__specs li{
+    width:100%;
+
+    padding:
+      14px
+      0
+      4px;
+
+    border-left:0;
+
+    border-top:
+      1px solid
+      rgba(246,243,236,.3);
+  }
+
+  .dev__specs li:first-child{
+    padding-top:4px;
+
+    border-top:0;
+  }
+
+  .footer__grid{
+    grid-template-columns:1fr;
+  }
+
+  .field-row{
+    grid-template-columns:1fr;
+  }
+
+  .modal__dialog{
+    padding:46px 28px 38px;
+  }
+
+  .cta{
+    padding:110px 0;
+  }
+
+  .section{
+    padding:90px 0;
   }
 }
 
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
 @media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  *,
+  *::before,
+  *::after{
+    animation:none!important;
+    transition:none!important;
+  }
+
+  [data-reveal]{
+    opacity:1!important;
+    transform:none!important;
+  }
 
   .hero__media video{
     transform:none;
   }
+}
 
-  }  
 </style>
 </head>
+
+
 <body>
- 
 
+<!-- =====================================================
+     NAVBAR
+     ===================================================== -->
 
+<header class="nav" id="navbar">
 
-<!-- ======= Navbar ======= -->
-<header class="nav" id="siteNav">
   <div class="wrap nav__inner">
-    <a class="logo" href="#top" aria-label="AURA Estates — home">AURA</a>
-    <ul class="nav__links" id="navMenu">
-      <li><a href="#properties">Properties</a></li>
-      <li><a href="#story">About</a></li>
-      <li><a href="#developments">Developments</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li class="nav__cta-item"><button class="btn btn--dark" data-modal="General enquiry">Private Viewing</button></li>
-    </ul>
+
+    <a href="#top" class="logo">
+      AURA
+    </a>
+
+    <nav class="nav__links">
+
+      <a href="#properties">Properties</a>
+
+      <a href="#story">Our Story</a>
+
+      <a href="#standard">Why AURA</a>
+
+      <a href="#development">Development</a>
+
+      <a href="#contact">
+        Private Viewing
+      </a>
+
+    </nav>
+
     <div class="nav__actions">
-      <button class="btn btn--dark btn--sm" data-modal="General enquiry">Private Viewing</button>
+
+      <button
+        class="btn btn--ghost btn--sm"
+        data-open-modal>
+        Schedule Viewing
+      </button>
+
     </div>
-    <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
-      <span></span><span></span>
+
+    <button
+      class="nav__toggle"
+      id="menuToggle"
+      aria-label="Open menu"
+      aria-expanded="false">
+
+      <span></span>
+      <span></span>
+
     </button>
+
   </div>
+
 </header>
 
-<main>
-  <!-- ======= Hero ======= -->
-  <section class="hero" id="top">
-    <div class="hero__media">
-  <video autoplay muted loop playsinline preload="auto">
-    <source src="422576406_1789584885010052.mp4" type="video/mp4">
-  </video>
-    </div>
-      
-    
-    <div class="hero__scrim"></div>
-    <div class="wrap hero__content">
-      <p class="eyebrow eyebrow--light" data-reveal>Private Residences &nbsp;•&nbsp; Dubai</p>
-      <h1 data-reveal style="--d:.12s">Spaces designed for <em>extraordinary</em> living.</h1>
-      <p class="lede" data-reveal style="--d:.24s">Discover contemporary residences crafted around architecture, comfort and exceptional city living.</p>
-      <div class="hero__actions" data-reveal style="--d:.36s">
-        <a class="btn btn--ghost" href="#properties">Explore Properties</a>
-        <button class="btn btn--ivory" data-modal="General enquiry">Schedule a Private Viewing <span class="btn__arr">&rarr;</span></button>
-      </div>
-    </div>
-    <div class="hero__cue" aria-hidden="true">Scroll</div>
-  </section>
 
-  <!-- ======= Featured Properties ======= -->
-  <section class="section" id="properties">
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <p class="eyebrow">Featured Residences</p>
-        <h2 class="section-title">Exceptional residences.</h2>
-      </div>
-      <div class="prop-grid">
-        <article class="card" data-reveal>
-          <div class="card__media">
-            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="AURA Palm Residence — modern villa with pool at dusk" loading="lazy" decoding="async">
-          </div>
-          <div class="card__body">
-            <h3 class="card__name">AURA Palm Residence</h3>
-            <p class="card__loc">Dubai Palm Jumeirah</p>
-            <p class="card__price">From AED 4.8M</p>
-            <div class="card__cta">
-              <button class="link-arrow" data-modal="AURA Palm Residence">View Property <span class="arr">&rarr;</span></button>
-            </div>
-          </div>
-        </article>
-        <article class="card" data-reveal style="--d:.12s">
-          <div class="card__media">
-            <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="AURA Skyline Villa — contemporary home exterior at dusk" loading="lazy" decoding="async">
-          </div>
-          <div class="card__body">
-            <h3 class="card__name">AURA Skyline Villa</h3>
-            <p class="card__loc">Dubai Hills</p>
-            <p class="card__price">From AED 7.2M</p>
-            <div class="card__cta">
-              <button class="link-arrow" data-modal="AURA Skyline Villa">View Property <span class="arr">&rarr;</span></button>
-            </div>
-          </div>
-        </article>
-        <article class="card" data-reveal style="--d:.24s">
-          <div class="card__media">
-            <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="AURA Marina Residence — landscaped pool at dusk" loading="lazy" decoding="async">
-          </div>
-          <div class="card__body">
-            <h3 class="card__name">AURA Marina Residence</h3>
-            <p class="card__loc">Dubai Marina</p>
-            <p class="card__price">From AED 3.9M</p>
-            <div class="card__cta">
-              <button class="link-arrow" data-modal="AURA Marina Residence">View Property <span class="arr">&rarr;</span></button>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
+<main id="top">
 
-  <!-- ======= Our Story ======= -->
-  <section class="section story" id="story">
-    <div class="wrap story__grid">
-      <div class="story__media" data-reveal>
-        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=1100&amp;q=80" alt="Contemporary living space with floor-to-ceiling windows" loading="lazy" decoding="async">
+
+<!-- =====================================================
+     HERO
+     ===================================================== -->
+
+<section class="hero">
+
+  <div class="hero__media">
+
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto">
+
+      <source
+        src="422576406_1789584885010052.mp4"
+        type="video/mp4">
+
+    </video>
+
+  </div>
+
+  <div class="hero__scrim"></div>
+
+  <div class="wrap hero__content">
+
+    <div class="eyebrow eyebrow--light">
+      Private Residences · Dubai
+    </div>
+
+    <h1>
+      A quieter
+      <em>standard</em>
+      of living.
+    </h1>
+
+    <p class="lede">
+      Private residences shaped by architecture,
+      considered locations and a deeper understanding
+      of everyday living.
+    </p>
+
+    <div class="hero__actions">
+
+      <button
+        class="btn btn--ivory"
+        data-open-modal>
+
+        Schedule a Private Viewing
+
+        <span class="btn__arr">→</span>
+
+      </button>
+
+      <a
+        href="#properties"
+        class="btn btn--ghost">
+
+        Explore Properties
+
+        <span class="btn__arr">→</span>
+
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="hero__cue">
+    Discover
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROPERTIES
+     ===================================================== -->
+
+<section
+  class="section properties"
+  id="properties">
+
+  <div class="wrap">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        Selected Residences
       </div>
+
+      <h2 class="section-title">
+        Spaces designed
+        to be lived in.
+      </h2>
+
+    </div>
+
+
+    <div class="prop-grid">
+
+
+      <!-- PROPERTY 01 -->
+
+      <article class="card">
+
+        <div class="card__media">
+
+          <img
+            src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85"
+            alt="Luxury Dubai residence"
+            loading="lazy">
+
+        </div>
+
+        <div class="card__body">
+
+          <h3 class="card__name">
+            The Palm Residence
+          </h3>
+
+          <p class="card__loc">
+            Palm Jumeirah · Dubai
+          </p>
+
+          <p class="card__price">
+            From AED 8.9M
+          </p>
+
+          <div class="card__cta">
+
+            <button
+              class="link-arrow"
+              data-open-modal>
+
+              Request Details
+
+              <span class="arr">→</span>
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- PROPERTY 02 -->
+
+      <article class="card">
+
+        <div class="card__media">
+
+          <img
+            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85"
+            alt="Contemporary luxury villa"
+            loading="lazy">
+
+        </div>
+
+        <div class="card__body">
+
+          <h3 class="card__name">
+            Villa Amani
+          </h3>
+
+          <p class="card__loc">
+            Jumeirah · Dubai
+          </p>
+
+          <p class="card__price">
+            From AED 12.5M
+          </p>
+
+          <div class="card__cta">
+
+            <button
+              class="link-arrow"
+              data-open-modal>
+
+              Request Details
+
+              <span class="arr">→</span>
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- PROPERTY 03 -->
+
+      <article class="card">
+
+        <div class="card__media">
+
+          <img
+            src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1200&q=85"
+            alt="Modern luxury apartment"
+            loading="lazy">
+
+        </div>
+
+        <div class="card__body">
+
+          <h3 class="card__name">
+            AURA Sky Residences
+          </h3>
+
+          <p class="card__loc">
+            Downtown Dubai
+          </p>
+
+          <p class="card__price">
+            From AED 6.4M
+          </p>
+
+          <div class="card__cta">
+
+            <button
+              class="link-arrow"
+              data-open-modal>
+
+              Request Details
+
+              <span class="arr">→</span>
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     STORY
+     ===================================================== -->
+
+<section
+  class="section story"
+  id="story">
+
+  <div class="wrap">
+
+    <div class="story__grid">
+
+      <div class="story__media">
+
+        <img
+          src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85"
+          alt="AURA Estates architecture"
+          loading="lazy">
+
+      </div>
+
+
       <div class="story__copy">
-        <p class="eyebrow" data-reveal>The AURA Standard</p>
-        <h2 class="section-title" data-reveal style="--d:.1s">Architecture shaped around exceptional living.</h2>
-        <p data-reveal style="--d:.2s;margin-top:24px">We create residences where architecture, location and everyday living come together.</p>
-        <p data-reveal style="--d:.28s">From first sketch to final detail, every AURA residence begins with the same conviction — that luxury is restraint, light and proportion. We develop in dialogue with Dubai's fabric: quiet courtyards, sculpted facades and interiors that unfold slowly and live simply.</p>
-        <a class="link-arrow" href="#standard" data-reveal style="--d:.36s">Discover AURA <span class="arr">&rarr;</span></a>
-      </div>
-    </div>
-  </section>
 
-  <!-- ======= Why AURA ======= -->
-  <section class="section why" id="standard">
+        <div class="eyebrow">
+          The AURA Approach
+        </div>
+
+        <h2 class="section-title">
+          Luxury is felt
+          before it is seen.
+        </h2>
+
+        <p>
+          AURA Estates exists for people who value
+          architecture, privacy and a sense of place.
+        </p>
+
+        <p>
+          We look beyond square footage and finishes.
+          Every residence is considered as part of a
+          larger way of living — from its first arrival
+          to the quiet moments at home.
+        </p>
+
+        <button
+          class="link-arrow"
+          data-open-modal>
+
+          Speak With Our Specialists
+
+          <span class="arr">→</span>
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     WHY AURA
+     ===================================================== -->
+
+<section
+  class="section why"
+  id="standard">
+
   <div class="why-video">
-  <video autoplay muted loop playsinline preload="auto">
-    <source src="109803326_1789660265221549.mp4" type="video/mp4">
-  </video>
-  </div>  
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <p class="eyebrow eyebrow--light">Why AURA</p>
-        <h2 class="section-title">Considered in every detail.</h2>
-      </div>
-      <div class="why-grid">
-        <div class="why__item" data-reveal>
-          <p class="why__num">01</p>
-          <h3>Architecture</h3>
-          <p>Contemporary design with attention to detail.</p>
-        </div>
-        <div class="why__item" data-reveal style="--d:.1s">
-          <p class="why__num">02</p>
-          <h3>Location</h3>
-          <p>Prime addresses selected for lifestyle and accessibility.</p>
-        </div>
-        <div class="why__item" data-reveal style="--d:.2s">
-          <p class="why__num">03</p>
-          <h3>Craftsmanship</h3>
-          <p>Materials and finishes chosen for lasting quality.</p>
-        </div>
-        <div class="why__item" data-reveal style="--d:.3s">
-          <p class="why__num">04</p>
-          <h3>Experience</h3>
-          <p>A considered journey from discovery to ownership.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ======= Featured Development ======= -->
-  <section class="dev" id="developments">
-    <div class="dev__media">
-      <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&amp;fit=crop&amp;w=1920&amp;q=80" alt="AURA Skyline — modern residence at dusk" loading="lazy" decoding="async">
-    </div>
-    <div class="dev__scrim"></div>
-    <div class="wrap dev__content">
-      <p class="eyebrow eyebrow--light" data-reveal>AURA Skyline</p>
-      <h2 data-reveal style="--d:.1s">A new perspective on city living.</h2>
-      <ul class="dev__specs" data-reveal style="--d:.2s">
-        <li>4 Bedrooms</li>
-        <li>Private Pool</li>
-        <li>5,200 sq ft</li>
-      </ul>
-      <button class="btn btn--ghost" data-modal="AURA Skyline Development" data-reveal style="--d:.3s">Explore Development <span class="btn__arr">&rarr;</span></button>
-    </div>
-  </section>
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata">
 
-  <!-- ======= Final CTA ======= -->
-  <section class="cta" id="contact">
-    <div class="wrap">
-      <p class="eyebrow eyebrow--light" data-reveal>Private Viewings</p>
-      <h2 data-reveal style="--d:.1s">Find your next address.</h2>
-      <p data-reveal style="--d:.2s">Speak with our property specialists and arrange a private viewing.</p>
-      <button class="btn btn--ivory" data-modal="General enquiry" data-reveal style="--d:.3s">Schedule a Private Viewing <span class="btn__arr">&rarr;</span></button>
+      <source
+        src="109803326_1789660265221549.mp4"
+        type="video/mp4">
+
+    </video>
+
+  </div>
+
+
+  <div class="wrap">
+
+    <div class="section-head">
+
+      <div class="eyebrow eyebrow--light">
+        Why AURA
+      </div>
+
+      <h2 class="section-title">
+        Considered at
+        every level.
+      </h2>
+
     </div>
-  </section>
+
+
+    <div class="why-grid">
+
+
+      <article class="why__item">
+
+        <div class="why__num">
+          01
+        </div>
+
+        <h3>
+          Architecture
+        </h3>
+
+        <p>
+          Distinctive spaces with a focus on proportion,
+          natural light and timeless materials.
+        </p>
+
+      </article>
+
+
+      <article class="why__item">
+
+        <div class="why__num">
+          02
+        </div>
+
+        <h3>
+          Location
+        </h3>
+
+        <p>
+          Residences positioned around the places,
+          connections and experiences that matter.
+        </p>
+
+      </article>
+
+
+      <article class="why__item">
+
+        <div class="why__num">
+          03
+        </div>
+
+        <h3>
+          Privacy
+        </h3>
+
+        <p>
+          A quieter approach to residential living,
+          designed around comfort and discretion.
+        </p>
+
+      </article>
+
+
+      <article class="why__item">
+
+        <div class="why__num">
+          04
+        </div>
+
+        <h3>
+          Service
+        </h3>
+
+        <p>
+          Personal guidance from first conversation
+          through private viewing and beyond.
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     DEVELOPMENT
+     ===================================================== -->
+
+<section
+  class="dev"
+  id="development">
+
+  <div class="dev__media">
+
+    <img
+      src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=2000&q=90"
+      alt="Dubai skyline"
+      loading="lazy">
+
+  </div>
+
+  <div class="dev__scrim"></div>
+
+
+  <div class="wrap dev__content">
+
+    <div class="eyebrow eyebrow--light">
+      AURA Development
+    </div>
+
+    <h2>
+      A new perspective
+      on Dubai living.
+    </h2>
+
+
+    <ul class="dev__specs">
+
+      <li>
+        Dubai
+      </li>
+
+      <li>
+        Private Residences
+      </li>
+
+      <li>
+        Limited Collection
+      </li>
+
+    </ul>
+
+
+    <button
+      class="btn btn--ivory"
+      data-open-modal>
+
+      Register Interest
+
+      <span class="btn__arr">→</span>
+
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     FINAL CTA
+     ===================================================== -->
+
+<section
+  class="cta"
+  id="contact">
+
+  <div class="wrap">
+
+    <div class="eyebrow eyebrow--light">
+      Private Access
+    </div>
+
+    <h2>
+      Your next address
+      deserves intention.
+    </h2>
+
+    <p>
+      Speak privately with a member of the
+      AURA Estates specialist team.
+    </p>
+
+    <button
+      class="btn btn--ivory"
+      data-open-modal>
+
+      Schedule a Private Viewing
+
+      <span class="btn__arr">→</span>
+
+    </button>
+
+  </div>
+
+</section>
+
+
 </main>
 
-<!-- ======= Footer ======= -->
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
 <footer class="footer">
+
   <div class="wrap">
+
     <div class="footer__grid">
-      <div>
-        <a class="logo" href="#top">AURA</a>
-        <p class="footer__blurb">Private residences and considered developments across Dubai.</p>
-      </div>
+
+
       <div class="footer__col">
-        <p class="footer__head">Explore</p>
+
+        <div class="logo">
+          AURA
+        </div>
+
+        <p class="footer__blurb">
+          Private residences and considered
+          developments across Dubai.
+        </p>
+
+      </div>
+
+
+      <div class="footer__col">
+
+        <div class="footer__head">
+          Explore
+        </div>
+
         <ul>
-          <li><a href="#properties">Properties</a></li>
-          <li><a href="#story">About</a></li>
-          <li><a href="#developments">Developments</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#top">Privacy</a></li>
+
+          <li>
+            <a href="#properties">
+              Properties
+            </a>
+          </li>
+
+          <li>
+            <a href="#story">
+              Our Story
+            </a>
+          </li>
+
+          <li>
+            <a href="#standard">
+              Why AURA
+            </a>
+          </li>
+
+          <li>
+            <a href="#development">
+              Development
+            </a>
+          </li>
+
         </ul>
+
       </div>
+
+
       <div class="footer__col">
-        <p class="footer__head">Visit</p>
-        <p>Jumeirah 1<br>Dubai, United Arab Emirates</p>
-        <p class="footer__head">Contact</p>
-        <a href="mailto:hello@auraestates.ae">hello@auraestates.ae</a>
-        <a href="tel:+971400000000">+971 4 000 0000</a>
+
+        <div class="footer__head">
+          Contact
+        </div>
+
+        <p>
+          Jumeirah 1<br>
+          Dubai, UAE
+        </p>
+
+        <br>
+
+        <p>
+          hello@auraestates.ae
+        </p>
+
       </div>
+
+
       <div class="footer__col">
-        <p class="footer__head">Enquiries</p>
-        <p>Private viewings by appointment. Our specialists respond within one business day.</p>
-        <p class="footer__head" style="margin-top:28px">Book</p>
-        <button class="link-arrow link-arrow--light" data-modal="General enquiry">Book a Viewing <span class="arr">&rarr;</span></button>
+
+        <div class="footer__head">
+          Private Viewings
+        </div>
+
+        <p>
+          By appointment only.
+        </p>
+
+        <br>
+
+        <button
+          class="btn btn--ghost btn--sm"
+          data-open-modal>
+
+          Enquire
+
+        </button>
+
       </div>
+
+
     </div>
+
+
     <div class="footer__bar">
-      <span>&copy; <span id="year"></span> AURA Estates</span>
-      <span>Dubai &middot; UAE</span>
-      <a href="#top">Back to top</a>
+
+      <span>
+        © 2026 AURA Estates
+      </span>
+
+      <span>
+        Private Residences · Dubai
+      </span>
+
     </div>
+
   </div>
+
 </footer>
 
-<!-- ======= Enquiry Modal ======= -->
-<div class="modal" id="modal" aria-hidden="true">
-  <div class="modal__backdrop" data-close></div>
-  <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <button class="modal__close" data-close aria-label="Close dialog">&times;</button>
-    <p class="eyebrow">Private Viewing</p>
-    <h3 id="modalTitle">Request a private viewing</h3>
-    <p class="modal__sub">Share your details and our specialists will arrange a time that suits you.</p>
-    <form id="enquiryForm">
-      <div class="field-row">
-        <div class="field">
-          <label for="fName">Full name</label>
-          <input id="fName" name="name" type="text" autocomplete="name" required>
-        </div>
-        <div class="field">
-          <label for="fEmail">Email</label>
-          <input id="fEmail" name="email" type="email" autocomplete="email" required>
-        </div>
-      </div>
-      <div class="field-row">
-        <div class="field">
-          <label for="fPhone">Phone <span>(optional)</span></label>
-          <input id="fPhone" name="phone" type="tel" autocomplete="tel">
-        </div>
-        <div class="field">
-          <label for="interest">Interested in</label>
-          <select id="interest" name="interest">
-            <option>General enquiry</option>
-            <option>AURA Palm Residence</option>
-            <option>AURA Skyline Villa</option>
-            <option>AURA Marina Residence</option>
-            <option>AURA Skyline Development</option>
-          </select>
-        </div>
-      </div>
-      <div class="field">
-        <label for="fMsg">Message <span>(optional)</span></label>
-        <textarea id="fMsg" name="message"></textarea>
-      </div>
-      <button class="btn btn--dark" type="submit">Request Viewing <span class="btn__arr">&rarr;</span></button>
-    </form>
-    <div id="enquirySuccess" class="success" hidden>
-      <h3>Thank you.</h3>
-      <p>We have received your enquiry. A member of our specialists team will be in touch within one business day to arrange your private viewing.</p>
-      <button class="link-arrow" data-close>Close <span class="arr">&rarr;</span></button>
-    </div>
+
+<!-- =====================================================
+     MODAL
+     ===================================================== -->
+
+<div
+  class="modal"
+  id="viewingModal"
+  aria-hidden="true">
+
+  <div
+    class="modal__backdrop"
+    data-close-modal>
   </div>
+
+
+  <div
+    class="modal__dialog"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle">
+
+
+    <button
+      class="modal__close"
+      data-close-modal
+      aria-label="Close">
+
+      ×
+
+    </button>
+
+
+    <div id="formContent">
+
+      <div class="eyebrow">
+        Private Viewing
+      </div>
+
+      <h3 id="modalTitle">
+        Begin a private conversation.
+      </h3>
+
+      <p class="modal__sub">
+        Share a few details and a member of our
+        specialist team will be in touch.
+      </p>
+
+
+      <form id="viewingForm">
+
+        <div class="field">
+
+          <label for="name">
+            Name
+          </label>
+
+          <input
+            id="name"
+            name="name"
+            type="text"
+            required
+            autocomplete="name">
+
+        </div>
+
+
+        <div class="field-row">
+
+          <div class="field">
+
+            <label for="email">
+              Email
+            </label>
+
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              autocomplete="email">
+
+          </div>
+
+
+          <div class="field">
+
+            <label for="phone">
+              Phone
+            </label>
+
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              autocomplete="tel">
+
+          </div>
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="interest">
+            Interested In
+          </label>
+
+          <select
+            id="interest"
+            name="interest">
+
+            <option>
+              The Palm Residence
+            </option>
+
+            <option>
+              Villa Amani
+            </option>
+
+            <option>
+              AURA Sky Residences
+            </option>
+
+            <option>
+              General Enquiry
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="message">
+            Message
+          </label>
+
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Tell us how we can assist.">
+          </textarea>
+
+        </div>
+
+
+        <button
+          type="submit"
+          class="btn btn--dark">
+
+          Request Private Viewing
+
+          <span class="btn__arr">→</span>
+
+        </button>
+
+      </form>
+
+    </div>
+
+
+    <div
+      class="success"
+      id="successContent"
+      hidden>
+
+      <div class="eyebrow">
+        Thank You
+      </div>
+
+      <h3>
+        Your enquiry has been received.
+      </h3>
+
+      <p>
+        A member of our specialist team will
+        be in touch shortly.
+      </p>
+
+      <button
+        class="btn btn--dark"
+        data-close-modal>
+
+        Close
+
+      </button>
+
+    </div>
+
+  </div>
+
 </div>
 
+
+<!-- =====================================================
+     JAVASCRIPT
+     ===================================================== -->
+
 <script>
-(function(){
-  var header=document.getElementById('siteNav');
-  var toggle=document.querySelector('.nav__toggle');
 
-  function closeMenu(){
-    document.body.classList.remove('menu-open');
-    header.classList.remove('menu-open');
-    toggle.setAttribute('aria-expanded','false');
-  }
-  window.addEventListener('scroll',function(){
-    header.classList.toggle('scrolled',window.scrollY>40);
-  },{passive:true});
-  header.classList.toggle('scrolled',window.scrollY>40);
+/* ================= NAVBAR ================= */
 
-  toggle.addEventListener('click',function(){
-    var open=document.body.classList.toggle('menu-open');
-    header.classList.toggle('menu-open',open);
-    toggle.setAttribute('aria-expanded',String(open));
-    toggle.setAttribute('aria-label',open?'Close menu':'Open menu');
-  });
-  document.querySelectorAll('.nav__links a').forEach(function(a){
-    a.addEventListener('click',closeMenu);
-  });
+const navbar = document.getElementById("navbar");
 
-  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var items=document.querySelectorAll('[data-reveal]');
-  if(reduce||!('IntersectionObserver' in window)){
-    items.forEach(function(el){el.classList.add('is-in');});
+function updateNavbar(){
+
+  if(window.scrollY > 40){
+
+    navbar.classList.add("scrolled");
+
   }else{
-    var io=new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target);}
-      });
-    },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
-    items.forEach(function(el){io.observe(el);});
+
+    navbar.classList.remove("scrolled");
+
   }
 
-  var modal=document.getElementById('modal');
-  var form=document.getElementById('enquiryForm');
-  var success=document.getElementById('enquirySuccess');
-  var interest=document.getElementById('interest');
-  var lastFocus=null;
+}
 
-  function openModal(prop){
-    lastFocus=document.activeElement;
-    closeMenu();
-    if(prop){interest.value=prop;}
-    form.hidden=false;
-    success.hidden=true;
-    modal.classList.add('open');
-    modal.setAttribute('aria-hidden','false');
-    document.body.style.overflow='hidden';
-    setTimeout(function(){
-      var f=document.getElementById('fName');
-      if(f){f.focus();}
-    },400);
-  }
-  function closeModal(){
-    modal.classList.remove('open');
-    modal.setAttribute('aria-hidden','true');
-    document.body.style.overflow='';
-    if(lastFocus&&lastFocus.focus){lastFocus.focus();}
-  }
-  document.querySelectorAll('[data-modal]').forEach(function(b){
-    b.addEventListener('click',function(e){
-      e.preventDefault();
-      openModal(b.getAttribute('data-modal')||'');
+window.addEventListener(
+  "scroll",
+  updateNavbar,
+  {passive:true}
+);
+
+updateNavbar();
+
+
+/* ================= MOBILE MENU ================= */
+
+const menuToggle =
+  document.getElementById("menuToggle");
+
+menuToggle.addEventListener("click",()=>{
+
+  const open =
+    document.body.classList.toggle("menu-open");
+
+  menuToggle.setAttribute(
+    "aria-expanded",
+    open ? "true" : "false"
+  );
+
+});
+
+
+document
+  .querySelectorAll(".nav__links a")
+  .forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+      document.body.classList.remove(
+        "menu-open"
+      );
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
     });
-  });
-  document.querySelectorAll('[data-close]').forEach(function(b){
-    b.addEventListener('click',closeModal);
-  });
-  document.addEventListener('keydown',function(e){
-    if(e.key==='Escape'){closeModal();closeMenu();}
-  });
-  form.addEventListener('submit',function(e){
-    e.preventDefault();
-    if(!form.reportValidity()){return;}
-    form.hidden=true;
-    success.hidden=false;
-    var c=success.querySelector('button');
-    if(c){c.focus();}
+
   });
 
-  document.getElementById('year').textContent=new Date().getFullYear();
-})();
+
+/* ================= MODAL ================= */
+
+const modal =
+  document.getElementById("viewingModal");
+
+const openButtons =
+  document.querySelectorAll(
+    "[data-open-modal]"
+  );
+
+const closeButtons =
+  document.querySelectorAll(
+    "[data-close-modal]"
+  );
+
+
+function openModal(){
+
+  modal.classList.add("open");
+
+  modal.setAttribute(
+    "aria-hidden",
+    "false"
+  );
+
+  document.body.style.overflow="hidden";
+
+}
+
+
+function closeModal(){
+
+  modal.classList.remove("open");
+
+  modal.setAttribute(
+    "aria-hidden",
+    "true"
+  );
+
+  document.body.style.overflow="";
+
+}
+
+
+openButtons.forEach(button=>{
+
+  button.addEventListener(
+    "click",
+    openModal
+  );
+
+});
+
+
+closeButtons.forEach(button=>{
+
+  button.addEventListener(
+    "click",
+    closeModal
+  );
+
+});
+
+
+document.addEventListener(
+  "keydown",
+  event=>{
+
+    if(event.key==="Escape"){
+
+      closeModal();
+
+    }
+
+  }
+);
+
+
+/* ================= FORM ================= */
+
+const form =
+  document.getElementById(
+    "viewingForm"
+  );
+
+const formContent =
+  document.getElementById(
+    "formContent"
+  );
+
+const successContent =
+  document.getElementById(
+    "successContent"
+  );
+
+
+form.addEventListener(
+  "submit",
+  event=>{
+
+    event.preventDefault();
+
+    formContent.hidden=true;
+
+    successContent.hidden=false;
+
+  }
+);
+
+
+/* ================= SCROLL REVEAL ================= */
+
+const revealElements =
+  document.querySelectorAll(
+    "[data-reveal]"
+  );
+
+
+if("IntersectionObserver" in window){
+
+  const observer =
+    new IntersectionObserver(
+      entries=>{
+
+        entries.forEach(entry=>{
+
+          if(entry.isIntersecting){
+
+            entry.target.classList.add(
+              "is-in"
+            );
+
+            observer.unobserve(
+              entry.target
+            );
+
+          }
+
+        });
+
+      },
+      {
+        threshold:.12
+      }
+    );
+
+
+  revealElements.forEach(element=>{
+
+    observer.observe(element);
+
+  });
+
+}else{
+
+  revealElements.forEach(element=>{
+
+    element.classList.add("is-in");
+
+  });
+
+}
+
+
+/* ================= VIDEO FALLBACK ================= */
+
+document
+  .querySelectorAll("video")
+  .forEach(video=>{
+
+    video.addEventListener(
+      "error",
+      ()=>{
+        video.style.display="none";
+      }
+    );
+
+  });
+
 </script>
+
 </body>
 </html>
