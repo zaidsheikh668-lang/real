@@ -1677,6 +1677,182 @@ body.menu-open .nav__toggle span:last-child{
   }
 }
 
+
+/* =========================================================
+   AURA SIGNATURE PREMIUM LAYER
+   ========================================================= */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  pointer-events:none;
+  opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+  mix-blend-mode:soft-light;
+}
+.nav__inner{position:relative}
+.nav__inner::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(201,172,125,.45),transparent);
+  opacity:.7;
+}
+.logo{font-weight:500}
+.logo::before{
+  content:"EST. 2016";
+  display:block;
+  margin-bottom:-2px;
+  font-family:var(--sans);
+  font-size:.38rem;
+  font-weight:500;
+  letter-spacing:.32em;
+  opacity:.58;
+  text-align:center;
+}
+.hero::after{
+  content:"AURA";
+  position:absolute;
+  right:-.08em;
+  bottom:-.18em;
+  z-index:1;
+  font-family:var(--serif);
+  font-size:clamp(8rem,22vw,20rem);
+  line-height:.8;
+  color:rgba(246,243,236,.045);
+  letter-spacing:-.06em;
+  pointer-events:none;
+}
+.hero__content{max-width:980px}
+.hero h1{font-weight:300}
+.hero .lede{border-left:1px solid rgba(201,172,125,.65);padding-left:18px}
+.hero__actions{position:relative}
+.hero__actions::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:-22px;
+  width:76px;
+  height:1px;
+  background:var(--gold-light);
+}
+.card{position:relative}
+.card-index{
+  position:absolute;
+  top:12px;
+  right:12px;
+  z-index:3;
+  width:34px;
+  height:34px;
+  display:grid;
+  place-items:center;
+  border:1px solid rgba(246,243,236,.55);
+  color:var(--ivory);
+  background:rgba(23,21,18,.3);
+  backdrop-filter:blur(8px);
+  font-family:var(--serif);
+  font-size:.82rem;
+  font-style:italic;
+}
+.card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:38px;
+  height:1px;
+  background:var(--gold);
+  z-index:2;
+}
+.card__media{position:relative}
+.card__media::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.08));
+  pointer-events:none;
+}
+.card__name{font-weight:400}
+.card__price{font-size:.68rem}
+.link-arrow{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  padding-bottom:7px;
+  border-bottom:1px solid rgba(23,21,18,.28);
+  font-size:.64rem;
+  font-weight:500;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  transition:color .3s ease,border-color .3s ease,gap .3s var(--ease);
+}
+.link-arrow .arr{transition:transform .3s var(--ease)}
+.link-arrow:hover{color:var(--gold-text);border-color:var(--gold);gap:17px}
+.link-arrow:hover .arr{transform:translateX(3px)}
+.story__copy{padding-right:5vw}
+.story__copy p{font-size:1.02rem;color:#514c44}
+.story__media{position:relative;box-shadow:20px 30px 70px rgba(23,21,18,.12)}
+.story__media::before{
+  content:"AURA";
+  position:absolute;
+  top:20px;
+  left:20px;
+  z-index:2;
+  padding:7px 10px;
+  border:1px solid rgba(246,243,236,.5);
+  color:var(--ivory);
+  font-size:.5rem;
+  letter-spacing:.28em;
+  background:rgba(23,21,18,.2);
+  backdrop-filter:blur(8px);
+}
+.why-grid{position:relative}
+.why__item{transition:transform .45s var(--ease),border-color .35s ease}
+.why__item:hover{transform:translateY(-7px);border-color:var(--gold-light)}
+.why__num{letter-spacing:.08em}
+.dev{min-height:94vh}
+.dev__content{max-width:900px}
+.dev h2{font-weight:300}
+.dev__specs li{transition:color .3s ease}
+.dev__specs li:hover{color:var(--gold-light)}
+.cta h2{font-weight:300;max-width:900px;margin-inline:auto}
+.cta::after{
+  content:"A";
+  position:absolute;
+  right:4vw;
+  bottom:-.2em;
+  font-family:var(--serif);
+  font-size:18rem;
+  line-height:1;
+  color:rgba(246,243,236,.035);
+}
+.footer .logo{font-size:1.7rem}
+.footer__bar{letter-spacing:.18em}
+.modal__dialog{
+  box-shadow:0 35px 100px rgba(0,0,0,.3);
+  border-top:2px solid var(--gold);
+}
+@media(max-width:640px){
+  .hero::after{font-size:8rem;right:-.06em}
+  .hero__actions::before{display:none}
+  .story__copy{padding-right:0}
+  .logo::before{font-size:.34rem}
+}
+@media(prefers-reduced-motion:no-preference){
+  .hero__content .eyebrow{animation:heroIn .9s .1s both}
+  .hero__content h1{animation:heroIn 1s .2s both}
+  .hero__content .lede{animation:heroIn 1s .32s both}
+  .hero__content .hero__actions{animation:heroIn 1s .45s both}
+  @keyframes heroIn{
+    from{opacity:0;transform:translateY(22px)}
+    to{opacity:1;transform:none}
+  }
+}
 </style>
 </head>
 
@@ -1845,7 +2021,7 @@ body.menu-open .nav__toggle span:last-child{
 
       <!-- PROPERTY 01 -->
 
-      <article class="card">
+      <article class="card"><span class="card-index">03</span><span class="card-index">02</span><span class="card-index">01</span>
 
         <div class="card__media">
 
