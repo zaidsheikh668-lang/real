@@ -1264,6 +1264,173 @@ body.menu-open .nav__toggle span:last-child{
 }
 
 
+
+/* =========================================================
+   CINEMATIC MOTION LAYER
+   ========================================================= */
+
+.hero__content{
+  opacity:0;
+  transform:translateY(34px);
+  animation:auraHeroIn 1.15s var(--ease) .18s forwards;
+}
+
+.hero__content .eyebrow{
+  opacity:0;
+  transform:translateY(14px);
+  animation:auraHeroIn .8s var(--ease) .05s forwards;
+}
+
+.hero__content h1{
+  opacity:0;
+  transform:translateY(24px);
+  animation:auraHeroIn 1s var(--ease) .22s forwards;
+}
+
+.hero__content .lede{
+  opacity:0;
+  transform:translateY(18px);
+  animation:auraHeroIn .9s var(--ease) .42s forwards;
+}
+
+.hero__actions{
+  opacity:0;
+  transform:translateY(16px);
+  animation:auraHeroIn .9s var(--ease) .58s forwards;
+}
+
+.hero__cue{
+  animation:auraCue 2.2s ease-in-out 1.4s infinite;
+}
+
+.hero__media::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:2;
+  pointer-events:none;
+  background:radial-gradient(circle at 50% 45%, transparent 0 34%, rgba(0,0,0,.16) 100%);
+  opacity:.7;
+}
+
+.card{
+  position:relative;
+  transition:transform .65s var(--ease);
+}
+
+.card::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  height:1px;
+  background:linear-gradient(90deg, transparent, var(--gold), transparent);
+  transform:scaleX(0);
+  transform-origin:center;
+  transition:transform .7s var(--ease);
+}
+
+.card:hover{
+  transform:translateY(-8px);
+}
+
+.card:hover::after{
+  transform:scaleX(1);
+}
+
+.card__media{
+  position:relative;
+}
+
+.card__media::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg, rgba(255,255,255,.12), transparent 35%, rgba(0,0,0,.12));
+  opacity:0;
+  transition:opacity .7s ease;
+  pointer-events:none;
+}
+
+.card:hover .card__media::after{
+  opacity:1;
+}
+
+.story__media{
+  position:relative;
+}
+
+.story__media::after{
+  content:"AURA";
+  position:absolute;
+  right:22px;
+  bottom:18px;
+  color:rgba(246,243,236,.8);
+  font-family:var(--serif);
+  font-size:.72rem;
+  letter-spacing:.34em;
+  opacity:0;
+  transform:translateY(10px);
+  transition:opacity .5s ease, transform .5s var(--ease);
+}
+
+.story__media:hover::after{
+  opacity:1;
+  transform:none;
+}
+
+.why__item{
+  transition:transform .55s var(--ease), border-color .4s ease;
+}
+
+.why__item:hover{
+  transform:translateY(-7px);
+  border-color:rgba(201,172,125,.65);
+}
+
+.dev__media img{
+  transform:scale(1.04);
+  transition:transform 1.6s var(--ease);
+}
+
+.dev:hover .dev__media img{
+  transform:scale(1.08);
+}
+
+.cta::before{
+  animation:auraGlow 7s ease-in-out infinite alternate;
+}
+
+@keyframes auraHeroIn{
+  to{opacity:1;transform:none}
+}
+
+@keyframes auraCue{
+  0%,100%{transform:translateX(-50%) translateY(0);opacity:.65}
+  50%{transform:translateX(-50%) translateY(8px);opacity:1}
+}
+
+@keyframes auraGlow{
+  from{transform:translate(-50%,-50%) scale(.88);opacity:.55}
+  to{transform:translate(-50%,-50%) scale(1.12);opacity:1}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .hero__content,
+  .hero__content .eyebrow,
+  .hero__content h1,
+  .hero__content .lede,
+  .hero__actions{
+    opacity:1;
+    transform:none;
+    animation:none;
+  }
+  .hero__cue,.cta::before{animation:none}
+  .card,.why__item,.dev__media img{transition:none}
+}
+
+
 /* =========================================================
    RESPONSIVE
    ========================================================= */
@@ -2021,7 +2188,7 @@ body::before{
 
       <!-- PROPERTY 01 -->
 
-      <article class="card"><span class="card-index">03</span><span class="card-index">02</span><span class="card-index">01</span>
+      <article class="card"><span class="card-index">01</span>
 
         <div class="card__media">
 
@@ -2067,7 +2234,7 @@ body::before{
 
       <!-- PROPERTY 02 -->
 
-      <article class="card">
+      <article class="card"><span class="card-index">02</span>
 
         <div class="card__media">
 
@@ -2113,7 +2280,7 @@ body::before{
 
       <!-- PROPERTY 03 -->
 
-      <article class="card">
+      <article class="card"><span class="card-index">03</span>
 
         <div class="card__media">
 
@@ -3047,6 +3214,55 @@ if("IntersectionObserver" in window){
   });
 
 }
+
+
+
+/* ================= PREMIUM MOTION ================= */
+
+const revealGroups = [
+  ...document.querySelectorAll(".prop-grid .card"),
+  ...document.querySelectorAll(".why-grid .why__item")
+];
+
+revealGroups.forEach((el,index)=>{
+  el.style.transitionDelay = `${Math.min(index * 90, 360)}ms`;
+});
+
+/* Subtle pointer parallax — desktop only */
+if(window.matchMedia("(pointer:fine)").matches &&
+   !window.matchMedia("(prefers-reduced-motion:reduce)").matches){
+
+  const hero = document.querySelector(".hero");
+  const heroContent = document.querySelector(".hero__content");
+  const heroMedia = document.querySelector(".hero__media");
+
+  if(hero && heroContent && heroMedia){
+    hero.addEventListener("pointermove",(event)=>{
+      const rect = hero.getBoundingClientRect();
+      const x = (event.clientX - rect.left) / rect.width - .5;
+      const y = (event.clientY - rect.top) / rect.height - .5;
+
+      heroContent.style.transform =
+        `translate3d(${x * 10}px,${y * 8}px,0)`;
+
+      heroMedia.style.transform =
+        `translate3d(${x * -7}px,${y * -5}px,0) scale(1.015)`;
+    });
+
+    hero.addEventListener("pointerleave",()=>{
+      heroContent.style.transform="";
+      heroMedia.style.transform="";
+    });
+  }
+}
+
+/* Give the scroll cue a gentle fade as the user enters the page */
+window.addEventListener("scroll",()=>{
+  const cue = document.querySelector(".hero__cue");
+  if(cue){
+    cue.style.opacity = Math.max(0, 1 - window.scrollY / 180);
+  }
+},{passive:true});
 
 
 /* ================= VIDEO FALLBACK ================= */
