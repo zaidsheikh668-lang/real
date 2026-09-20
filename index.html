@@ -1490,6 +1490,193 @@ body.menu-open .nav__toggle span:last-child{
   }
 }
 
+
+/* =========================================================
+   FINAL POLISH / ACCESSIBILITY / MOBILE FIXES
+   ========================================================= */
+
+.link-arrow{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  width:max-content;
+  padding:0;
+  margin:0;
+  color:var(--charcoal);
+  font-size:.68rem;
+  font-weight:500;
+  letter-spacing:.22em;
+  line-height:1.4;
+  text-transform:uppercase;
+  border:0;
+  background:transparent;
+  cursor:pointer;
+  transition:color .3s ease, transform .3s var(--ease);
+}
+.link-arrow .arr{
+  display:inline-block;
+  transition:transform .3s var(--ease);
+}
+.link-arrow:hover{
+  color:var(--gold-text);
+  transform:translateX(2px);
+}
+.link-arrow:hover .arr{
+  transform:translateX(5px);
+}
+
+.card__cta{
+  margin-top:auto;
+  padding-top:22px;
+}
+
+.card{
+  min-width:0;
+}
+
+.card__media img,
+.story__media img,
+.dev__media img{
+  background:var(--coal);
+}
+
+.hero__media::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  background:radial-gradient(circle at 70% 35%, rgba(201,172,125,.08), transparent 38%);
+}
+
+.hero__media video{
+  position:relative;
+  z-index:0;
+}
+
+.hero__media video,
+.why-video video{
+  backface-visibility:hidden;
+}
+
+.modal__dialog{
+  overscroll-behavior:contain;
+  -webkit-overflow-scrolling:touch;
+}
+
+.field input::placeholder,
+.field textarea::placeholder{
+  color:rgba(23,21,18,.42);
+}
+
+@media(max-width:640px){
+  .section{
+    padding:78px 0;
+  }
+
+  .section-head{
+    margin-bottom:44px;
+  }
+
+  .section-title{
+    font-size:clamp(2.05rem,10vw,3rem);
+  }
+
+  .hero__actions{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .hero__actions .btn{
+    width:100%;
+    flex:none;
+  }
+
+  .hero h1{
+    font-size:clamp(3rem,15vw,4.4rem);
+  }
+
+  .hero .lede{
+    font-size:.94rem;
+  }
+
+  .prop-grid{
+    gap:52px;
+  }
+
+  .card__media{
+    aspect-ratio:4/5;
+  }
+
+  .story__media{
+    aspect-ratio:1/1;
+  }
+
+  .dev__content{
+    padding:100px 0;
+  }
+
+  .dev__specs{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:0;
+    margin:32px 0 38px;
+  }
+
+  .dev__specs li,
+  .dev__specs li:first-child{
+    padding:12px 0;
+    border-left:0;
+    border-bottom:1px solid rgba(246,243,236,.2);
+  }
+
+  .footer{
+    padding:68px 0 32px;
+  }
+
+  .footer__grid{
+    grid-template-columns:1fr;
+    gap:38px;
+  }
+
+  .footer__bar{
+    margin-top:48px;
+    flex-direction:column;
+  }
+
+  .modal{
+    padding:12px;
+  }
+
+  .modal__dialog{
+    padding:48px 22px 28px;
+    max-height:94svh;
+  }
+
+  .field-row{
+    grid-template-columns:1fr;
+    gap:0;
+  }
+
+  .nav__links a{
+    font-size:1.8rem;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  html{
+    scroll-behavior:auto;
+  }
+
+  *,
+  *::before,
+  *::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+  }
+}
+
 </style>
 </head>
 
@@ -2485,6 +2672,16 @@ document
   });
 
 
+
+// Close mobile menu when viewport returns to desktop
+window.addEventListener("resize",()=>{
+  if(window.innerWidth > 900){
+    document.body.classList.remove("menu-open");
+    menuToggle.setAttribute("aria-expanded","false");
+  }
+});
+
+
 /* ================= MODAL ================= */
 
 const modal =
@@ -2599,8 +2796,35 @@ form.addEventListener(
 
 const revealElements =
   document.querySelectorAll(
-    "[data-reveal]"
+    ".section-head, .card, .story__copy, .why__item, .dev__content, .cta>.wrap, .footer__grid"
   );
+
+revealElements.forEach(element=>{
+  element.setAttribute("data-reveal","");
+});
+
+if(!document.getElementById("reveal-styles")){
+  const revealStyle = document.createElement("style");
+  revealStyle.id = "reveal-styles";
+  revealStyle.textContent = `
+    [data-reveal]{
+      opacity:0;
+      transform:translateY(24px);
+      transition:opacity .8s var(--ease), transform .8s var(--ease);
+    }
+    [data-reveal].is-in{
+      opacity:1;
+      transform:none;
+    }
+    @media(prefers-reduced-motion:reduce){
+      [data-reveal]{
+        opacity:1;
+        transform:none;
+      }
+    }
+  `;
+  document.head.appendChild(revealStyle);
+}
 
 
 if("IntersectionObserver" in window){
