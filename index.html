@@ -2020,6 +2020,39 @@ body::before{
     to{opacity:1;transform:none}
   }
 }
+
+
+/* =========================================================
+   DESKTOP MASTER LAYOUT — 1200px+
+   ========================================================= */
+@media(min-width:1200px){
+  .wrap{width:min(1280px,88vw)}
+  .nav__inner{height:84px}
+  .nav__links{gap:52px}
+  .hero__content{padding-top:calc(var(--nav-h) + 90px);padding-bottom:140px}
+  .hero h1{max-width:13ch;font-size:clamp(5rem,6.5vw,7rem)}
+  .hero .lede{max-width:560px;font-size:1.05rem}
+  .hero__actions{margin-top:50px}
+  .section{padding:150px 0}
+  .section-head{margin-bottom:76px}
+  .prop-grid{grid-template-columns:repeat(3,1fr);gap:92px 42px}
+  .card__media{aspect-ratio:4/5}
+  .story__grid{gap:120px}
+  .story__media{aspect-ratio:5/6}
+  .why-grid{gap:72px 44px}
+  .dev__content{padding:170px 0}
+  .cta{padding:180px 0}
+  .footer{padding-top:104px}
+}
+
+@media(min-width:1500px){
+  .wrap{width:min(1380px,86vw)}
+  .hero__content{padding-top:190px;padding-bottom:170px}
+  .hero h1{font-size:7.2rem}
+  .section{padding:170px 0}
+  .dev{min-height:100vh}
+}
+
 </style>
 </head>
 
