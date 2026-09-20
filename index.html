@@ -3,3547 +3,681 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>AURA Estates — Private Residences in Dubai</title>
-
-<meta name="description"
-content="AURA Estates — private residences and considered developments across Dubai. Architecture, location and everyday living.">
-
-<meta name="theme-color" content="#171512">
-<meta property="og:title" content="AURA Estates — Private Residences in Dubai">
-<meta property="og:description" content="A considered collection of private residences and developments across Dubai.">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-
+<title>NEURAL — by ZAID | World-Class Digital Products</title>
+<meta name="description" content="NEURAL by ZAID — Premium websites and e-commerce experiences for ambitious brands, founders and businesses. International focus.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
 <style>
-/* =========================================================
-   AURA SIGNATURE — $10K AGENCY POLISH
-   ========================================================= */
-
+*{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --gold-deep:#765f38;
-  --paper:#fbf9f4;
-  --shadow-xl:0 35px 100px rgba(23,21,18,.16);
-}
-
-/* Luxury loading curtain */
-.aura-loader{
-  position:fixed;
-  inset:0;
-  z-index:9999;
-  display:grid;
-  place-items:center;
-  background:var(--charcoal);
-  color:var(--ivory);
-  transition:opacity .9s var(--ease), visibility .9s ease;
-}
-.aura-loader.is-done{opacity:0;visibility:hidden;pointer-events:none}
-.aura-loader__inner{text-align:center}
-.aura-loader__mark{
-  font-family:var(--serif);
-  font-size:clamp(2rem,5vw,3.2rem);
-  letter-spacing:.48em;
-  padding-left:.48em;
-}
-.aura-loader__line{
-  width:90px;height:1px;margin:22px auto 0;
-  background:var(--gold-light);
-  transform-origin:left;
-  animation:auraLoadLine 1.5s var(--ease) infinite;
-}
-.aura-loader__label{
-  margin-top:14px;
-  color:rgba(246,243,236,.5);
-  font-size:.55rem;letter-spacing:.32em;text-transform:uppercase;
-}
-
-/* Editorial trust strip */
-.aura-strip{
-  position:relative;
-  z-index:3;
-  background:var(--charcoal);
-  color:var(--ivory);
-  border-top:1px solid rgba(246,243,236,.08);
-  border-bottom:1px solid rgba(246,243,236,.08);
-}
-.aura-strip__inner{
-  min-height:76px;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  align-items:center;
-}
-.aura-strip__item{
-  min-height:40px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:12px;
-  border-left:1px solid rgba(246,243,236,.12);
-  text-align:center;
-}
-.aura-strip__item:first-child{border-left:0}
-.aura-strip__num{font-family:var(--serif);font-size:1.15rem;color:var(--gold-light)}
-.aura-strip__text{font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(246,243,236,.7)}
-
-/* Editorial collection heading */
-.collection-intro{
-  display:grid;
-  grid-template-columns:1.2fr .8fr;
-  gap:80px;
-  align-items:end;
-  margin-bottom:72px;
-}
-.collection-intro__statement{
-  max-width:16ch;
-  font-family:var(--serif);
-  font-size:clamp(2rem,4vw,3.5rem);
-  line-height:1.08;
-  letter-spacing:-.02em;
-}
-.collection-intro__copy{
-  max-width:38ch;
-  color:var(--grey);
-  font-size:.95rem;
-}
-
-/* More tactile premium cards */
-.card__media{
-  box-shadow:0 18px 45px rgba(23,21,18,.07);
-  transition:box-shadow .6s ease, transform .6s var(--ease);
-}
-.card:hover .card__media{
-  box-shadow:var(--shadow-xl);
-}
-.card-index{
-  position:absolute;
-  z-index:3;
-  top:14px;
-  left:14px;
-  width:34px;height:34px;
-  display:grid;place-items:center;
-  border:1px solid rgba(246,243,236,.5);
-  background:rgba(23,21,18,.25);
-  backdrop-filter:blur(10px);
-  color:var(--ivory);
-  font-size:.58rem;
-  letter-spacing:.12em;
-}
-
-/* Floating enquiry control */
-.aura-rail{
-  position:fixed;
-  right:18px;
-  top:50%;
-  z-index:40;
-  transform:translateY(-50%);
-  writing-mode:vertical-rl;
-  text-orientation:mixed;
-  padding:14px 10px;
-  border:1px solid rgba(23,21,18,.16);
-  background:rgba(246,243,236,.82);
-  backdrop-filter:blur(14px);
-  box-shadow:0 15px 45px rgba(23,21,18,.12);
-  font-size:.56rem;
-  font-weight:500;
-  letter-spacing:.22em;
-  text-transform:uppercase;
-  transition:transform .35s var(--ease),background .35s ease;
-}
-.aura-rail:hover{transform:translateY(-50%) translateX(-4px);background:var(--gold);}
-
-/* Premium link treatment */
-.link-arrow{
-  position:relative;
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  border-bottom:1px solid rgba(23,21,18,.2);
-  padding-bottom:7px;
-  font-size:.66rem;
-  font-weight:500;
-  letter-spacing:.2em;
-  text-transform:uppercase;
-}
-.link-arrow .arr{transition:transform .35s var(--ease)}
-.link-arrow:hover .arr{transform:translateX(5px)}
-
-/* Accessibility / performance */
-@media(prefers-reduced-motion:reduce){
-  .aura-loader__line{animation:none}
-  .aura-rail,.card,.card__media{transition:none}
-}
-@keyframes auraLoadLine{
-  0%{transform:scaleX(0);opacity:.4}
-  50%{transform:scaleX(1);opacity:1}
-  100%{transform:scaleX(0);opacity:.4}
-}
-
-
-/* =========================================================
-   AURA ESTATES — COMPLETE PREMIUM WEBSITE
-   ========================================================= */
-
-:root{
-  --charcoal:#171512;
-  --coal:#23201b;
-  --ivory:#f6f3ec;
-  --ivory-2:#ece7db;
-  --grey:#6c665b;
-  --gold:#a98f63;
-  --gold-text:#8c7346;
-  --gold-light:#c9ac7d;
-  --line:rgba(23,21,18,.14);
-
-  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
-  --sans:"Inter",-apple-system,"Segoe UI",Roboto,sans-serif;
-
-  --nav-h:80px;
-  --ease:cubic-bezier(.22,.61,.21,1);
-}
-
-/* ================= RESET ================= */
-
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-html{
-  scroll-behavior:smooth;
-  scroll-padding-top:90px;
-}
-
-body{
-  margin:0;
-  padding:0;
-  background:var(--ivory);
-  color:var(--charcoal);
-  font-family:var(--sans);
-  font-size:16px;
-  font-weight:300;
-  line-height:1.7;
-  overflow-x:hidden;
-  -webkit-font-smoothing:antialiased;
-}
-
-body.menu-open{
-  overflow:hidden;
-}
-
-h1,h2,h3{
-  font-family:var(--serif);
-  font-weight:400;
-  line-height:1.08;
-}
-
-img{
-  display:block;
-  width:100%;
-  max-width:100%;
-}
-
-video{
-  display:block;
-}
-
-a{
-  color:inherit;
-  text-decoration:none;
-}
-
-button{
-  font:inherit;
-  color:inherit;
-  background:none;
-  border:0;
-  cursor:pointer;
-}
-
-ul{
-  list-style:none;
-}
-
-::selection{
-  background:var(--gold);
-  color:var(--ivory);
-}
-
-:focus-visible{
-  outline:1px solid var(--gold);
-  outline-offset:3px;
-}
-
-.wrap{
-  width:min(1240px,92vw);
-  margin-inline:auto;
-}
-
-section,
-footer,
-main{
-  margin:0;
-}
-
-
-/* =========================================================
-   SHARED
-   ========================================================= */
-
-.section{
-  padding:130px 0;
-}
-
-.eyebrow{
-  display:flex;
-  align-items:center;
-  gap:14px;
-
-  color:var(--gold-text);
-
-  font-size:.66rem;
-  font-weight:500;
-  letter-spacing:.3em;
-  text-transform:uppercase;
-}
-
-.eyebrow::before{
-  content:"";
-  width:38px;
-  height:1px;
-  background:currentColor;
-  flex:none;
-}
-
-.eyebrow--light{
-  color:var(--gold-light);
-}
-
-.section-head{
-  max-width:720px;
-  margin-bottom:64px;
-}
-
-.section-title{
-  margin-top:20px;
-  font-size:clamp(2.2rem,4.4vw,3.5rem);
-  letter-spacing:.01em;
-}
-
-.section-head::after{
-  content:"";
-  display:block;
-
-  width:46px;
-  height:1px;
-
-  margin-top:26px;
-
-  background:var(--gold);
-}
-
-
-/* =========================================================
-   BUTTONS
-   ========================================================= */
-
-.btn{
-  position:relative;
-  isolation:isolate;
-
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:12px;
-
-  min-height:52px;
-  padding:16px 30px;
-
-  border:1px solid transparent;
-
-  font-size:.66rem;
-  font-weight:500;
-  letter-spacing:.24em;
-  text-transform:uppercase;
-
-  white-space:nowrap;
-  overflow:hidden;
-
-  transition:
-    transform .35s var(--ease),
-    background .35s ease,
-    color .35s ease,
-    border-color .35s ease,
-    box-shadow .35s ease;
-}
-
-.btn::before{
-  content:"";
-  position:absolute;
-  inset:0;
-
-  background:rgba(255,255,255,.1);
-
-  transform:translateX(-105%);
-
-  transition:transform .45s var(--ease);
-
-  z-index:-1;
-}
-
-.btn:hover::before{
-  transform:translateX(0);
-}
-
-.btn:hover{
-  transform:translateY(-3px);
-}
-
-.btn:active{
-  transform:translateY(0) scale(.98);
-}
-
-.btn__arr{
-  transition:transform .3s var(--ease);
-}
-
-.btn:hover .btn__arr{
-  transform:translateX(5px);
-}
-
-.btn--ivory{
-  background:var(--ivory);
-  color:var(--charcoal);
-  border-color:var(--ivory);
-}
-
-.btn--ivory:hover{
-  background:var(--gold);
-  border-color:var(--gold);
-}
-
-.btn--dark{
-  background:var(--charcoal);
-  color:var(--ivory);
-  border-color:var(--charcoal);
-}
-
-.btn--dark:hover{
-  background:var(--gold);
-  border-color:var(--gold);
-  color:var(--charcoal);
-}
-
-.btn--ghost{
-  color:var(--ivory);
-  border-color:rgba(246,243,236,.55);
-}
-
-.btn--ghost:hover{
-  background:var(--ivory);
-  border-color:var(--ivory);
-  color:var(--charcoal);
-}
-
-
-/* =========================================================
-   NAVBAR
-   ========================================================= */
-
-.nav{
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-
-  z-index:50;
-
-  color:var(--ivory);
-
-  background:rgba(23,21,18,.45);
-
-  backdrop-filter:blur(16px);
-  -webkit-backdrop-filter:blur(16px);
-
-  border-bottom:1px solid rgba(246,243,236,.08);
-
-  transition:
-    background .4s var(--ease),
-    color .4s var(--ease),
-    box-shadow .4s ease;
-}
-
-.nav.scrolled{
-  color:var(--charcoal);
-  background:rgba(246,243,236,.96);
-
-  border-bottom-color:var(--line);
-
-  box-shadow:0 10px 40px rgba(0,0,0,.1);
-}
-
-.nav__inner{
-  height:var(--nav-h);
-
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-
-  gap:24px;
-}
-
-.logo{
-  font-family:var(--serif);
-  font-size:1.35rem;
-  letter-spacing:.4em;
-
-  padding-left:.4em;
-
-  transition:color .3s ease;
-}
-
-.logo:hover{
-  color:var(--gold-light);
-}
-
-.nav__links{
-  display:flex;
-  align-items:center;
-  gap:44px;
-}
-
-.nav__links a{
-  position:relative;
-
-  padding:6px 0;
-
-  font-size:.65rem;
-  font-weight:500;
-  letter-spacing:.2em;
-  text-transform:uppercase;
-}
-
-.nav__links a::after{
-  content:"";
-
-  position:absolute;
-  left:0;
-  bottom:0;
-
-  width:100%;
-  height:1px;
-
-  background:currentColor;
-
-  transform:scaleX(0);
-  transform-origin:right;
-
-  transition:transform .35s var(--ease);
-}
-
-.nav__links a:hover::after{
-  transform:scaleX(1);
-  transform-origin:left;
-}
-
-.nav__actions{
-  display:flex;
-}
-
-.nav__toggle{
-  display:none;
-
-  width:44px;
-  height:44px;
-
-  position:relative;
-}
-
-.nav__toggle span{
-  position:absolute;
-
-  left:9px;
-  right:9px;
-
-  height:1.5px;
-
-  background:currentColor;
-
-  transition:
-    top .3s var(--ease),
-    transform .3s var(--ease);
-}
-
-.nav__toggle span:first-child{
-  top:17px;
-}
-
-.nav__toggle span:last-child{
-  top:26px;
-}
-
-body.menu-open .nav__toggle span:first-child{
-  top:21px;
-  transform:rotate(45deg);
-}
-
-body.menu-open .nav__toggle span:last-child{
-  top:21px;
-  transform:rotate(-45deg);
-}
-
-
-/* =========================================================
-   HERO
-   ========================================================= */
-
-.hero{
-  position:relative;
-
-  min-height:100vh;
-  min-height:100svh;
-
-  display:flex;
-  align-items:center;
-
-  color:var(--ivory);
-
-  overflow:hidden;
-}
-
-.hero__media{
-  position:absolute;
-  inset:0;
-
-  z-index:0;
-
-  background:var(--coal);
-
-  overflow:hidden;
-}
-
-.hero__media video,
-.hero__media img{
-  width:100%;
-  height:100%;
-
-  object-fit:cover;
-}
-
-.hero__media video{
-  transform:scale(1.04);
-
-  transition:
-    transform 1.2s var(--ease);
-}
-
-.hero:hover .hero__media video{
-  transform:scale(1.07);
-}
-
-.hero__scrim{
-  position:absolute;
-  inset:0;
-
-  z-index:1;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(15,13,11,.58),
-      rgba(15,13,11,.16) 45%,
-      rgba(15,13,11,.72)
-    );
-}
-
-.hero__content{
-  position:relative;
-
-  z-index:2;
-
-  padding:
-    calc(var(--nav-h) + 60px)
-    0
-    110px;
-}
-
-.hero h1{
-  max-width:14ch;
-
-  margin:24px 0 28px;
-
-  font-size:clamp(3rem,7vw,6rem);
-
-  letter-spacing:-.035em;
-}
-
-.hero h1 em{
-  color:var(--gold-light);
-  font-style:italic;
-}
-
-.hero .lede{
-  max-width:520px;
-
-  font-size:1.02rem;
-
-  color:rgba(246,243,236,.86);
-}
-
-.hero__actions{
-  display:flex;
-  flex-wrap:wrap;
-
-  gap:16px;
-
-  margin-top:44px;
-}
-
-.hero__cue{
-  position:absolute;
-
-  left:50%;
-  bottom:25px;
-
-  z-index:3;
-
-  transform:translateX(-50%);
-
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-
-  gap:12px;
-
-  color:rgba(246,243,236,.65);
-
-  font-size:.58rem;
-  letter-spacing:.34em;
-  text-transform:uppercase;
-}
-
-.hero__cue::after{
-  content:"";
-
-  width:1px;
-  height:42px;
-
-  background:
-    linear-gradient(
-      rgba(246,243,236,.7),
-      rgba(246,243,236,0)
-    );
-}
-
-
-/* =========================================================
-   PROPERTIES
-   ========================================================= */
-
-.properties{
-  background:var(--ivory);
-}
-
-.prop-grid{
-  display:grid;
-
-  grid-template-columns:repeat(3,1fr);
-
-  gap:72px 36px;
-}
-
-.card{
-  display:flex;
-  flex-direction:column;
-
-  background:transparent;
-
-  overflow:hidden;
-}
-
-.card__media{
-  aspect-ratio:3/4;
-
-  overflow:hidden;
-
-  background:var(--coal);
-}
-
-.card__media img{
-  width:100%;
-  height:100%;
-
-  object-fit:cover;
-
-  transition:
-    transform 1.3s var(--ease);
-}
-
-.card:hover .card__media img{
-  transform:scale(1.06);
-}
-
-.card__body{
-  display:flex;
-  flex-direction:column;
-  flex:1;
-
-  padding-top:26px;
-}
-
-.card__name{
-  font-size:1.65rem;
-
-  transition:color .3s ease;
-}
-
-.card:hover .card__name{
-  color:var(--gold-text);
-}
-
-.card__loc{
-  margin-top:8px;
-
-  color:var(--grey);
-
-  font-size:.64rem;
-  letter-spacing:.22em;
-  text-transform:uppercase;
-}
-
-.card__price{
-  margin-top:14px;
-
-  color:var(--gold-text);
-
-  font-size:.78rem;
-  font-weight:500;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-}
-
-.card__cta{
-  margin-top:22px;
-}
-
-
-/* =========================================================
-   STORY
-   ========================================================= */
-
-.story{
-  background:var(--ivory-2);
-}
-
-.story__grid{
-  display:grid;
-
-  grid-template-columns:1fr 1fr;
-
-  gap:90px;
-
-  align-items:center;
-}
-
-.story__media{
-  aspect-ratio:4/5;
-
-  overflow:hidden;
-
-  background:var(--coal);
-}
-
-.story__media img{
-  width:100%;
-  height:100%;
-
-  object-fit:cover;
-
-  transition:
-    transform 1.3s var(--ease);
-}
-
-.story__media:hover img{
-  transform:scale(1.05);
-}
-
-.story__copy p{
-  max-width:46ch;
-}
-
-.story__copy p+p{
-  margin-top:20px;
-}
-
-.story__copy .link-arrow{
-  display:inline-flex;
-
-  margin-top:34px;
-
-  color:var(--charcoal);
-
-  font-size:.68rem;
-  font-weight:500;
-  letter-spacing:.22em;
-  text-transform:uppercase;
-}
-
-
-/* =========================================================
-   WHY AURA
-   ========================================================= */
-
-.why{
-  position:relative;
-
-  background:var(--charcoal);
-
-  color:var(--ivory);
-
-  overflow:hidden;
-}
-
-.why-video{
-  position:absolute;
-  inset:0;
-
-  z-index:0;
-
-  overflow:hidden;
-}
-
-.why-video video{
-  width:100%;
-  height:100%;
-
-  object-fit:cover;
-
-  filter:
-    brightness(.36)
-    contrast(1.08)
-    saturate(.8);
-}
-
-.why-video::after{
-  content:"";
-
-  position:absolute;
-  inset:0;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(12,11,9,.35),
-      rgba(12,11,9,.75)
-    );
-}
-
-.why>.wrap{
-  position:relative;
-  z-index:2;
-}
-
-.why .section-head{
-  max-width:700px;
-}
-
-.why .section-title{
-  color:var(--ivory);
-}
-
-.why-grid{
-  display:grid;
-
-  grid-template-columns:repeat(4,1fr);
-
-  gap:64px 36px;
-}
-
-.why__item{
-  padding-top:26px;
-
-  border-top:
-    1px solid
-    rgba(246,243,236,.18);
-}
-
-.why__num{
-  color:var(--gold-light);
-
-  font-family:var(--serif);
-
-  font-size:1rem;
-
-  font-style:italic;
-}
-
-.why__item h3{
-  margin:16px 0 12px;
-
-  font-size:1.4rem;
-}
-
-.why__item p{
-  color:rgba(246,243,236,.72);
-
-  font-size:.9rem;
-}
-
-
-/* =========================================================
-   DEVELOPMENT
-   ========================================================= */
-
-.dev{
-  position:relative;
-
-  min-height:88vh;
-
-  display:flex;
-  align-items:center;
-
-  color:var(--ivory);
-
-  overflow:hidden;
-}
-
-.dev__media{
-  position:absolute;
-  inset:0;
-
-  background:var(--coal);
-}
-
-.dev__media img{
-  width:100%;
-  height:100%;
-
-  object-fit:cover;
-}
-
-.dev__scrim{
-  position:absolute;
-  inset:0;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(14,12,10,.78),
-      rgba(14,12,10,.30) 65%,
-      rgba(14,12,10,.15)
-    );
-}
-
-.dev__content{
-  position:relative;
-
-  z-index:2;
-
-  padding:130px 0;
-}
-
-.dev h2{
-  max-width:15ch;
-
-  margin-top:20px;
-
-  font-size:clamp(2.4rem,5vw,3.9rem);
-}
-
-.dev__specs{
-  display:flex;
-  flex-wrap:wrap;
-
-  margin:40px 0 46px;
-}
-
-.dev__specs li{
-  padding:2px 34px;
-
-  border-left:
-    1px solid
-    rgba(246,243,236,.3);
-
-  font-size:.72rem;
-  font-weight:500;
-  letter-spacing:.2em;
-  text-transform:uppercase;
-}
-
-.dev__specs li:first-child{
-  padding-left:0;
-
-  border-left:0;
-}
-
-
-/* =========================================================
-   CTA
-   ========================================================= */
-
-.cta{
-  position:relative;
-
-  background:var(--charcoal);
-
-  color:var(--ivory);
-
-  text-align:center;
-
-  padding:150px 0;
-
-  border-top:
-    1px solid
-    rgba(246,243,236,.1);
-
-  overflow:hidden;
-}
-
-.cta::before{
-  content:"";
-
-  position:absolute;
-
-  width:420px;
-  height:420px;
-
-  left:50%;
-  top:50%;
-
-  transform:translate(-50%,-50%);
-
-  border-radius:50%;
-
-  background:rgba(201,169,106,.055);
-
-  filter:blur(80px);
-
-  pointer-events:none;
-}
-
-.cta>.wrap{
-  position:relative;
-  z-index:2;
-}
-
-.cta .eyebrow{
-  justify-content:center;
-}
-
-.cta .eyebrow::after{
-  content:"";
-
-  width:38px;
-  height:1px;
-
-  background:currentColor;
-}
-
-.cta h2{
-  margin:22px 0 20px;
-
-  font-size:clamp(2.6rem,5.5vw,4.4rem);
-}
-
-.cta p{
-  max-width:460px;
-
-  margin-inline:auto;
-
-  color:rgba(246,243,236,.78);
-}
-
-.cta .btn{
-  margin-top:44px;
-}
-
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-.footer{
-  margin:0;
-
-  padding:88px 0 40px;
-
-  background:var(--charcoal);
-
-  color:var(--ivory);
-
-  border-top:
-    1px solid
-    rgba(246,243,236,.12);
-}
-
-.footer__grid{
-  display:grid;
-
-  grid-template-columns:
-    1.8fr 1fr 1.2fr 1.4fr;
-
-  gap:56px;
-}
-
-.footer__blurb{
-  max-width:30ch;
-
-  margin-top:20px;
-
-  color:rgba(246,243,236,.68);
-
-  font-size:.92rem;
-}
-
-.footer__head{
-  margin-bottom:20px;
-
-  color:var(--gold-light);
-
-  font-size:.64rem;
-  font-weight:500;
-  letter-spacing:.24em;
-  text-transform:uppercase;
-}
-
-.footer__col a{
-  display:block;
-
-  width:max-content;
-
-  padding:4px 0;
-
-  color:rgba(246,243,236,.78);
-
-  font-size:.92rem;
-
-  transition:color .3s ease;
-}
-
-.footer__col a:hover{
-  color:var(--gold-light);
-}
-
-.footer__col p{
-  color:rgba(246,243,236,.78);
-
-  font-size:.92rem;
-}
-
-.footer__col li{
-  margin-bottom:10px;
-}
-
-.footer__bar{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:space-between;
-
-  gap:14px;
-
-  margin-top:72px;
-  padding-top:28px;
-
-  border-top:
-    1px solid
-    rgba(246,243,236,.12);
-
-  color:rgba(246,243,236,.5);
-
-  font-size:.7rem;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-}
-
-
-/* =========================================================
-   MODAL
-   ========================================================= */
-
-.modal{
-  position:fixed;
-  inset:0;
-
-  z-index:100;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  padding:20px;
-
-  opacity:0;
-  visibility:hidden;
-
-  transition:
-    opacity .4s ease,
-    visibility .4s ease;
-}
-
-.modal.open{
-  opacity:1;
-  visibility:visible;
-}
-
-.modal__backdrop{
-  position:absolute;
-  inset:0;
-
-  background:rgba(14,12,10,.76);
-}
-
-.modal__dialog{
-  position:relative;
-
-  width:min(600px,100%);
-
-  max-height:92vh;
-
-  overflow:auto;
-
-  padding:54px 52px 48px;
-
-  background:var(--ivory);
-
-  transform:translateY(22px);
-
-  transition:
-    transform .45s var(--ease);
-}
-
-.modal.open .modal__dialog{
-  transform:none;
-}
-
-.modal__close{
-  position:absolute;
-
-  top:14px;
-  right:18px;
-
-  width:40px;
-  height:40px;
-
-  font-family:var(--serif);
-
-  font-size:1.6rem;
-
-  opacity:.55;
-}
-
-.modal h3{
-  margin:18px 0 12px;
-
-  font-size:2rem;
-}
-
-.modal__sub{
-  margin-bottom:36px;
-
-  color:var(--grey);
-
-  font-size:.94rem;
-}
-
-.field{
-  margin-bottom:24px;
-}
-
-.field label{
-  display:block;
-
-  margin-bottom:6px;
-
-  font-size:.62rem;
-  font-weight:500;
-  letter-spacing:.2em;
-  text-transform:uppercase;
-}
-
-.field input,
-.field select,
-.field textarea{
-  width:100%;
-
-  padding:10px 2px;
-
-  background:transparent;
-
-  border:0;
-
-  border-bottom:
-    1px solid
-    rgba(23,21,18,.3);
-
-  border-radius:0;
-
-  color:var(--charcoal);
-
-  font:inherit;
-
-  font-size:.95rem;
-}
-
-.field input:focus,
-.field select:focus,
-.field textarea:focus{
-  outline:none;
-
-  border-color:var(--gold);
-}
-
-.field textarea{
-  min-height:88px;
-
-  resize:vertical;
-}
-
-.field-row{
-  display:grid;
-
-  grid-template-columns:1fr 1fr;
-
-  gap:24px;
-}
-
-.modal .btn{
-  width:100%;
-
-  margin-top:12px;
-}
-
-.success{
-  text-align:center;
-}
-
-.success h3{
-  font-size:2.2rem;
-}
-
-.success p{
-  margin:14px 0 30px;
-
-  color:var(--grey);
-}
-
-
-
-/* =========================================================
-   CINEMATIC MOTION LAYER
-   ========================================================= */
-
-.hero__content{
-  opacity:0;
-  transform:translateY(34px);
-  animation:auraHeroIn 1.15s var(--ease) .18s forwards;
-}
-
-.hero__content .eyebrow{
-  opacity:0;
-  transform:translateY(14px);
-  animation:auraHeroIn .8s var(--ease) .05s forwards;
-}
-
-.hero__content h1{
-  opacity:0;
-  transform:translateY(24px);
-  animation:auraHeroIn 1s var(--ease) .22s forwards;
-}
-
-.hero__content .lede{
-  opacity:0;
-  transform:translateY(18px);
-  animation:auraHeroIn .9s var(--ease) .42s forwards;
-}
-
-.hero__actions{
-  opacity:0;
-  transform:translateY(16px);
-  animation:auraHeroIn .9s var(--ease) .58s forwards;
-}
-
-.hero__cue{
-  animation:auraCue 2.2s ease-in-out 1.4s infinite;
-}
-
-.hero__media::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:2;
-  pointer-events:none;
-  background:radial-gradient(circle at 50% 45%, transparent 0 34%, rgba(0,0,0,.16) 100%);
-  opacity:.7;
-}
-
-.card{
-  position:relative;
-  transition:transform .65s var(--ease);
-}
-
-.card::after{
-  content:"";
-  position:absolute;
-  left:0;
-  right:0;
-  top:0;
-  height:1px;
-  background:linear-gradient(90deg, transparent, var(--gold), transparent);
-  transform:scaleX(0);
-  transform-origin:center;
-  transition:transform .7s var(--ease);
-}
-
-.card:hover{
-  transform:translateY(-8px);
-}
-
-.card:hover::after{
-  transform:scaleX(1);
-}
-
-.card__media{
-  position:relative;
-}
-
-.card__media::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(135deg, rgba(255,255,255,.12), transparent 35%, rgba(0,0,0,.12));
-  opacity:0;
-  transition:opacity .7s ease;
-  pointer-events:none;
-}
-
-.card:hover .card__media::after{
-  opacity:1;
-}
-
-.story__media{
-  position:relative;
-}
-
-.story__media::after{
-  content:"AURA";
-  position:absolute;
-  right:22px;
-  bottom:18px;
-  color:rgba(246,243,236,.8);
-  font-family:var(--serif);
-  font-size:.72rem;
-  letter-spacing:.34em;
-  opacity:0;
-  transform:translateY(10px);
-  transition:opacity .5s ease, transform .5s var(--ease);
-}
-
-.story__media:hover::after{
-  opacity:1;
-  transform:none;
-}
-
-.why__item{
-  transition:transform .55s var(--ease), border-color .4s ease;
-}
-
-.why__item:hover{
-  transform:translateY(-7px);
-  border-color:rgba(201,172,125,.65);
-}
-
-.dev__media img{
-  transform:scale(1.04);
-  transition:transform 1.6s var(--ease);
-}
-
-.dev:hover .dev__media img{
-  transform:scale(1.08);
-}
-
-.cta::before{
-  animation:auraGlow 7s ease-in-out infinite alternate;
-}
-
-@keyframes auraHeroIn{
-  to{opacity:1;transform:none}
-}
-
-@keyframes auraCue{
-  0%,100%{transform:translateX(-50%) translateY(0);opacity:.65}
-  50%{transform:translateX(-50%) translateY(8px);opacity:1}
-}
-
-@keyframes auraGlow{
-  from{transform:translate(-50%,-50%) scale(.88);opacity:.55}
-  to{transform:translate(-50%,-50%) scale(1.12);opacity:1}
-}
-
-@media(prefers-reduced-motion:reduce){
-  .hero__content,
-  .hero__content .eyebrow,
-  .hero__content h1,
-  .hero__content .lede,
-  .hero__actions{
-    opacity:1;
-    transform:none;
-    animation:none;
-  }
-  .hero__cue,.cta::before{animation:none}
-  .card,.why__item,.dev__media img{transition:none}
-}
-
-
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
-
-@media(max-width:1080px){
-
-  .prop-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .why-grid{
-    grid-template-columns:repeat(2,1fr);
-
-    gap:56px 36px;
-  }
-
-  .footer__grid{
-    grid-template-columns:1fr 1fr;
-
-    gap:44px;
-  }
-}
-
-
-@media(max-width:900px){
-
-  .section{
-    padding:96px 0;
-  }
-
-  .nav__links{
-    position:fixed;
-
-    inset:0;
-
-    z-index:1;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    gap:30px;
-
-    background:var(--ivory);
-
-    color:var(--charcoal);
-
-    transform:translateY(-102%);
-
-    transition:
-      transform .55s var(--ease);
-  }
-
-  body.menu-open .nav__links{
-    transform:translateY(0);
-  }
-
-  .nav__links a{
-    font-family:var(--serif);
-
-    font-size:2rem;
-
-    letter-spacing:.03em;
-
-    text-transform:none;
-  }
-
-  .nav__links a::after{
-    display:none;
-  }
-
-  .nav__actions{
-    display:none;
-  }
-
-  .nav__toggle{
-    display:block;
-  }
-
-  .story__grid{
-    grid-template-columns:1fr;
-
-    gap:48px;
-  }
-
-  .story__media{
-    aspect-ratio:4/3;
-  }
-
-  .hero__actions .btn{
-    flex:1 1 auto;
-  }
-
-  .dev{
-    min-height:80vh;
-  }
-}
-
-
-@media(max-width:640px){
-
-  .wrap{
-    width:92vw;
-  }
-
-  .prop-grid{
-    grid-template-columns:1fr;
-  }
-
-  .why-grid{
-    grid-template-columns:1fr;
-
-    gap:44px;
-  }
-
-  .why-video video{
-    filter:
-      brightness(.32)
-      contrast(1.06)
-      saturate(.78);
-  }
-
-  .hero__content{
-    padding:
-      140px
-      0
-      110px;
-  }
-
-  .hero h1{
-    font-size:clamp(2.6rem,11vw,3.3rem);
-  }
-
-  .hero__actions{
-    flex-direction:column;
-
-    gap:12px;
-  }
-
-  .hero__actions .btn{
-    width:100%;
-
-    min-height:56px;
-  }
-
-  .hero__cue{
-    display:none;
-  }
-
-  .dev__specs{
-    flex-direction:column;
-
-    gap:0;
-  }
-
-  .dev__specs li{
-    width:100%;
-
-    padding:
-      14px
-      0
-      4px;
-
-    border-left:0;
-
-    border-top:
-      1px solid
-      rgba(246,243,236,.3);
-  }
-
-  .dev__specs li:first-child{
-    padding-top:4px;
-
-    border-top:0;
-  }
-
-  .footer__grid{
-    grid-template-columns:1fr;
-  }
-
-  .field-row{
-    grid-template-columns:1fr;
-  }
-
-  .modal__dialog{
-    padding:46px 28px 38px;
-  }
-
-  .cta{
-    padding:110px 0;
-  }
-
-  .section{
-    padding:90px 0;
-  }
-}
-
-
-/* =========================================================
-   REDUCED MOTION
-   ========================================================= */
-
-@media(prefers-reduced-motion:reduce){
-
-  html{
-    scroll-behavior:auto;
-  }
-
-  *,
-  *::before,
-  *::after{
-    animation:none!important;
-    transition:none!important;
-  }
-
-  [data-reveal]{
-    opacity:1!important;
-    transform:none!important;
-  }
-
-  .hero__media video{
-    transform:none;
-  }
-}
-
-
-/* =========================================================
-   FINAL POLISH / ACCESSIBILITY / MOBILE FIXES
-   ========================================================= */
-
-.link-arrow{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  width:max-content;
-  padding:0;
-  margin:0;
-  color:var(--charcoal);
-  font-size:.68rem;
-  font-weight:500;
-  letter-spacing:.22em;
-  line-height:1.4;
-  text-transform:uppercase;
-  border:0;
-  background:transparent;
-  cursor:pointer;
-  transition:color .3s ease, transform .3s var(--ease);
-}
-.link-arrow .arr{
-  display:inline-block;
-  transition:transform .3s var(--ease);
-}
-.link-arrow:hover{
-  color:var(--gold-text);
-  transform:translateX(2px);
-}
-.link-arrow:hover .arr{
-  transform:translateX(5px);
-}
-
-.card__cta{
-  margin-top:auto;
-  padding-top:22px;
-}
-
-.card{
-  min-width:0;
-}
-
-.card__media img,
-.story__media img,
-.dev__media img{
-  background:var(--coal);
-}
-
-.hero__media::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:1;
-  pointer-events:none;
-  background:radial-gradient(circle at 70% 35%, rgba(201,172,125,.08), transparent 38%);
-}
-
-.hero__media video{
-  position:relative;
-  z-index:0;
-}
-
-.hero__media video,
-.why-video video{
-  backface-visibility:hidden;
-}
-
-.modal__dialog{
-  overscroll-behavior:contain;
-  -webkit-overflow-scrolling:touch;
-}
-
-.field input::placeholder,
-.field textarea::placeholder{
-  color:rgba(23,21,18,.42);
-}
-
-@media(max-width:640px){
-  .section{
-    padding:78px 0;
-  }
-
-  .section-head{
-    margin-bottom:44px;
-  }
-
-  .section-title{
-    font-size:clamp(2.05rem,10vw,3rem);
-  }
-
-  .hero__actions{
-    flex-direction:column;
-    align-items:stretch;
-  }
-
-  .hero__actions .btn{
-    width:100%;
-    flex:none;
-  }
-
-  .hero h1{
-    font-size:clamp(3rem,15vw,4.4rem);
-  }
-
-  .hero .lede{
-    font-size:.94rem;
-  }
-
-  .prop-grid{
-    gap:52px;
-  }
-
-  .card__media{
-    aspect-ratio:4/5;
-  }
-
-  .story__media{
-    aspect-ratio:1/1;
-  }
-
-  .dev__content{
-    padding:100px 0;
-  }
-
-  .dev__specs{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:0;
-    margin:32px 0 38px;
-  }
-
-  .dev__specs li,
-  .dev__specs li:first-child{
-    padding:12px 0;
-    border-left:0;
-    border-bottom:1px solid rgba(246,243,236,.2);
-  }
-
-  .footer{
-    padding:68px 0 32px;
-  }
-
-  .footer__grid{
-    grid-template-columns:1fr;
-    gap:38px;
-  }
-
-  .footer__bar{
-    margin-top:48px;
-    flex-direction:column;
-  }
-
-  .modal{
-    padding:12px;
-  }
-
-  .modal__dialog{
-    padding:48px 22px 28px;
-    max-height:94svh;
-  }
-
-  .field-row{
-    grid-template-columns:1fr;
-    gap:0;
-  }
-
-  .nav__links a{
-    font-size:1.8rem;
-  }
-}
-
-@media(prefers-reduced-motion:reduce){
-  html{
-    scroll-behavior:auto;
-  }
-
-  *,
-  *::before,
-  *::after{
-    animation-duration:.01ms !important;
-    animation-iteration-count:1 !important;
-    transition-duration:.01ms !important;
-  }
-}
-
-
-/* =========================================================
-   AURA SIGNATURE PREMIUM LAYER
-   ========================================================= */
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  z-index:9999;
-  pointer-events:none;
-  opacity:.035;
-  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
-  mix-blend-mode:soft-light;
-}
-.nav__inner{position:relative}
-.nav__inner::after{
-  content:"";
-  position:absolute;
-  left:0;
-  right:0;
-  bottom:0;
-  height:1px;
-  background:linear-gradient(90deg,transparent,rgba(201,172,125,.45),transparent);
-  opacity:.7;
-}
-.logo{font-weight:500}
-.logo::before{
-  content:"EST. 2016";
-  display:block;
-  margin-bottom:-2px;
-  font-family:var(--sans);
-  font-size:.38rem;
-  font-weight:500;
-  letter-spacing:.32em;
-  opacity:.58;
-  text-align:center;
-}
-.hero::after{
-  content:"AURA";
-  position:absolute;
-  right:-.08em;
-  bottom:-.18em;
-  z-index:1;
-  font-family:var(--serif);
-  font-size:clamp(8rem,22vw,20rem);
-  line-height:.8;
-  color:rgba(246,243,236,.045);
-  letter-spacing:-.06em;
-  pointer-events:none;
-}
-.hero__content{max-width:980px}
-.hero h1{font-weight:300}
-.hero .lede{border-left:1px solid rgba(201,172,125,.65);padding-left:18px}
-.hero__actions{position:relative}
-.hero__actions::before{
-  content:"";
-  position:absolute;
-  left:0;
-  top:-22px;
-  width:76px;
-  height:1px;
-  background:var(--gold-light);
-}
-.card{position:relative}
-.card-index{
-  position:absolute;
-  top:12px;
-  right:12px;
-  z-index:3;
-  width:34px;
-  height:34px;
-  display:grid;
-  place-items:center;
-  border:1px solid rgba(246,243,236,.55);
-  color:var(--ivory);
-  background:rgba(23,21,18,.3);
-  backdrop-filter:blur(8px);
-  font-family:var(--serif);
-  font-size:.82rem;
-  font-style:italic;
-}
-.card::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  width:38px;
-  height:1px;
-  background:var(--gold);
-  z-index:2;
-}
-.card__media{position:relative}
-.card__media::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.08));
-  pointer-events:none;
-}
-.card__name{font-weight:400}
-.card__price{font-size:.68rem}
-.link-arrow{
-  position:relative;
-  display:inline-flex;
-  align-items:center;
-  gap:12px;
-  padding-bottom:7px;
-  border-bottom:1px solid rgba(23,21,18,.28);
-  font-size:.64rem;
-  font-weight:500;
-  letter-spacing:.2em;
-  text-transform:uppercase;
-  transition:color .3s ease,border-color .3s ease,gap .3s var(--ease);
-}
-.link-arrow .arr{transition:transform .3s var(--ease)}
-.link-arrow:hover{color:var(--gold-text);border-color:var(--gold);gap:17px}
-.link-arrow:hover .arr{transform:translateX(3px)}
-.story__copy{padding-right:5vw}
-.story__copy p{font-size:1.02rem;color:#514c44}
-.story__media{position:relative;box-shadow:20px 30px 70px rgba(23,21,18,.12)}
-.story__media::before{
-  content:"AURA";
-  position:absolute;
-  top:20px;
-  left:20px;
-  z-index:2;
-  padding:7px 10px;
-  border:1px solid rgba(246,243,236,.5);
-  color:var(--ivory);
-  font-size:.5rem;
-  letter-spacing:.28em;
-  background:rgba(23,21,18,.2);
-  backdrop-filter:blur(8px);
-}
-.why-grid{position:relative}
-.why__item{transition:transform .45s var(--ease),border-color .35s ease}
-.why__item:hover{transform:translateY(-7px);border-color:var(--gold-light)}
-.why__num{letter-spacing:.08em}
-.dev{min-height:94vh}
-.dev__content{max-width:900px}
-.dev h2{font-weight:300}
-.dev__specs li{transition:color .3s ease}
-.dev__specs li:hover{color:var(--gold-light)}
-.cta h2{font-weight:300;max-width:900px;margin-inline:auto}
-.cta::after{
-  content:"A";
-  position:absolute;
-  right:4vw;
-  bottom:-.2em;
-  font-family:var(--serif);
-  font-size:18rem;
-  line-height:1;
-  color:rgba(246,243,236,.035);
-}
-.footer .logo{font-size:1.7rem}
-.footer__bar{letter-spacing:.18em}
-.modal__dialog{
-  box-shadow:0 35px 100px rgba(0,0,0,.3);
-  border-top:2px solid var(--gold);
-}
-@media(max-width:640px){
-  .hero::after{font-size:8rem;right:-.06em}
-  .hero__actions::before{display:none}
-  .story__copy{padding-right:0}
-  .logo::before{font-size:.34rem}
-}
-@media(prefers-reduced-motion:no-preference){
-  .hero__content .eyebrow{animation:heroIn .9s .1s both}
-  .hero__content h1{animation:heroIn 1s .2s both}
-  .hero__content .lede{animation:heroIn 1s .32s both}
-  .hero__content .hero__actions{animation:heroIn 1s .45s both}
-  @keyframes heroIn{
-    from{opacity:0;transform:translateY(22px)}
-    to{opacity:1;transform:none}
-  }
-}
-
-
-/* =========================================================
-   DESKTOP MASTER LAYOUT — 1200px+
-   ========================================================= */
-@media(min-width:1200px){
-  .wrap{width:min(1280px,88vw)}
-  .nav__inner{height:84px}
-  .nav__links{gap:52px}
-  .hero__content{padding-top:calc(var(--nav-h) + 90px);padding-bottom:140px}
-  .hero h1{max-width:13ch;font-size:clamp(5rem,6.5vw,7rem)}
-  .hero .lede{max-width:560px;font-size:1.05rem}
-  .hero__actions{margin-top:50px}
-  .section{padding:150px 0}
-  .section-head{margin-bottom:76px}
-  .prop-grid{grid-template-columns:repeat(3,1fr);gap:92px 42px}
-  .card__media{aspect-ratio:4/5}
-  .story__grid{gap:120px}
-  .story__media{aspect-ratio:5/6}
-  .why-grid{gap:72px 44px}
-  .dev__content{padding:170px 0}
-  .cta{padding:180px 0}
-  .footer{padding-top:104px}
-}
-
-@media(min-width:1500px){
-  .wrap{width:min(1380px,86vw)}
-  .hero__content{padding-top:190px;padding-bottom:170px}
-  .hero h1{font-size:7.2rem}
-  .section{padding:170px 0}
-  .dev{min-height:100vh}
-}
-
+--bg:#040814; --navy:#060B18; --navy2:#0A1228; --line:rgba(255,255,255,.09);
+--line2:rgba(255,255,255,.06); --white:#F5F7FA; --muted:#8A95AD; --muted2:#5C6880;
+--gold:#D8B47A; --gold2:#F0D9A8; --gold-dim:rgba(216,180,122,.14);
+--blue:#6E9DFF; --blue2:#3B62FF; --blue-dim:rgba(110,157,255,.12);
+--glass:rgba(255,255,255,.06); --radius:18px;
+--font:'Sora',system-ui,-apple-system,Inter,Helvetica,Arial,sans-serif;
+--serif:'Cormorant Garamond',Georgia,serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased;line-height:1.6}
+::selection{background:var(--gold);color:#0A0A0A}
+::-webkit-scrollbar{width:9px}::-webkit-scrollbar-track{background:#040814}::-webkit-scrollbar-thumb{background:linear-gradient(#D8B47A,#3B62FF);border-radius:10px}
+a{color:inherit;text-decoration:none}button{font-family:inherit}img{display:block;max-width:100%}
+.grain{position:fixed;inset:0;z-index:120;pointer-events:none;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+#progress{position:fixed;top:0;left:0;height:2px;width:0%;z-index:200;background:linear-gradient(90deg,var(--gold),var(--blue));box-shadow:0 0 12px rgba(216,180,122,.6)}
+#cursor{position:fixed;top:0;left:0;width:32px;height:32px;border:1px solid rgba(216,180,122,.7);border-radius:50%;pointer-events:none;z-index:300;transform:translate(-50%,-50%);transition:width .25s,height .25s,background .25s,border .25s;mix-blend-mode:normal;display:flex;align-items:center;justify-content:center}
+#cursorDot{position:fixed;top:0;left:0;width:5px;height:5px;background:var(--gold2);border-radius:50%;pointer-events:none;z-index:300;transform:translate(-50%,-50%)}
+#cursor.hovering{width:72px;height:72px;background:rgba(216,180,122,.12);backdrop-filter:blur(4px);border-color:rgba(240,217,168,.9)}
+#cursor.hovering::after{content:'VIEW';font-size:9px;letter-spacing:.2em;color:var(--gold2)}
+@media(hover:none){#cursor,#cursorDot{display:none}}
+/* PRELOADER */
+#preloader{position:fixed;inset:0;z-index:500;background:#020409;display:flex;align-items:center;justify-content:center;flex-direction:column;transition:opacity .9s ease,visibility .9s}
+#preloader.done{opacity:0;visibility:hidden}
+.pre-inner{text-align:center;width:min(420px,86vw)}
+.pre-logo{font-weight:800;letter-spacing:.35em;font-size:13px;color:var(--white)}
+.pre-logo span{color:var(--gold)}
+.pre-bar{height:1px;background:rgba(255,255,255,.12);margin:26px 0 14px;position:relative;overflow:hidden}
+.pre-fill{position:absolute;left:0;top:0;height:100%;width:0%;background:linear-gradient(90deg,var(--gold),var(--blue))}
+.pre-count{font-size:11px;letter-spacing:.25em;color:var(--muted)}
+.pre-tag{margin-top:18px;font-family:var(--serif);font-style:italic;font-size:18px;color:rgba(245,247,250,.6)}
+/* NAV */
+nav{position:fixed;top:18px;left:50%;transform:translateX(-50%);width:min(1240px,calc(100% - 28px));z-index:100;display:flex;align-items:center;justify-content:space-between;padding:12px 12px 12px 22px;border-radius:100px;background:rgba(6,11,24,.58);backdrop-filter:blur(22px) saturate(1.4);-webkit-backdrop-filter:blur(22px) saturate(1.4);border:1px solid rgba(255,255,255,.1);box-shadow:0 12px 40px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.08);transition:background .4s,box-shadow .4s,top .4s}
+nav.scrolled{background:rgba(4,8,20,.82);box-shadow:0 18px 50px rgba(0,0,0,.6)}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-mark{width:36px;height:36px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#F0D9A8,#D8B47A 35%,#1A2340 72%,#060B18);border:1px solid rgba(216,180,122,.5);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;letter-spacing:.05em;position:relative;overflow:hidden}
+.brand-mark::after{content:'';position:absolute;inset:0;background:conic-gradient(from 0deg,transparent,rgba(110,157,255,.6),transparent 30%);animation:spin 6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.brand-text{line-height:1}
+.brand-text strong{display:block;font-size:15px;letter-spacing:.28em;font-weight:700}
+.brand-text small{display:block;font-size:9px;letter-spacing:.32em;color:var(--gold);margin-top:4px;font-weight:500}
+.nav-links{display:flex;align-items:center;gap:32px;font-size:12.5px;letter-spacing:.14em;font-weight:500;color:rgba(245,247,250,.75)}
+.nav-links a{position:relative;padding:6px 0;transition:color .3s}
+.nav-links a::after{content:'';position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--gold);transition:width .35s}
+.nav-links a:hover,.nav-links a.active{color:#fff}.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-cta{display:flex;align-items:center;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:10px;border-radius:100px;padding:13px 24px;font-size:12.5px;letter-spacing:.12em;font-weight:600;text-transform:uppercase;cursor:pointer;border:1px solid transparent;transition:.35s;white-space:nowrap}
+.btn-primary{background:#F5F7FA;color:#060B18;border-color:#fff}
+.btn-primary:hover{background:var(--gold2);border-color:var(--gold2);transform:translateY(-2px);box-shadow:0 12px 30px rgba(216,180,122,.35)}
+.btn-glass{background:rgba(255,255,255,.07);color:#fff;border-color:rgba(255,255,255,.18);backdrop-filter:blur(12px)}
+.btn-glass:hover{background:rgba(255,255,255,.12);border-color:rgba(216,180,122,.6);transform:translateY(-2px)}
+.btn .arr{transition:transform .3s}.btn:hover .arr{transform:translateX(4px)}
+#hamb{display:none;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+#hamb span{display:block;width:18px;height:1.5px;background:#fff;transition:.35s}
+#hamb.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}#hamb.open span:nth-child(2){opacity:0}#hamb.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+#mobileMenu{position:fixed;inset:0;z-index:99;background:rgba(2,4,9,.92);backdrop-filter:blur(28px);display:flex;flex-direction:column;justify-content:center;padding:100px 32px 40px;opacity:0;visibility:hidden;transition:.5s}
+#mobileMenu.open{opacity:1;visibility:visible}
+#mobileMenu a.mlink{font-size:clamp(32px,9vw,54px);font-weight:700;letter-spacing:-.02em;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;transform:translateY(20px);opacity:0;transition:.6s}
+#mobileMenu.open a.mlink{transform:none;opacity:1}
+#mobileMenu a.mlink span.num{font-size:11px;letter-spacing:.2em;color:var(--gold)}
+#mobileMenu a.mlink:hover{color:var(--gold2);padding-left:8px}
+/* HERO */
+#hero{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#020409}
+.hero-media{position:absolute;inset:0;z-index:0}
+.hero-media video{width:100%;height:100%;object-fit:cover;object-position:center center;opacity:.78;filter:saturate(1.2) contrast(1.08) brightness(.92);transform:scale(1.05)}
+#lightCanvas{position:absolute;inset:0;width:100%;height:100%;mix-blend-mode:screen;opacity:.9}
+.hero-shade{position:absolute;inset:0;z-index:1;pointer-events:none;
+background:
+radial-gradient(ellipse 62% 48% at 50% 46%, rgba(216,180,122,.18) 0%, rgba(59,98,255,.12) 28%, transparent 62%),
+linear-gradient(to bottom, rgba(2,4,9,.72) 0%, rgba(2,4,9,.22) 28%, rgba(2,4,9,.18) 52%, rgba(2,4,9,.62) 78%, #040814 100%),
+radial-gradient(ellipse 120% 90% at 50% 50%, transparent 45%, rgba(2,4,9,.68) 100%)}
+.hero-vignette{position:absolute;inset:0;z-index:1;pointer-events:none;box-shadow:inset 0 0 220px 60px rgba(2,4,9,.85)}
+.hero-inner{position:relative;z-index:2;width:min(1120px,92vw);text-align:center;padding:138px 0 90px}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;padding:9px 18px 9px 10px;border-radius:100px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);backdrop-filter:blur(14px);font-size:10.5px;letter-spacing:.24em;font-weight:600;color:rgba(255,255,255,.9)}
+.eyebrow .dotlive{width:28px;height:28px;border-radius:100px;background:rgba(216,180,122,.18);border:1px solid rgba(216,180,122,.4);display:flex;align-items:center;justify-content:center;font-size:8px;letter-spacing:.15em;color:var(--gold2)}
+.pulse{width:6px;height:6px;border-radius:50%;background:#7DFFA8;box-shadow:0 0 10px #7DFFA8;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero-badge{margin:18px 0 0;font-size:10.5px;letter-spacing:.32em;color:var(--muted);font-weight:500}
+.hero-badge b{color:var(--gold2);font-weight:600}
+h1.hero-h1{margin:22px 0 0;font-size:clamp(42px,7.8vw,102px);line-height:.98;letter-spacing:-.04em;font-weight:700;text-wrap:balance;text-shadow:0 8px 60px rgba(0,0,0,.6)}
+h1 .line{display:block;overflow:hidden}
+h1 .line span{display:inline-block;transform:translateY(110%);animation:rise 1.1s cubic-bezier(.16,1,.3,1) forwards}
+h1 .line:nth-child(2) span{animation-delay:.15s}
+@keyframes rise{to{transform:none}}
+.hero-h1 .italic{font-family:var(--serif);font-style:italic;font-weight:300;letter-spacing:-.02em;background:linear-gradient(100deg,#fff 10%,#F0D9A8 45%,#6E9DFF 90%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none}
+.hero-sub{margin:24px auto 0;max-width:620px;color:rgba(245,247,250,.72);font-size:clamp(14px,1.6vw,17px);font-weight:300;line-height:1.7}
+.hero-ctas{margin-top:34px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.hero-features{margin:52px auto 0;display:flex;justify-content:center;align-items:stretch;gap:0;max-width:900px;border:1px solid rgba(255,255,255,.1);border-radius:16px;background:rgba(4,8,20,.42);backdrop-filter:blur(18px);overflow:hidden}
+.hfeat{flex:1;padding:18px 10px;display:flex;flex-direction:column;align-items:center;gap:8px;font-size:10.5px;letter-spacing:.18em;font-weight:600;color:rgba(255,255,255,.85)}
+.hfeat i{font-style:normal;width:30px;height:30px;border-radius:50%;border:1px solid rgba(216,180,122,.35);display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--gold2);background:rgba(216,180,122,.08)}
+.hfeat + .hfeat{border-left:1px solid rgba(255,255,255,.08)}
+.hero-bottom{position:absolute;bottom:0;left:0;right:0;z-index:3;display:flex;justify-content:space-between;align-items:center;padding:22px 32px;font-size:10px;letter-spacing:.22em;color:var(--muted);border-top:1px solid rgba(255,255,255,.07);background:linear-gradient(to top,rgba(2,4,9,.7),transparent)}
+.scroll-hint{display:flex;align-items:center;gap:10px}
+.scroll-line{width:44px;height:1px;background:rgba(255,255,255,.2);position:relative;overflow:hidden}
+.scroll-line::after{content:'';position:absolute;left:0;top:0;height:100%;width:30%;background:var(--gold);animation:scrollLine 2s infinite}
+@keyframes scrollLine{0%{left:-30%}100%{left:100%}}
+.side-label{position:absolute;z-index:3;top:50%;font-size:10px;letter-spacing:.4em;color:rgba(255,255,255,.35);writing-mode:vertical-rl}
+.side-label.left{left:24px;transform:translateY(-50%) rotate(180deg)}.side-label.right{right:24px;transform:translateY(-50%)}
+@media(max-width:900px){.side-label{display:none}.hero-bottom{padding:16px}.hero-bottom .hideM{display:none}}
+/* MARQUEE */
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,255,255,.015);overflow:hidden;white-space:nowrap;padding:18px 0;position:relative}
+.marquee-track{display:inline-flex;gap:0;animation:marq 28s linear infinite}
+.marquee span{font-size:12px;letter-spacing:.3em;font-weight:600;color:rgba(255,255,255,.55);padding:0 28px;display:inline-flex;align-items:center;gap:28px}
+.marquee span::after{content:'◆';color:var(--gold);font-size:8px}
+@keyframes marq{to{transform:translateX(-50%)}}
+/* SECTIONS */
+section{position:relative}
+.wrap{width:min(1240px,92vw);margin:0 auto}
+.sec-head{display:flex;align-items:center;gap:16px;margin-bottom:28px;font-size:11px;letter-spacing:.28em;color:var(--muted);font-weight:600}
+.sec-head::before{content:'';width:36px;height:1px;background:var(--gold)}
+.sec-head em{font-style:normal;color:var(--gold);border:1px solid rgba(216,180,122,.35);padding:4px 12px;border-radius:100px;background:rgba(216,180,122,.07)}
+h2.big{font-size:clamp(30px,4.6vw,58px);line-height:1.04;letter-spacing:-.03em;font-weight:700;text-wrap:balance}
+h2.big .serif{font-family:var(--serif);font-style:italic;font-weight:300;color:var(--gold2)}
+.lead{color:var(--muted);font-weight:300;font-size:clamp(14px,1.6vw,17px);line-height:1.8;max-width:640px}
+.reveal{opacity:0;transform:translateY(36px);transition:opacity .9s ease,transform .9s cubic-bezier(.16,1,.3,1)}
+.reveal.visible{opacity:1;transform:none}
+/* STUDIO */
+#studio{padding:120px 0 90px;background:linear-gradient(#040814,#060B18)}
+.studio-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;margin-top:48px;align-items:start}
+.studio-copy p{color:rgba(245,247,250,.72);font-weight:300;line-height:1.9;margin-bottom:20px;font-size:16px}
+.studio-copy p strong{color:#fff;font-weight:600}
+.quote-card{border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.015));backdrop-filter:blur(16px);padding:32px;position:relative;overflow:hidden}
+.quote-card::before{content:'“';position:absolute;top:6px;right:22px;font-family:var(--serif);font-size:90px;color:rgba(216,180,122,.18);line-height:1}
+.quote-card p{font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.6;color:#EDEFF5}
+.quote-card small{display:block;margin-top:16px;font-family:var(--font);font-style:normal;font-size:10.5px;letter-spacing:.22em;color:var(--gold)}
+.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px}
+.prin{border:1px solid var(--line2);border-radius:14px;padding:22px 18px;background:rgba(255,255,255,.02);transition:.4s}
+.prin:hover{border-color:rgba(216,180,122,.4);background:rgba(216,180,122,.06);transform:translateY(-4px)}
+.prin h4{font-size:12px;letter-spacing:.18em;margin:12px 0 8px}
+.prin p{font-size:13px;color:var(--muted);font-weight:300;line-height:1.7}
+.prin .n{font-size:11px;letter-spacing:.2em;color:var(--gold)}
+@media(max-width:900px){.studio-grid{grid-template-columns:1fr}.principles{grid-template-columns:1fr}}
+/* ECOMMERCE */
+#ecommerce{padding:90px 0;background:#060B18;border-top:1px solid var(--line2);overflow:hidden}
+.ecom-shell{margin-top:48px;display:grid;grid-template-columns:.95fr 1.05fr;gap:28px;align-items:stretch}
+.ecom-left{border:1px solid rgba(216,180,122,.22);border-radius:22px;padding:42px 36px;background:radial-gradient(120% 100% at 0% 0%,rgba(216,180,122,.12),transparent 55%),radial-gradient(120% 120% at 100% 100%,rgba(59,98,255,.14),transparent 55%),#080E20;position:relative;overflow:hidden}
+.ecom-left::after{content:'';position:absolute;top:-80px;right:-80px;width:260px;height:260px;background:radial-gradient(circle,rgba(216,180,122,.22),transparent 70%);pointer-events:none}
+.check-list{margin:28px 0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.check-list li{list-style:none;display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:rgba(255,255,255,.8);font-weight:300;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:12px 14px;background:rgba(255,255,255,.03)}
+.check-list li::before{content:'✓';color:var(--gold);font-weight:700;flex-shrink:0}
+.ecom-badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+.ecom-badges span{font-size:10px;letter-spacing:.18em;font-weight:600;padding:8px 14px;border-radius:100px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.05);color:rgba(255,255,255,.8)}
+.ecom-badges span.gold{border-color:rgba(216,180,122,.5);color:var(--gold2);background:rgba(216,180,122,.1)}
+.ecom-right{border:1px solid rgba(255,255,255,.1);border-radius:22px;background:#0A1024;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.browser-bar{display:flex;align-items:center;gap:8px;padding:14px 18px;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.02)}
+.browser-bar i{width:10px;height:10px;border-radius:50%;display:block}.browser-bar i:nth-child(1){background:#FF5F57}.browser-bar i:nth-child(2){background:#FEBC2E}.browser-bar i:nth-child(3){background:#28C840}
+.url{margin-left:10px;flex:1;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:100px;padding:7px 16px;font-size:11px;letter-spacing:.08em;color:var(--muted)}
+.cart-pill{font-size:11px;letter-spacing:.12em;background:var(--gold);color:#111;padding:7px 14px;border-radius:100px;font-weight:700}
+.ecom-tabs{display:flex;gap:8px;padding:18px 18px 0}
+.ecom-tabs button{flex:1;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.09);background:transparent;color:var(--muted);font-size:11px;letter-spacing:.14em;font-weight:600;cursor:pointer;transition:.3s}
+.ecom-tabs button.active{background:#fff;color:#0A0A0A;border-color:#fff}
+.ecom-stage{padding:18px;display:grid;grid-template-columns:1fr 1fr;gap:16px;flex:1}
+.ecom-img{border-radius:16px;overflow:hidden;position:relative;min-height:300px;background:#111}
+.ecom-img img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;transition:transform .8s,opacity .5s}
+.ecom-stage:hover .ecom-img img{transform:scale(1.05)}
+.ecom-info{display:flex;flex-direction:column;justify-content:center;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:24px}
+.ecom-info h3{font-size:22px;letter-spacing:-.02em;margin:8px 0}
+.ecom-info p{font-size:13px;color:var(--muted);font-weight:300;line-height:1.7}
+.price-row{display:flex;align-items:center;gap:12px;margin:14px 0}
+.price{font-size:22px;font-weight:700}.old{font-size:13px;color:var(--muted);text-decoration:line-through}.off{font-size:10px;letter-spacing:.12em;background:rgba(40,200,64,.15);color:#7DFFA8;border:1px solid rgba(125,255,168,.3);padding:4px 10px;border-radius:100px}
+.qty{display:flex;align-items:center;gap:14px;margin:12px 0;border:1px solid rgba(255,255,255,.1);border-radius:100px;padding:6px;width:max-content}
+.qty button{width:28px;height:28px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:transparent;color:#fff;cursor:pointer}
+.ecom-foot{padding:0 18px 18px;display:flex;gap:10px}
+.ecom-foot .btn{flex:1;justify-content:center}
+#toast{position:fixed;bottom:26px;left:50%;transform:translate(-50%,80px);background:#fff;color:#111;padding:13px 22px;border-radius:100px;font-size:12px;letter-spacing:.08em;font-weight:600;z-index:200;transition:.5s;box-shadow:0 20px 50px rgba(0,0,0,.4)}
+#toast.show{transform:translate(-50%,0)}
+@media(max-width:980px){.ecom-shell{grid-template-columns:1fr}.ecom-stage{grid-template-columns:1fr}.check-list{grid-template-columns:1fr}}
+/* SERVICES */
+#services{padding:110px 0;background:#040814;border-top:1px solid var(--line2)}
+.serv-list{margin-top:48px;border-top:1px solid var(--line)}
+.serv{border-bottom:1px solid var(--line);display:grid;grid-template-columns:80px 1fr auto;gap:20px;align-items:center;padding:28px 18px;cursor:pointer;transition:.4s;position:relative;overflow:hidden}
+.serv::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(216,180,122,.09),rgba(59,98,255,.08),transparent);opacity:0;transition:.4s}
+.serv:hover::before,.serv.open::before{opacity:1}
+.serv:hover,.serv.open{padding-left:28px}
+.serv-num{font-size:12px;letter-spacing:.2em;color:var(--gold);font-weight:600}
+.serv-main h3{font-size:clamp(20px,2.8vw,30px);letter-spacing:-.02em;font-weight:600}
+.serv-main h3 span{font-family:var(--serif);font-style:italic;font-weight:300;color:rgba(255,255,255,.55);font-size:.85em;margin-left:10px}
+.serv-desc{max-height:0;overflow:hidden;transition:max-height .6s cubic-bezier(.16,1,.3,1),margin .4s;margin-top:0;color:var(--muted);font-weight:300;font-size:14.5px;line-height:1.8;max-width:640px}
+.serv.open .serv-desc{max-height:200px;margin-top:12px}
+.serv-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;max-height:0;overflow:hidden;transition:.6s;opacity:0}
+.serv.open .serv-tags{max-height:100px;opacity:1}
+.serv-tags span{font-size:10px;letter-spacing:.14em;border:1px solid rgba(255,255,255,.12);padding:6px 12px;border-radius:100px;color:rgba(255,255,255,.7)}
+.serv-plus{width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:300;transition:.4s;background:rgba(255,255,255,.03)}
+.serv.open .serv-plus,.serv:hover .serv-plus{background:var(--gold);color:#111;border-color:var(--gold);transform:rotate(45deg)}
+/* PROCESS */
+#process{padding:80px 0;background:#060B18;border-top:1px solid var(--line2)}
+.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px}
+.proc{border:1px solid var(--line2);border-radius:16px;padding:28px 24px;background:rgba(255,255,255,.02);position:relative;overflow:hidden;transition:.4s}
+.proc:hover{transform:translateY(-6px);border-color:rgba(110,157,255,.4)}
+.proc::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--blue));opacity:0;transition:.4s}
+.proc:hover::after{opacity:1}
+.proc b{font-size:11px;letter-spacing:.22em;color:var(--blue)}
+.proc h4{margin:12px 0 10px;font-size:17px}
+.proc p{font-size:13px;color:var(--muted);font-weight:300;line-height:1.7}
+@media(max-width:900px){.proc-grid{grid-template-columns:1fr 1fr}}@media(max-width:560px){.proc-grid{grid-template-columns:1fr}}
+/* WORK */
+#work{padding:110px 0;background:linear-gradient(#060B18,#040814);border-top:1px solid var(--line2)}
+.featured{margin-top:48px;border-radius:24px;overflow:hidden;border:1px solid rgba(255,255,255,.1);background:#080E20;display:grid;grid-template-columns:1.15fr .85fr;box-shadow:0 40px 100px rgba(0,0,0,.5);position:relative}
+.feat-media{position:relative;min-height:480px;overflow:hidden}
+.feat-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.featured:hover .feat-media img{transform:scale(1.06)}
+.feat-media::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 55%,rgba(8,14,32,.55)),linear-gradient(to top,rgba(4,8,20,.55),transparent 55%)}
+.feat-badge{position:absolute;top:20px;left:20px;z-index:2;display:flex;gap:10px}
+.feat-badge span{font-size:10px;letter-spacing:.18em;font-weight:700;padding:8px 14px;border-radius:100px}
+.feat-badge .c{background:rgba(216,180,122,.92);color:#111}.feat-badge .f{background:rgba(4,8,20,.6);color:#fff;border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(10px)}
+.feat-body{padding:48px 42px;display:flex;flex-direction:column;justify-content:center}
+.feat-body h3{font-size:clamp(30px,3.5vw,46px);letter-spacing:-.03em;line-height:1.02;margin:14px 0}
+.feat-body h3 em{font-family:var(--serif);font-style:italic;font-weight:300;color:var(--gold2)}
+.feat-meta{display:flex;gap:18px;font-size:11px;letter-spacing:.18em;color:var(--muted);margin:14px 0 18px;flex-wrap:wrap}
+.feat-meta b{color:var(--gold2)}
+.feat-body p{color:var(--muted);font-weight:300;line-height:1.8;font-size:15px}
+.feat-actions{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+.work-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+.wcard{border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.09);background:#080E20;position:relative;transition:.5s}
+.wcard:hover{transform:translateY(-6px);border-color:rgba(216,180,122,.4);box-shadow:0 30px 60px rgba(0,0,0,.5)}
+.wcard-img{height:280px;overflow:hidden;position:relative}
+.wcard-img img{width:100%;height:100%;object-fit:cover;transition:1s}
+.wcard:hover .wcard-img img{transform:scale(1.08)}
+.wcard-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(8,14,32,.7),transparent 60%)}
+.wcard-body{padding:26px}
+.wcard-body h4{font-size:20px;letter-spacing:-.02em}.wcard-body h4 span{font-family:var(--serif);font-style:italic;color:var(--muted);font-weight:300}
+.wcard-body p{font-size:13.5px;color:var(--muted);font-weight:300;margin-top:8px}
+.wcard-top{display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.2em;color:var(--gold);font-weight:600}
+@media(max-width:980px){.featured{grid-template-columns:1fr}.feat-media{min-height:320px}.work-grid{grid-template-columns:1fr}}
+/* FOUNDER */
+#founder{padding:110px 0;background:#040814;border-top:1px solid var(--line2)}
+.founder-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;margin-top:48px;align-items:center}
+.founder-visual{border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.1);position:relative;background:#080E20}
+.founder-visual img{width:100%;height:560px;object-fit:cover;filter:saturate(.9) contrast(1.05)}
+.founder-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(4,8,20,.85) 0%,transparent 55%),radial-gradient(80% 60% at 50% 20%,transparent,rgba(4,8,20,.3))}
+.founder-card{position:absolute;bottom:18px;left:18px;right:18px;z-index:2;display:flex;justify-content:space-between;align-items:center;background:rgba(4,8,20,.6);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:16px 20px}
+.founder-card strong{font-size:14px;letter-spacing:.08em}.founder-card small{display:block;font-size:10px;letter-spacing:.22em;color:var(--gold);margin-top:4px}
+.avail{display:flex;align-items:center;gap:8px;font-size:10px;letter-spacing:.18em;color:#7DFFA8}
+.founder-copy h3{font-size:clamp(28px,3.5vw,44px);letter-spacing:-.03em;line-height:1.08}
+.founder-copy h3 em{font-family:var(--serif);font-style:italic;font-weight:300;color:var(--gold2)}
+.founder-copy p{color:var(--muted);font-weight:300;line-height:1.9;margin-top:18px;font-size:15.5px}
+.founder-copy p strong{color:#fff;font-weight:500}
+.cap-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:26px 0}
+.cap-list div{border:1px solid rgba(255,255,255,.09);border-radius:12px;padding:14px 16px;font-size:13px;background:rgba(255,255,255,.02);display:flex;gap:10px;align-items:center}
+.cap-list div::before{content:'—';color:var(--gold)}
+.sig{font-family:var(--serif);font-style:italic;font-size:28px;color:rgba(255,255,255,.85);margin-top:10px}
+.sig small{display:block;font-family:var(--font);font-style:normal;font-size:10px;letter-spacing:.28em;color:var(--muted);margin-top:6px}
+@media(max-width:980px){.founder-grid{grid-template-columns:1fr}.founder-visual img{height:420px}}
+/* CONTACT */
+#contact{padding:110px 0 60px;background:radial-gradient(90% 70% at 50% 0%,rgba(59,98,255,.12),transparent 60%),radial-gradient(70% 50% at 50% 100%,rgba(216,180,122,.1),transparent 60%),#040814;border-top:1px solid var(--line2)}
+.contact-shell{margin-top:48px;display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.contact-left{border-radius:22px;padding:48px 42px;background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.015));border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(18px);position:relative;overflow:hidden}
+.contact-left::before{content:'';position:absolute;top:-60px;left:-60px;width:220px;height:220px;background:radial-gradient(circle,rgba(216,180,122,.2),transparent 70%)}
+.contact-left h3{font-size:clamp(28px,3.4vw,44px);letter-spacing:-.03em;line-height:1.05}
+.contact-left h3 em{font-family:var(--serif);font-style:italic;font-weight:300;color:var(--gold2)}
+.c-rows{margin-top:28px;display:flex;flex-direction:column;gap:14px}
+.c-row{display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,.08);padding-top:14px;font-size:13px}
+.c-row span:first-child{font-size:10px;letter-spacing:.22em;color:var(--muted)}
+.c-row span:last-child{font-weight:500}
+form.contact-form{border-radius:22px;padding:38px 34px;background:#080E20;border:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column;gap:16px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{display:flex;flex-direction:column;gap:8px}
+.field label{font-size:10px;letter-spacing:.22em;color:var(--muted);font-weight:600}
+.field input,.field select,.field textarea{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:14px 16px;color:#fff;font-family:inherit;font-size:14px;outline:none;transition:.3s;width:100%}
+.field textarea{min-height:110px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold);background:rgba(216,180,122,.06);box-shadow:0 0 0 3px rgba(216,180,122,.12)}
+.field select option{background:#0A1228}
+.form-note{font-size:12px;color:var(--muted);font-weight:300}
+#formSuccess{display:none;text-align:center;padding:30px 10px}
+#formSuccess .tick{width:64px;height:64px;border-radius:50%;background:rgba(125,255,168,.12);border:1px solid rgba(125,255,168,.4);display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 16px;color:#7DFFA8}
+@media(max-width:980px){.contact-shell{grid-template-columns:1fr}.f-row{grid-template-columns:1fr}}
+/* FOOTER */
+footer{border-top:1px solid var(--line);padding:60px 0 30px;background:#020409}
+.foot-big{font-size:clamp(60px,14vw,190px);font-weight:800;letter-spacing:-.05em;line-height:.9;text-align:center;background:linear-gradient(to bottom,#fff 30%,rgba(255,255,255,.05));-webkit-background-clip:text;background-clip:text;color:transparent;user-select:none}
+.foot-grid{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:40px;padding-top:26px;border-top:1px solid rgba(255,255,255,.07);font-size:11px;letter-spacing:.18em;color:var(--muted)}
+.foot-grid a:hover{color:var(--gold2)}
+.toTop{width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.18);background:transparent;color:#fff;cursor:pointer;transition:.3s;font-size:18px}
+.toTop:hover{background:var(--gold);color:#111;border-color:var(--gold)}
+@media(max-width:860px){nav .nav-links{display:none}#hamb{display:flex}.nav-cta .btn-glass{display:none}.hfeat{font-size:9px}.hero-features{flex-wrap:wrap}.hfeat{flex:1 1 40%}.hfeat:nth-child(3){border-left:none}.serv{grid-template-columns:50px 1fr auto}}
 </style>
 </head>
-
-
 <body>
-<div class="aura-loader" id="auraLoader" aria-hidden="true">
-  <div class="aura-loader__inner">
-    <div class="aura-loader__mark">AURA</div>
-    <div class="aura-loader__line"></div>
-    <div class="aura-loader__label">Private residences · Dubai</div>
-  </div>
+<div class="grain"></div>
+<div id="progress"></div>
+<div id="cursor"></div><div id="cursorDot"></div>
+<div id="toast">Added to bag — premium checkout preview</div>
+
+<div id="preloader">
+<div class="pre-inner">
+<div class="pre-logo">NEURAL <span>— by ZAID</span></div>
+<div class="pre-bar"><div class="pre-fill" id="preFill"></div></div>
+<div class="pre-count" id="preCount">00%</div>
+<div class="pre-tag">Premium digital experiences for ambitious brands.</div>
+</div>
 </div>
 
-<!-- =====================================================
-     NAVBAR
-     ===================================================== -->
+<nav id="nav">
+<a href="#hero" class="brand" aria-label="NEURAL home">
+<div class="brand-mark">N</div>
+<div class="brand-text"><strong>NEURAL</strong><small>BY ZAID</small></div>
+</a>
+<div class="nav-links">
+<a href="#studio" data-nav>Studio</a>
+<a href="#ecommerce" data-nav>E-commerce</a>
+<a href="#services" data-nav>Services</a>
+<a href="#work" data-nav>Work</a>
+<a href="#founder" data-nav>About</a>
+<a href="#contact" data-nav>Contact</a>
+</div>
+<div class="nav-cta">
+<a href="#work" class="btn btn-glass magnetic" style="padding:11px 20px">View Portfolio</a>
+<a href="#contact" class="btn btn-primary magnetic">Start a Project <span class="arr">→</span></a>
+<button id="hamb" aria-label="Menu"><span></span><span></span><span></span></button>
+</div>
+</nav>
 
-<header class="nav" id="navbar">
+<div id="mobileMenu">
+<a class="mlink" href="#studio">Studio <span class="num">01</span></a>
+<a class="mlink" href="#ecommerce">E-commerce <span class="num">02</span></a>
+<a class="mlink" href="#services">Services <span class="num">03</span></a>
+<a class="mlink" href="#work">Work <span class="num">04</span></a>
+<a class="mlink" href="#founder">About <span class="num">05</span></a>
+<a class="mlink" href="#contact">Start a Project <span class="num">→</span></a>
+<div style="margin-top:28px;font-size:11px;letter-spacing:.22em;color:var(--muted)">NEURAL — BY ZAID • INTERNATIONAL FOCUS • <span id="clockM" style="color:var(--gold2)">—</span></div>
+</div>
 
-  <div class="wrap nav__inner">
-
-    <a href="#top" class="logo">
-      AURA
-    </a>
-
-    <nav class="nav__links">
-
-      <a href="#properties">Properties</a>
-
-      <a href="#story">Our Story</a>
-
-      <a href="#standard">Why AURA</a>
-
-      <a href="#development">Development</a>
-
-      <a href="#contact">
-        Private Viewing
-      </a>
-
-    </nav>
-
-    <div class="nav__actions">
-
-      <button
-        class="btn btn--ghost btn--sm"
-        data-open-modal>
-        Schedule Viewing
-      </button>
-
-    </div>
-
-    <button
-      class="nav__toggle"
-      id="menuToggle"
-      aria-label="Open menu"
-      aria-expanded="false">
-
-      <span></span>
-      <span></span>
-
-    </button>
-
-  </div>
-
+<header id="hero">
+<div class="hero-media">
+<video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2000&auto=format&fit=crop">
+<source src="https://assets.mixkit.co/videos/preview/mixkit-white-smoke-slowly-emerging-on-black-background-12312-large.mp4" type="video/mp4">
+<source src="https://cdn.pixabay.com/video/2020/05/25/40130-424930032_large.mp4" type="video/mp4">
+</video>
+<canvas id="lightCanvas"></canvas>
+<div class="hero-shade"></div><div class="hero-vignette"></div>
+</div>
+<div class="side-label left">NEURAL STUDIO — EST. FOR GLOBAL BRANDS</div>
+<div class="side-label right">PREMIUM • CINEMATIC • CONVERSION-FOCUSED</div>
+<div class="hero-inner" id="heroInner">
+<div class="eyebrow reveal visible"><span class="dotlive"><span class="pulse"></span>&nbsp;LIVE</span> NEURAL — by ZAID &nbsp;•&nbsp; PREMIUM DIGITAL STUDIO</div>
+<div class="hero-badge">INDEPENDENT STUDIO • <b>INTERNATIONAL / USA CLIENT FOCUSED</b> • AVAILABLE WORLDWIDE</div>
+<h1 class="hero-h1">
+<span class="line"><span>World-Class</span></span>
+<span class="line"><span>Digital Products</span></span>
+<span class="line"><span class="italic">Built to Make Brands Impossible to Ignore.</span></span>
+</h1>
+<p class="hero-sub">We design premium websites and e-commerce experiences for ambitious brands, founders and businesses — where refined visuals, cinematic motion and conversion-focused structure meet.</p>
+<div class="hero-ctas">
+<a href="#contact" class="btn btn-primary magnetic" style="padding:16px 32px;font-size:13px">Start a Project <span class="arr">→</span></a>
+<a href="https://zaidsheikh668-lang.github.io/zaid/" target="_blank" rel="noopener" class="btn btn-glass magnetic" style="padding:16px 32px;font-size:13px">View Portfolio <span class="arr">↗</span></a>
+</div>
+<div class="hero-features">
+<div class="hfeat"><i>✦</i>PREMIUM DESIGN</div>
+<div class="hfeat"><i>◈</i>END-TO-END DELIVERY</div>
+<div class="hfeat"><i>⬣</i>E-COMMERCE READY</div>
+<div class="hfeat"><i>◎</i>INTERNATIONAL FOCUS</div>
+</div>
+</div>
+<div class="hero-bottom">
+<div class="scroll-hint"><div class="scroll-line"></div> SCROLL TO EXPLORE</div>
+<div class="hideM">34.05°N — DUBAI • NYC • LONDON</div>
+<div><span class="pulse" style="display:inline-block;margin-right:8px"></span>ACCEPTING NEW PROJECTS</div>
+</div>
 </header>
 
+<div class="marquee"><div class="marquee-track" id="marq">
+<span>PREMIUM WEBSITES</span><span>E-COMMERCE EXPERIENCES</span><span>LUXURY BRAND WEBSITES</span><span>INTERACTIVE MOTION</span><span>CONVERSION-FOCUSED STOREFRONTS</span><span>MOTION & VISUAL STORYTELLING</span>
+</div></div>
 
-<main id="top">
-
-
-<!-- =====================================================
-     HERO
-     ===================================================== -->
-
-<section class="hero">
-
-  <div class="hero__media">
-
-    <video
-      autoplay
-      muted
-      loop
-      playsinline
-      preload="auto">
-
-      <source
-        src="422576406_1789584885010052.mp4"
-        type="video/mp4">
-
-    </video>
-
-  </div>
-
-  <div class="hero__scrim"></div>
-
-  <div class="wrap hero__content">
-
-    <div class="eyebrow eyebrow--light">
-      Mumbai, Maharashtra · India
-    </div>
-
-    <h1>
-      A quieter
-      <em>standard</em>
-      of living.
-    </h1>
-
-    <p class="lede">
-      Private residences shaped by architecture,
-      considered locations and a deeper understanding
-      of everyday living.
-    </p>
-
-    <div class="hero__actions">
-
-      <button
-        class="btn btn--ivory"
-        data-open-modal>
-
-        Schedule a Private Viewing
-
-        <span class="btn__arr">→</span>
-
-      </button>
-
-      <a
-        href="#properties"
-        class="btn btn--ghost">
-
-        Explore Properties
-
-        <span class="btn__arr">→</span>
-
-      </a>
-
-    </div>
-
-  </div>
-
-  <div class="hero__cue">
-    Discover
-  </div>
-
+<section id="studio">
+<div class="wrap">
+<div class="sec-head reveal"><em>01 — STUDIO</em> NEURAL POSITIONING</div>
+<h2 class="big reveal">NEURAL is the digital design studio <span class="serif">by Zaid Sheikh.</span></h2>
+<div class="studio-grid">
+<div class="studio-copy reveal">
+<p><strong>Zaid Sheikh creates premium digital experiences</strong> that combine refined visual design, modern interaction, cinematic motion and conversion-focused structure.</p>
+<p>From luxury brands to modern e-commerce businesses, every project is designed to feel <strong>distinctive, intentional and ready for a global audience.</strong></p>
+<p style="color:var(--muted);font-size:14px">An independent practice — no bloated agency layers. You work directly with the designer on direction, layout, motion and delivery, with a focus on international standards and detail.</p>
+<div class="principles">
+<div class="prin"><div class="n">/ 01</div><h4>DISTINCTIVE</h4><p>No templates. Art-directed layouts built around your brand story.</p></div>
+<div class="prin"><div class="n">/ 02</div><h4>INTENTIONAL</h4><p>Every section has a role — clarity, desire, trust, action.</p></div>
+<div class="prin"><div class="n">/ 03</div><h4>GLOBAL-READY</h4><p>Designed for USA & international audiences, devices and expectations.</p></div>
+</div>
+</div>
+<div class="reveal">
+<div class="quote-card">
+<p>Premium digital experiences for ambitious brands — designed with restraint, built with intent.</p>
+<small>— NEURAL STUDIO PHILOSOPHY</small>
+<div style="margin-top:24px;display:flex;gap:10px;flex-wrap:wrap">
+<span style="font-size:10px;letter-spacing:.18em;border:1px solid rgba(216,180,122,.4);color:var(--gold2);padding:8px 14px;border-radius:100px">LUXURY / MODERN</span>
+<span style="font-size:10px;letter-spacing:.18em;border:1px solid rgba(110,157,255,.4);color:#9DB9FF;padding:8px 14px;border-radius:100px">CINEMATIC MOTION</span>
+</div>
+</div>
+<div style="margin-top:14px;border:1px solid var(--line2);border-radius:14px;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.02)">
+<div><div style="font-size:11px;letter-spacing:.22em;color:var(--muted)">FOCUS AREAS</div><div style="font-size:14px;margin-top:6px">Websites • Storefronts • Brand Sites • Motion</div></div>
+<div style="font-family:var(--serif);font-style:italic;font-size:22px;color:var(--gold2)">Z.S</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 
-
-<!-- =====================================================
-     SIGNATURE STRIP
-     ===================================================== -->
-<section class="aura-strip" aria-label="AURA highlights">
-  <div class="wrap aura-strip__inner">
-    <div class="aura-strip__item"><span class="aura-strip__num">03</span><span class="aura-strip__text">Private Residences</span></div>
-    <div class="aura-strip__item"><span class="aura-strip__num">01</span><span class="aura-strip__text">Considered Collection</span></div>
-    <div class="aura-strip__item"><span class="aura-strip__num">24/7</span><span class="aura-strip__text">Private Access</span></div>
-    <div class="aura-strip__item"><span class="aura-strip__num">DXB</span><span class="aura-strip__text">Dubai</span></div>
-  </div>
+<section id="ecommerce">
+<div class="wrap">
+<div class="sec-head reveal"><em>02 — E-COMMERCE</em> CONVERSION BY DESIGN</div>
+<h2 class="big reveal">E-commerce, <span class="serif">elevated.</span></h2>
+<p class="lead reveal" style="margin-top:16px">From product discovery to checkout, we create storefronts that make products feel premium and the buying journey feel effortless.</p>
+<div class="ecom-shell">
+<div class="ecom-left reveal">
+<div style="font-size:11px;letter-spacing:.24em;color:var(--gold)">STOREFRONT SPECIALIST</div>
+<h3 style="font-size:26px;margin:12px 0;letter-spacing:-.02em">Designed to browse beautifully.<br>Built to convert quietly.</h3>
+<p style="font-size:14px;color:rgba(255,255,255,.65);font-weight:300;line-height:1.8">Mobile-first shopping, premium presentation and brand storytelling — for international DTC brands and COD / prepaid-ready Indian e-commerce concepts.</p>
+<ul class="check-list">
+<li>Shopify-style storefront design</li>
+<li>Product pages that sell</li>
+<li>Collection pages</li>
+<li>Conversion-focused layouts</li>
+<li>Mobile-first shopping</li>
+<li>Premium product presentation</li>
+<li>Motion interactions</li>
+<li>Brand storytelling</li>
+<li>International + Indian concepts</li>
+</ul>
+<div class="ecom-badges"><span class="gold">SHOPIFY-STYLE UX</span><span>MOBILE-FIRST</span><span>COD / PREPAID READY CONCEPTS</span><span class="gold">USA / GLOBAL READY</span></div>
+<div style="margin-top:26px;display:flex;gap:12px;flex-wrap:wrap"><a href="#contact" class="btn btn-primary magnetic">Request a Storefront →</a></div>
+</div>
+<div class="ecom-right reveal" id="shopMock">
+<div class="browser-bar"><i></i><i></i><i></i><div class="url">neural-studio.shop / atelier — premium storefront concept</div><div class="cart-pill">BAG (<span id="cartCount">0</span>)</div></div>
+<div class="ecom-tabs">
+<button class="active" data-tab="discovery">01 DISCOVERY</button>
+<button data-tab="product">02 PRODUCT</button>
+<button data-tab="checkout">03 CHECKOUT</button>
+</div>
+<div class="ecom-stage">
+<div class="ecom-img"><img id="shopImg" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1200&auto=format&fit=crop" alt="Storefront"></div>
+<div class="ecom-info">
+<div id="shopKicker" style="font-size:10px;letter-spacing:.22em;color:var(--gold)">NEW COLLECTION — CONCEPT</div>
+<h3 id="shopTitle">Atelier Noir — Edit 04</h3>
+<p id="shopDesc">A cinematic collection grid with editorial spacing, quick-view and story-led merchandising.</p>
+<div class="price-row"><span class="price" id="shopPrice">$148</span><span class="old" id="shopOld">$185</span><span class="off">CONCEPT PRICING</span></div>
+<div class="qty"><button id="qMinus">−</button><span id="qVal" style="font-weight:700">1</span><button id="qPlus">+</button><span style="font-size:11px;color:var(--muted);letter-spacing:.12em;margin-left:6px">QTY</span></div>
+</div>
+</div>
+<div class="ecom-foot">
+<button class="btn btn-primary" id="addBag" style="flex:1.4">Add to Bag →</button>
+<button class="btn btn-glass" id="nextStep" style="flex:1">Next: Product →</button>
+</div>
+<div style="padding:0 18px 18px;display:flex;gap:8px;font-size:10px;letter-spacing:.14em;color:var(--muted)"><span style="border:1px solid rgba(255,255,255,.12);padding:6px 12px;border-radius:100px">● COD CONCEPT</span><span style="border:1px solid rgba(255,255,255,.12);padding:6px 12px;border-radius:100px">● PREPAID FLOW</span><span style="border:1px solid rgba(216,180,122,.4);color:var(--gold2);padding:6px 12px;border-radius:100px">● INTL CHECKOUT UX</span></div>
+</div>
+</div>
+</div>
 </section>
 
-<!-- =====================================================
-     PROPERTIES
-     ===================================================== -->
-
-<section
-  class="section properties"
-  id="properties">
-
-  <div class="wrap">
-
-    <div class="section-head">
-
-      <div class="eyebrow">
-        Selected Residences
-      </div>
-
-      <h2 class="section-title">
-        Spaces designed
-        to be lived in.
-      </h2>
-
-    </div>
-
-
-    <div class="prop-grid">
-
-
-      <!-- PROPERTY 01 -->
-
-      <article class="card"><span class="card-index">01</span>
-
-        <div class="card__media">
-
-          <img
-            src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85"
-            alt="Luxury Dubai residence"
-            loading="lazy">
-
-        </div>
-
-        <div class="card__body">
-
-          <h3 class="card__name">
-            The Palm Residence
-          </h3>
-
-          <p class="card__loc">
-            Palm Jumeirah · Dubai
-          </p>
-
-          <p class="card__price">
-            From AED 8.9M
-          </p>
-
-          <div class="card__cta">
-
-            <button
-              class="link-arrow"
-              data-open-modal>
-
-              Request Details
-
-              <span class="arr">→</span>
-
-            </button>
-
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- PROPERTY 02 -->
-
-      <article class="card"><span class="card-index">02</span>
-
-        <div class="card__media">
-
-          <img
-            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85"
-            alt="Contemporary luxury villa"
-            loading="lazy">
-
-        </div>
-
-        <div class="card__body">
-
-          <h3 class="card__name">
-            Villa Amani
-          </h3>
-
-          <p class="card__loc">
-            Jumeirah · Dubai
-          </p>
-
-          <p class="card__price">
-            From AED 12.5M
-          </p>
-
-          <div class="card__cta">
-
-            <button
-              class="link-arrow"
-              data-open-modal>
-
-              Request Details
-
-              <span class="arr">→</span>
-
-            </button>
-
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- PROPERTY 03 -->
-
-      <article class="card"><span class="card-index">03</span>
-
-        <div class="card__media">
-
-          <img
-            src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1200&q=85"
-            alt="Modern luxury apartment"
-            loading="lazy">
-
-        </div>
-
-        <div class="card__body">
-
-          <h3 class="card__name">
-            AURA Sky Residences
-          </h3>
-
-          <p class="card__loc">
-            Downtown Dubai
-          </p>
-
-          <p class="card__price">
-            From AED 6.4M
-          </p>
-
-          <div class="card__cta">
-
-            <button
-              class="link-arrow"
-              data-open-modal>
-
-              Request Details
-
-              <span class="arr">→</span>
-
-            </button>
-
-          </div>
-
-        </div>
-
-      </article>
-
-    </div>
-
-  </div>
-
+<section id="services">
+<div class="wrap">
+<div class="sec-head reveal"><em>03 — SERVICES</em> WHAT NEURAL DOES BEST</div>
+<h2 class="big reveal">Capabilities, <span class="serif">curated for impact.</span></h2>
+<p class="lead reveal" style="margin-top:16px">Six focused offerings. Each one premium, conversion-aware and crafted end-to-end — from direction to final delivery.</p>
+<div class="serv-list reveal" id="servList">
+<div class="serv open"><div class="serv-num">01</div><div class="serv-main"><h3>Premium Websites <span>— signature sites</span></h3><div class="serv-desc">Bespoke, high-end websites for brands, businesses and founders who need to look world-class. Refined typography, precise spacing, responsive layouts and cinematic detail.</div><div class="serv-tags"><span>CUSTOM DESIGN</span><span>RESPONSIVE</span><span>BRAND-ALIGNED</span></div></div><div class="serv-plus">+</div></div>
+<div class="serv"><div class="serv-num">02</div><div class="serv-main"><h3>E-commerce Experiences <span>— storefronts</span></h3><div class="serv-desc">Shopify-style storefront design, product and collection pages, and mobile-first shopping flows. Premium presentation with effortless discovery-to-checkout journeys.</div><div class="serv-tags"><span>STOREFRONT UX</span><span>PRODUCT PAGES</span><span>MOBILE-FIRST</span></div></div><div class="serv-plus">+</div></div>
+<div class="serv"><div class="serv-num">03</div><div class="serv-main"><h3>Luxury Brand Websites <span>— editorial elegance</span></h3><div class="serv-desc">Quiet luxury aesthetics for fashion, real-estate concepts, hospitality and premium services. Editorial grids, generous whitespace and timeless art direction.</div><div class="serv-tags"><span>LUXURY</span><span>EDITORIAL</span><span>TIMELESS</span></div></div><div class="serv-plus">+</div></div>
+<div class="serv"><div class="serv-num">04</div><div class="serv-main"><h3>Interactive Motion <span>— cinematic feeling</span></h3><div class="serv-desc">Smooth scroll, parallax, micro-interactions and visual storytelling that make the site feel alive — without hurting clarity or performance.</div><div class="serv-tags"><span>SCROLL MOTION</span><span>MICRO-INTERACTIONS</span><span>STORYTELLING</span></div></div><div class="serv-plus">+</div></div>
+<div class="serv"><div class="serv-num">05</div><div class="serv-main"><h3>Landing Pages <span>— built to convert</span></h3><div class="serv-desc">Focused, conversion-led pages for launches, products and campaigns. Clear hierarchy, persuasive structure and strong calls-to-action.</div><div class="serv-tags"><span>LAUNCHES</span><span>CRO LAYOUT</span><span>SPEED</span></div></div><div class="serv-plus">+</div></div>
+<div class="serv"><div class="serv-num">06</div><div class="serv-main"><h3>Digital Product Experiences <span>— modern interfaces</span></h3><div class="serv-desc">Clean, modern interfaces for digital products, portfolios and brand platforms. Intuitive flows with premium visual polish.</div><div class="serv-tags"><span>UI DESIGN</span><span>PROTOTYPE</span><span>DESIGN SYSTEM</span></div></div><div class="serv-plus">+</div></div>
+</div>
+</div>
 </section>
 
-
-<!-- =====================================================
-     STORY
-     ===================================================== -->
-
-<section
-  class="section story"
-  id="story">
-
-  <div class="wrap">
-
-    <div class="story__grid">
-
-      <div class="story__media">
-
-        <img
-          src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85"
-          alt="AURA Estates architecture"
-          loading="lazy">
-
-      </div>
-
-
-      <div class="story__copy">
-
-        <div class="eyebrow">
-          The AURA Approach
-        </div>
-
-        <h2 class="section-title">
-          Luxury is felt
-          before it is seen.
-        </h2>
-
-        <p>
-          AURA Estates is presented by Zaid Sheikh, a website designer focused on creating premium digital experiences with a refined, modern and cinematic feel.
-        </p>
-
-        <p>
-          Based in Mumbai, Maharashtra, Zaid brings a detail-focused approach to web design, combining elegant layouts, smooth motion and strong visual storytelling.
-        </p>
-
-        <button
-          class="link-arrow"
-          data-open-modal>
-
-          Speak With Our Specialists
-
-          <span class="arr">→</span>
-
-        </button>
-
-      </div>
-
-    </div>
-
-  </div>
-
+<section id="process">
+<div class="wrap">
+<div class="sec-head reveal"><em>04 — PROCESS</em> END-TO-END DELIVERY</div>
+<h2 class="big reveal">Simple, focused, <span class="serif">premium process.</span></h2>
+<div class="proc-grid">
+<div class="proc reveal"><b>STEP 01</b><h4>Discover</h4><p>Brand, goals, audience and references. We define what world-class looks like for you.</p></div>
+<div class="proc reveal"><b>STEP 02</b><h4>Design</h4><p>Art direction, layout and visual system — refined until it feels inevitable.</p></div>
+<div class="proc reveal"><b>STEP 03</b><h4>Build & Motion</h4><p>Responsive build with cinematic motion, interactions and e-commerce structure.</p></div>
+<div class="proc reveal"><b>STEP 04</b><h4>Elevate & Launch</h4><p>Polish, QA across devices, and launch-ready delivery with guidance.</p></div>
+</div>
+</div>
 </section>
 
-
-<!-- =====================================================
-     WHY AURA
-     ===================================================== -->
-
-<section
-  class="section why"
-  id="standard">
-
-  <div class="why-video">
-
-    <video
-      autoplay
-      muted
-      loop
-      playsinline
-      preload="metadata">
-
-      <source
-        src="109803326_1789660265221549.mp4"
-        type="video/mp4">
-
-    </video>
-
-  </div>
-
-
-  <div class="wrap">
-
-    <div class="section-head">
-
-      <div class="eyebrow eyebrow--light">
-        Why AURA
-      </div>
-
-      <h2 class="section-title">
-        Considered at
-        every level.
-      </h2>
-
-    </div>
-
-
-    <div class="why-grid">
-
-
-      <article class="why__item">
-
-        <div class="why__num">
-          01
-        </div>
-
-        <h3>
-          Architecture
-        </h3>
-
-        <p>
-          Distinctive spaces with a focus on proportion,
-          natural light and timeless materials.
-        </p>
-
-      </article>
-
-
-      <article class="why__item">
-
-        <div class="why__num">
-          02
-        </div>
-
-        <h3>
-          Location
-        </h3>
-
-        <p>
-          Residences positioned around the places,
-          connections and experiences that matter.
-        </p>
-
-      </article>
-
-
-      <article class="why__item">
-
-        <div class="why__num">
-          03
-        </div>
-
-        <h3>
-          Privacy
-        </h3>
-
-        <p>
-          A quieter approach to residential living,
-          designed around comfort and discretion.
-        </p>
-
-      </article>
-
-
-      <article class="why__item">
-
-        <div class="why__num">
-          04
-        </div>
-
-        <h3>
-          Service
-        </h3>
-
-        <p>
-          Personal guidance from first conversation
-          through private viewing and beyond.
-        </p>
-
-      </article>
-
-
-    </div>
-
-  </div>
-
+<section id="work">
+<div class="wrap">
+<div class="sec-head reveal"><em>05 — SELECTED WORK</em> FEATURED CONCEPT</div>
+<h2 class="big reveal">Work that feels <span class="serif">impossible to ignore.</span></h2>
+<div class="featured reveal" id="featuredCard">
+<div class="feat-media"><div class="feat-badge"><span class="c">FEATURED CONCEPT</span><span class="f">PORTFOLIO PROJECT</span></div><img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=1800&auto=format&fit=crop" alt="AURA Estates"></div>
+<div class="feat-body">
+<div style="font-size:11px;letter-spacing:.24em;color:var(--gold)">01 — PRIVATE RESIDENCES • DUBAI CONCEPT</div>
+<h3>AURA <em>Estates</em></h3>
+<div class="feat-meta"><span><b>TYPE</b> LUXURY CONCEPT</span><span><b>SCOPE</b> WEBSITE • MOTION</span><span><b>FEEL</b> CINEMATIC</span></div>
+<p>A concept portfolio exploration for private residences in Dubai — dark cinematic visuals, editorial typography and slow, luxurious motion. Presented as a design concept, not a real company.</p>
+<div class="feat-actions">
+<a href="https://zaidsheikh668-lang.github.io/zaid/" target="_blank" rel="noopener" class="btn btn-primary magnetic">View Selected Work <span class="arr">↗</span></a>
+<a href="#contact" class="btn btn-glass magnetic">Start Similar →</a>
+</div>
+<div style="margin-top:22px;font-size:11px;letter-spacing:.16em;color:var(--muted)">FULL CASE + MORE CONCEPTS INSIDE THE LIVE PORTFOLIO ↗</div>
+</div>
+</div>
+<div class="work-grid">
+<div class="wcard reveal"><div class="wcard-img"><img src="https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=1200&auto=format&fit=crop" alt="Maison Noir"><div style="position:absolute;top:16px;left:16px;z-index:2;font-size:10px;letter-spacing:.18em;background:rgba(4,8,20,.6);border:1px solid rgba(255,255,255,.2);padding:7px 13px;border-radius:100px;backdrop-filter:blur(10px)">LUXURY CONCEPT • 02</div></div><div class="wcard-body"><div class="wcard-top"><span>MAISON NOIR</span><span>↗</span></div><h4>Editorial Fragrance <span>— brand site</span></h4><p>A luxury brand website concept with product storytelling and restrained motion.</p></div></div>
+<div class="wcard reveal"><div class="wcard-img"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1200&auto=format&fit=crop" alt="Atelier Commerce"><div style="position:absolute;top:16px;left:16px;z-index:2;font-size:10px;letter-spacing:.18em;background:rgba(216,180,122,.9);color:#111;padding:7px 13px;border-radius:100px;font-weight:700">E-COMMERCE CONCEPT • 03</div></div><div class="wcard-body"><div class="wcard-top"><span>ATELIER COMMERCE</span><span>↗</span></div><h4>Modern Storefront <span>— shopping UX</span></h4><p>Conversion-focused storefront concept — discovery, product, effortless checkout.</p></div></div>
+</div>
+<div style="text-align:center;margin-top:32px" class="reveal"><a href="https://zaidsheikh668-lang.github.io/zaid/" target="_blank" rel="noopener" class="btn btn-glass magnetic" style="padding:16px 34px">View Selected Work on Live Portfolio ↗</a></div>
+</div>
 </section>
 
-
-<!-- =====================================================
-     DEVELOPMENT
-     ===================================================== -->
-
-<section
-  class="dev"
-  id="development">
-
-  <div class="dev__media">
-
-    <img
-      src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=2000&q=90"
-      alt="Dubai skyline"
-      loading="lazy">
-
-  </div>
-
-  <div class="dev__scrim"></div>
-
-
-  <div class="wrap dev__content">
-
-    <div class="eyebrow eyebrow--light">
-      AURA Development
-    </div>
-
-    <h2>
-      A new perspective
-      on Dubai living.
-    </h2>
-
-
-    <ul class="dev__specs">
-
-      <li>
-        Dubai
-      </li>
-
-      <li>
-        Private Residences
-      </li>
-
-      <li>
-        Limited Collection
-      </li>
-
-    </ul>
-
-
-    <button
-      class="btn btn--ivory"
-      data-open-modal>
-
-      Register Interest
-
-      <span class="btn__arr">→</span>
-
-    </button>
-
-  </div>
-
+<section id="founder">
+<div class="wrap">
+<div class="sec-head reveal"><em>06 — FOUNDER</em> THE DESIGNER BEHIND NEURAL</div>
+<div class="founder-grid">
+<div class="founder-visual reveal">
+<img src="https://images.unsplash.com/photo-1493397212122-2b85dda8106b?q=80&w=1200&auto=format&fit=crop" alt="Studio">
+<div class="founder-card"><div><strong>Zaid Sheikh</strong><small>INDEPENDENT WEBSITE DESIGNER</small></div><div class="avail"><span class="pulse"></span> AVAILABLE</div></div>
+</div>
+<div class="founder-copy reveal">
+<h3>Designed by <em>Zaid Sheikh.</em></h3>
+<p><strong>Zaid Sheikh is an independent website designer</strong> focused on premium digital experiences, e-commerce interfaces and cinematic web design.</p>
+<p>His approach combines <strong>visual direction, responsive layouts, smooth motion and practical business-focused structure</strong> — so sites don't just look premium, they work for the brand.</p>
+<div class="cap-list"><div>Visual Direction</div><div>Responsive Layouts</div><div>Smooth Motion</div><div>E-commerce UX</div></div>
+<div class="sig">Zaid Sheikh<small>FOUNDER & DESIGNER — NEURAL</small></div>
+<div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap"><a href="#contact" class="btn btn-primary magnetic">Work with Zaid →</a><a href="https://zaidsheikh668-lang.github.io/zaid/" target="_blank" rel="noopener" class="btn btn-glass magnetic">See Portfolio ↗</a></div>
+</div>
+</div>
+</div>
 </section>
 
-
-<!-- =====================================================
-     FINAL CTA
-     ===================================================== -->
-
-<section
-  class="cta"
-  id="contact">
-
-  <div class="wrap">
-
-    <div class="eyebrow eyebrow--light">
-      Private Access
-    </div>
-
-    <h2>
-      Your next address
-      deserves intention.
-    </h2>
-
-    <p>
-      Speak privately with a member of the
-      AURA Estates specialist team.
-    </p>
-
-    <button
-      class="btn btn--ivory"
-      data-open-modal>
-
-      Schedule a Private Viewing
-
-      <span class="btn__arr">→</span>
-
-    </button>
-
-  </div>
-
+<section id="contact">
+<div class="wrap">
+<div class="sec-head reveal"><em>07 — CONTACT</em> START YOUR PROJECT</div>
+<h2 class="big reveal" style="text-align:center;max-width:800px;margin:0 auto">Have a brand, product or business that deserves <span class="serif">a better digital experience?</span></h2>
+<p class="lead reveal" style="text-align:center;margin:16px auto 0">Let's build it. Tell us about your vision — premium websites, storefronts and luxury digital experiences.</p>
+<div class="contact-shell">
+<div class="contact-left reveal">
+<h3>Let's <em>build it.</em></h3>
+<p style="margin-top:14px;color:var(--muted);font-weight:300;font-size:14px;line-height:1.8">Currently accepting select projects for international and Indian brands. Direct communication with Zaid from first call to final delivery.</p>
+<div class="c-rows">
+<div class="c-row"><span>RESPONSE</span><span>Within 24–48 hours</span></div>
+<div class="c-row"><span>FOCUS</span><span>Premium • E-commerce • Luxury</span></div>
+<div class="c-row"><span>CLIENTS</span><span>USA • Global • India</span></div>
+<div class="c-row"><span>LOCAL TIME</span><span id="clockC">—</span></div>
+</div>
+<div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap"><a href="mailto:hello@neuralbyzaid.studio?subject=Project%20Inquiry%20—%20NEURAL%20by%20ZAID" class="btn btn-primary magnetic">Request a Website →</a></div>
+</div>
+<form class="contact-form reveal" id="contactForm" novalidate>
+<div id="formFields" style="display:flex;flex-direction:column;gap:16px">
+<div class="f-row"><div class="field"><label>YOUR NAME</label><input id="fName" type="text" placeholder="Jane Cooper" required></div><div class="field"><label>EMAIL</label><input id="fEmail" type="email" placeholder="you@brand.com" required></div></div>
+<div class="f-row"><div class="field"><label>PROJECT TYPE</label><select id="fType"><option>Premium Website</option><option>E-commerce Storefront</option><option>Luxury Brand Website</option><option>Landing Page</option><option>Interactive / Motion Experience</option><option>Digital Product</option></select></div><div class="field"><label>BUDGET RANGE</label><select id="fBudget"><option>Under $1k</option><option selected>$1k – $3k</option><option>$3k – $8k</option><option>$8k+</option><option>Let's discuss</option></select></div></div>
+<div class="field"><label>TELL US ABOUT YOUR PROJECT</label><textarea id="fMsg" placeholder="Brand, goals, timeline, references..."></textarea></div>
+<button type="submit" class="btn btn-primary" id="submitBtn" style="justify-content:center;padding:16px">Start Your Project →</button>
+<div class="form-note">No spam. No pressure. Just a clear conversation about what's possible for your brand.</div>
+</div>
+<div id="formSuccess"><div class="tick">✓</div><h3 style="font-size:24px;letter-spacing:-.02em">Request received.</h3><p style="color:var(--muted);font-weight:300;margin-top:10px;font-size:14px">Thank you — Zaid will personally review your project and respond within 24–48 hours.</p><button type="button" class="btn btn-glass" id="resetForm" style="margin-top:20px">Send another →</button></div>
+</form>
+</div>
+</div>
 </section>
 
-
-</main>
-
-
-<!-- =====================================================
-     FOOTER
-     ===================================================== -->
-
-<footer class="footer">
-
-  <div class="wrap">
-
-    <div class="footer__grid">
-
-
-      <div class="footer__col">
-
-        <div class="logo">
-          AURA
-        </div>
-
-        <p class="footer__blurb">
-          Private residences and considered
-          developments across Dubai.
-        </p>
-
-      </div>
-
-
-      <div class="footer__col">
-
-        <div class="footer__head">
-          Explore
-        </div>
-
-        <ul>
-          <li><a href="https://zaidsheikh668-lang.github.io/zaid/" target="_blank" rel="noopener">Portfolio</a></li>
-        </ul>
-
-        <ul>
-
-          <li>
-            <a href="#properties">
-              Properties
-            </a>
-          </li>
-
-          <li>
-            <a href="#story">
-              Our Story
-            </a>
-          </li>
-
-          <li>
-            <a href="#standard">
-              Why AURA
-            </a>
-          </li>
-
-          <li>
-            <a href="#development">
-              Development
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-
-      <div class="footer__col">
-
-        <div class="footer__head">
-          Contact
-        </div>
-
-        <p>
-          Zaid Sheikh<br>
-          Mumbai, Maharashtra
-        </p>
-
-        <br>
-
-        <p>
-          zaidsheikh668@gmail.com
-        </p>
-
-        <br>
-
-        <p>
-          +91 7789043678
-        </p>
-
-        <p>
-          <a href="https://instagram.com/zaidsheikh68" target="_blank" rel="noopener">Instagram · @zaidsheikh68</a>
-        </p>
-
-      </div>
-
-
-      <div class="footer__col">
-
-        <div class="footer__head">
-          Private Viewings
-        </div>
-
-        <p>
-          Website Designer · Premium Digital Experiences
-        </p>
-
-        <br>
-
-        <button
-          class="btn btn--ghost btn--sm"
-          data-open-modal>
-
-          Enquire
-
-        </button>
-
-      </div>
-
-
-    </div>
-
-
-    <div class="footer__bar">
-
-      <span>
-        © 2026 Zaid Sheikh · AURA Estates
-      </span>
-
-      <span>
-        Private Residences · Dubai
-      </span>
-
-    </div>
-
-  </div>
-
+<footer>
+<div class="wrap">
+<div class="foot-big">NEURAL</div>
+<div style="text-align:center;font-size:11px;letter-spacing:.4em;color:var(--gold);margin-top:10px">BY ZAID — PREMIUM DIGITAL EXPERIENCES</div>
+<div class="foot-grid">
+<div>© 2026 NEURAL BY ZAID SHEIKH • ALL RIGHTS RESERVED</div>
+<div style="display:flex;gap:22px"><a href="#studio">STUDIO</a><a href="#work">WORK</a><a href="https://zaidsheikh668-lang.github.io/zaid/" target="_blank" rel="noopener">PORTFOLIO ↗</a><a href="#contact">CONTACT</a></div>
+<button class="toTop" id="toTop" aria-label="Back to top">↑</button>
+</div>
+</div>
 </footer>
 
-
-<!-- =====================================================
-     MODAL
-     ===================================================== -->
-
-<div
-  class="modal"
-  id="viewingModal"
-  aria-hidden="true">
-
-  <div
-    class="modal__backdrop"
-    data-close-modal>
-  </div>
-
-
-  <div
-    class="modal__dialog"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="modalTitle">
-
-
-    <button
-      class="modal__close"
-      data-close-modal
-      aria-label="Close">
-
-      ×
-
-    </button>
-
-
-    <div id="formContent">
-
-      <div class="eyebrow">
-        Private Viewing
-      </div>
-
-      <h3 id="modalTitle">
-        Begin a private conversation.
-      </h3>
-
-      <p class="modal__sub">
-        Share a few details and Zaid will be in touch.
-      </p>
-
-
-      <form id="viewingForm">
-
-        <div class="field">
-
-          <label for="name">
-            Name
-          </label>
-
-          <input
-            id="name"
-            name="name"
-            type="text"
-            required
-            autocomplete="name">
-
-        </div>
-
-
-        <div class="field-row">
-
-          <div class="field">
-
-            <label for="email">
-              Email
-            </label>
-
-            <input
-              id="email"
-              name="email"
-              type="email"
-              required
-              autocomplete="email">
-
-          </div>
-
-
-          <div class="field">
-
-            <label for="phone">
-              Phone
-            </label>
-
-            <input
-              id="phone"
-              name="phone"
-              type="tel"
-              autocomplete="tel">
-
-          </div>
-
-        </div>
-
-
-        <div class="field">
-
-          <label for="interest">
-            Interested In
-          </label>
-
-          <select
-            id="interest"
-            name="interest">
-
-            <option>
-              The Palm Residence
-            </option>
-
-            <option>
-              Villa Amani
-            </option>
-
-            <option>
-              AURA Sky Residences
-            </option>
-
-            <option>
-              General Enquiry
-            </option>
-
-          </select>
-
-        </div>
-
-
-        <div class="field">
-
-          <label for="message">
-            Message
-          </label>
-
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Tell us how we can assist.">
-          </textarea>
-
-        </div>
-
-
-        <button
-          type="submit"
-          class="btn btn--dark">
-
-          Request Private Viewing
-
-          <span class="btn__arr">→</span>
-
-        </button>
-
-      </form>
-
-    </div>
-
-
-    <div
-      class="success"
-      id="successContent"
-      hidden>
-
-      <div class="eyebrow">
-        Thank You
-      </div>
-
-      <h3>
-        Your enquiry has been received.
-      </h3>
-
-      <p>
-        Zaid will be in touch shortly.
-      </p>
-
-      <button
-        class="btn btn--dark"
-        data-close-modal>
-
-        Close
-
-      </button>
-
-    </div>
-
-  </div>
-
-</div>
-
-
-<!-- =====================================================
-     JAVASCRIPT
-     ===================================================== -->
-
 <script>
-/* ================= AURA LOADER ================= */
-window.addEventListener("load",()=>{
-  const loader=document.getElementById("auraLoader");
-  if(loader){
-    setTimeout(()=>loader.classList.add("is-done"),420);
-  }
+(function(){
+const preFill=document.getElementById('preFill'),preCount=document.getElementById('preCount'),pre=document.getElementById('preloader');
+let p=0;const iv=setInterval(()=>{p+=Math.random()*14+4;if(p>=100){p=100;clearInterval(iv);setTimeout(()=>{pre.classList.add('done');document.querySelectorAll('.hero-inner .reveal').forEach((el,i)=>{el.style.transitionDelay=(i*0.08)+'s';el.classList.add('visible')});},350);}preFill.style.width=p+'%';preCount.textContent=String(Math.floor(p)).padStart(2,'0')+'%';},140);
+
+const prog=document.getElementById('progress');
+addEventListener('scroll',()=>{const h=document.documentElement;const pct=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;prog.style.width=pct+'%';document.getElementById('nav').classList.toggle('scrolled',scrollY>40);},{passive:true});
+
+const cur=document.getElementById('cursor'),dot=document.getElementById('cursorDot');
+let mx=innerWidth/2,my=innerHeight/2,cx=mx,cy=my,dx=mx,dy=my;
+addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px';});
+(function loop(){cx+=(mx-cx)*0.16;cy+=(my-cy)*0.16;cur.style.left=cx+'px';cur.style.top=cy+'px';requestAnimationFrame(loop);})();
+document.querySelectorAll('a,.serv,button,.wcard').forEach(el=>{el.addEventListener('mouseenter',()=>cur.classList.add('hovering'));el.addEventListener('mouseleave',()=>cur.classList.remove('hovering'));});
+
+document.querySelectorAll('.magnetic').forEach(b=>{b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*0.12}px,${(e.clientY-r.top-r.height/2)*0.12}px)`;});b.addEventListener('mouseleave',()=>b.style.transform='');});
+
+const hamb=document.getElementById('hamb'),mm=document.getElementById('mobileMenu');
+hamb.onclick=()=>{hamb.classList.toggle('open');mm.classList.toggle('open');document.body.style.overflow=mm.classList.contains('open')?'hidden':'';};
+mm.querySelectorAll('a').forEach(a=>a.onclick=()=>{hamb.classList.remove('open');mm.classList.remove('open');document.body.style.overflow='';});
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}}),{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+const navLinks=[...document.querySelectorAll('[data-nav]')];
+const secIO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){navLinks.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id));}}),{rootMargin:'-40% 0px -55% 0px'});
+['studio','ecommerce','services','work','founder','contact'].forEach(id=>{const s=document.getElementById(id);if(s)secIO.observe(s);});
+
+document.querySelectorAll('.serv').forEach(s=>s.addEventListener('click',()=>{const was=s.classList.contains('open');document.querySelectorAll('.serv').forEach(x=>x.classList.remove('open'));if(!was)s.classList.add('open');}));
+
+const canvas=document.getElementById('lightCanvas'),ctx=canvas.getContext('2d');
+let W,H,parts=[],ribbons=[];
+function size(){const r=canvas.parentElement.getBoundingClientRect();W=canvas.width=r.width;H=canvas.height=r.height;}
+size();addEventListener('resize',size);
+for(let i=0;i<70;i++)parts.push({x:Math.random(),y:Math.random(),r:Math.random()*2.2+0.4,s:Math.random()*0.0009+0.0002,o:Math.random()*Math.PI*2,gold:Math.random()>0.45});
+for(let i=0;i<5;i++)ribbons.push({off:Math.random()*1000,sp:0.0006+Math.random()*0.0008,amp:0.08+Math.random()*0.1,y:0.35+Math.random()*0.3,w:2+Math.random()*3});
+let t=0,hx=0.5,hy=0.46;
+addEventListener('mousemove',e=>{const r=canvas.getBoundingClientRect();hx=(e.clientX-r.left)/r.width;hy=(e.clientY-r.top)/r.height;});
+const heroInner=document.getElementById('heroInner');
+addEventListener('scroll',()=>{if(scrollY<innerHeight)heroInner.style.transform=`translateY(${scrollY*0.18}px)`;heroInner.style.opacity=1-scrollY/(innerHeight*0.9);},{passive:true});
+function draw(){
+t+=0.008;ctx.clearRect(0,0,W,H);
+ctx.globalCompositeOperation='lighter';
+ribbons.forEach((rb,idx)=>{
+ctx.beginPath();
+for(let x=0;x<=W;x+=8){
+const n=Math.sin(x*0.002+ t*(1+rb.sp*400) + rb.off)*Math.sin(x*0.0007 - t*0.7 + idx)*H*rb.amp;
+const y=H*rb.y + n + (hy-0.5)*30;
+x===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+}
+const g=ctx.createLinearGradient(0,0,W,0);
+if(idx%2===0){g.addColorStop(0,'rgba(59,98,255,0)');g.addColorStop(0.35,'rgba(110,157,255,0.35)');g.addColorStop(0.5,'rgba(240,217,168,0.5)');g.addColorStop(0.65,'rgba(216,180,122,0.35)');g.addColorStop(1,'rgba(59,98,255,0)');}
+else{g.addColorStop(0,'rgba(216,180,122,0)');g.addColorStop(0.4,'rgba(216,180,122,0.32)');g.addColorStop(0.55,'rgba(255,240,200,0.4)');g.addColorStop(0.7,'rgba(110,157,255,0.3)');g.addColorStop(1,'rgba(216,180,122,0)');}
+ctx.strokeStyle=g;ctx.lineWidth=rb.w;ctx.shadowBlur=24;ctx.shadowColor=idx%2?'rgba(216,180,122,.7)':'rgba(110,157,255,.7)';ctx.stroke();ctx.shadowBlur=0;
 });
-
-/* Gentle tilt on property media for pointer devices */
-if(window.matchMedia("(pointer:fine)").matches &&
-   !window.matchMedia("(prefers-reduced-motion:reduce)").matches){
-  document.querySelectorAll(".card").forEach(card=>{
-    const media=card.querySelector(".card__media");
-    card.addEventListener("pointermove",(e)=>{
-      const r=card.getBoundingClientRect();
-      const x=(e.clientX-r.left)/r.width-.5;
-      const y=(e.clientY-r.top)/r.height-.5;
-      media.style.transform=`perspective(900px) rotateX(${y*-1.2}deg) rotateY(${x*1.2}deg)`;
-    });
-    card.addEventListener("pointerleave",()=>{
-      media.style.transform="";
-    });
-  });
-}
-
-
-/* ================= NAVBAR ================= */
-
-const navbar = document.getElementById("navbar");
-
-function updateNavbar(){
-
-  if(window.scrollY > 40){
-
-    navbar.classList.add("scrolled");
-
-  }else{
-
-    navbar.classList.remove("scrolled");
-
-  }
-
-}
-
-window.addEventListener(
-  "scroll",
-  updateNavbar,
-  {passive:true}
-);
-
-updateNavbar();
-
-
-/* ================= MOBILE MENU ================= */
-
-const menuToggle =
-  document.getElementById("menuToggle");
-
-menuToggle.addEventListener("click",()=>{
-
-  const open =
-    document.body.classList.toggle("menu-open");
-
-  menuToggle.setAttribute(
-    "aria-expanded",
-    open ? "true" : "false"
-  );
-
+parts.forEach(pt=>{
+pt.y-=pt.s;pt.o+=0.02;if(pt.y<-0.02){pt.y=1.02;pt.x=Math.random();}
+const flick=0.4+Math.sin(pt.o)*0.3;
+const x=(pt.x+(hx-0.5)*0.04)*W,y=pt.y*H;
+const rg=ctx.createRadialGradient(x,y,0,x,y,pt.r*8);
+const col=pt.gold?`216,180,122`:`110,157,255`;
+rg.addColorStop(0,`rgba(${col},${0.55*flick+0.2})`);rg.addColorStop(1,`rgba(${col},0)`);
+ctx.fillStyle=rg;ctx.beginPath();ctx.arc(x,y,pt.r*8,0,7);ctx.fill();
+ctx.fillStyle=`rgba(255,255,255,${0.5*flick})`;ctx.beginPath();ctx.arc(x,y,pt.r*0.7,0,7);ctx.fill();
 });
-
-
-document
-  .querySelectorAll(".nav__links a")
-  .forEach(link=>{
-
-    link.addEventListener("click",()=>{
-
-      document.body.classList.remove(
-        "menu-open"
-      );
-
-      menuToggle.setAttribute(
-        "aria-expanded",
-        "false"
-      );
-
-    });
-
-  });
-
-
-
-// Close mobile menu when viewport returns to desktop
-window.addEventListener("resize",()=>{
-  if(window.innerWidth > 900){
-    document.body.classList.remove("menu-open");
-    menuToggle.setAttribute("aria-expanded","false");
-  }
-});
-
-
-/* ================= MODAL ================= */
-
-const modal =
-  document.getElementById("viewingModal");
-
-const openButtons =
-  document.querySelectorAll(
-    "[data-open-modal]"
-  );
-
-const closeButtons =
-  document.querySelectorAll(
-    "[data-close-modal]"
-  );
-
-
-function openModal(){
-
-  modal.classList.add("open");
-
-  modal.setAttribute(
-    "aria-hidden",
-    "false"
-  );
-
-  document.body.style.overflow="hidden";
-
+const cgx=(0.5+(hx-0.5)*0.06)*W,cgy=0.46*H;
+const core=ctx.createRadialGradient(cgx,cgy,0,cgx,cgy,Math.min(W,H)*0.42);
+core.addColorStop(0,'rgba(255,244,220,0.20)');core.addColorStop(0.25,'rgba(216,180,122,0.12)');core.addColorStop(0.55,'rgba(110,157,255,0.07)');core.addColorStop(1,'rgba(0,0,0,0)');
+ctx.fillStyle=core;ctx.fillRect(0,0,W,H);
+requestAnimationFrame(draw);
 }
-
-
-function closeModal(){
-
-  modal.classList.remove("open");
-
-  modal.setAttribute(
-    "aria-hidden",
-    "true"
-  );
-
-  document.body.style.overflow="";
-
-}
-
-
-openButtons.forEach(button=>{
-
-  button.addEventListener(
-    "click",
-    openModal
-  );
-
-});
-
-
-closeButtons.forEach(button=>{
-
-  button.addEventListener(
-    "click",
-    closeModal
-  );
-
-});
-
-
-document.addEventListener(
-  "keydown",
-  event=>{
-
-    if(event.key==="Escape"){
-
-      closeModal();
-
-    }
-
-  }
-);
-
-
-/* ================= FORM ================= */
-
-const form =
-  document.getElementById(
-    "viewingForm"
-  );
-
-const formContent =
-  document.getElementById(
-    "formContent"
-  );
-
-const successContent =
-  document.getElementById(
-    "successContent"
-  );
-
-
-form.addEventListener(
-  "submit",
-  event=>{
-
-    event.preventDefault();
-
-    formContent.hidden=true;
-
-    successContent.hidden=false;
-
-  }
-);
-
-
-/* ================= SCROLL REVEAL ================= */
-
-const revealElements =
-  document.querySelectorAll(
-    ".section-head, .card, .story__copy, .why__item, .dev__content, .cta>.wrap, .footer__grid"
-  );
-
-revealElements.forEach(element=>{
-  element.setAttribute("data-reveal","");
-});
-
-if(!document.getElementById("reveal-styles")){
-  const revealStyle = document.createElement("style");
-  revealStyle.id = "reveal-styles";
-  revealStyle.textContent = `
-    [data-reveal]{
-      opacity:0;
-      transform:translateY(24px);
-      transition:opacity .8s var(--ease), transform .8s var(--ease);
-    }
-    [data-reveal].is-in{
-      opacity:1;
-      transform:none;
-    }
-    @media(prefers-reduced-motion:reduce){
-      [data-reveal]{
-        opacity:1;
-        transform:none;
-      }
-    }
-  `;
-  document.head.appendChild(revealStyle);
-}
-
-
-if("IntersectionObserver" in window){
-
-  const observer =
-    new IntersectionObserver(
-      entries=>{
-
-        entries.forEach(entry=>{
-
-          if(entry.isIntersecting){
-
-            entry.target.classList.add(
-              "is-in"
-            );
-
-            observer.unobserve(
-              entry.target
-            );
-
-          }
-
-        });
-
-      },
-      {
-        threshold:.12
-      }
-    );
-
-
-  revealElements.forEach(element=>{
-
-    observer.observe(element);
-
-  });
-
-}else{
-
-  revealElements.forEach(element=>{
-
-    element.classList.add("is-in");
-
-  });
-
-}
-
-
-
-/* ================= PREMIUM MOTION ================= */
-
-const revealGroups = [
-  ...document.querySelectorAll(".prop-grid .card"),
-  ...document.querySelectorAll(".why-grid .why__item")
-];
-
-revealGroups.forEach((el,index)=>{
-  el.style.transitionDelay = `${Math.min(index * 90, 360)}ms`;
-});
-
-/* Subtle pointer parallax — desktop only */
-if(window.matchMedia("(pointer:fine)").matches &&
-   !window.matchMedia("(prefers-reduced-motion:reduce)").matches){
-
-  const hero = document.querySelector(".hero");
-  const heroContent = document.querySelector(".hero__content");
-  const heroMedia = document.querySelector(".hero__media");
-
-  if(hero && heroContent && heroMedia){
-    hero.addEventListener("pointermove",(event)=>{
-      const rect = hero.getBoundingClientRect();
-      const x = (event.clientX - rect.left) / rect.width - .5;
-      const y = (event.clientY - rect.top) / rect.height - .5;
-
-      heroContent.style.transform =
-        `translate3d(${x * 10}px,${y * 8}px,0)`;
-
-      heroMedia.style.transform =
-        `translate3d(${x * -7}px,${y * -5}px,0) scale(1.015)`;
-    });
-
-    hero.addEventListener("pointerleave",()=>{
-      heroContent.style.transform="";
-      heroMedia.style.transform="";
-    });
-  }
-}
-
-/* Give the scroll cue a gentle fade as the user enters the page */
-window.addEventListener("scroll",()=>{
-  const cue = document.querySelector(".hero__cue");
-  if(cue){
-    cue.style.opacity = Math.max(0, 1 - window.scrollY / 180);
-  }
-},{passive:true});
-
-
-/* ================= VIDEO FALLBACK ================= */
-
-document
-  .querySelectorAll("video")
-  .forEach(video=>{
-
-    video.addEventListener(
-      "error",
-      ()=>{
-        video.style.display="none";
-      }
-    );
-
-  });
-
-</script>
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"RealEstateAgent",
-  "name":"AURA Estates",
-  "description":"Private residences and considered developments across Dubai.",
-  "areaServed":"Dubai",
-  "url":"https://zaidsheikh668-lang.github.io/real/"
-}
+draw();
+
+const tabs=[...document.querySelectorAll('.ecom-tabs button')];
+const data={
+discovery:{k:'NEW COLLECTION — CONCEPT',t:'Atelier Noir — Edit 04',d:'A cinematic collection grid with editorial spacing, quick-view and story-led merchandising.',p:'$148',o:'$185',img:'https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1200&auto=format&fit=crop',next:'Next: Product →'},
+product:{k:'PRODUCT PAGE — CONCEPT',t:'Sculpted Parfum — 100ml',d:'Premium product presentation: large imagery, scent notes, reviews and sticky add-to-bag.',p:'$120',o:'$150',img:'https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=1200&auto=format&fit=crop',next:'Next: Checkout →'},
+checkout:{k:'CHECKOUT — EFFORTLESS',t:'One-page Checkout Flow',d:'COD / prepaid-ready concepts plus international card flows. Minimal friction, maximum trust.',p:'$268',o:'$335',img:'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop',next:'Back: Discovery →'}
+};
+let cur2='discovery',qty=1,cart=0;
+const sImg=document.getElementById('shopImg'),sK=document.getElementById('shopKicker'),sT=document.getElementById('shopTitle'),sD=document.getElementById('shopDesc'),sP=document.getElementById('shopPrice'),sO=document.getElementById('shopOld'),nB=document.getElementById('nextStep');
+function setTab(k){cur2=k;tabs.forEach(b=>b.classList.toggle('active',b.dataset.tab===k));sImg.style.opacity=0;setTimeout(()=>{sImg.src=data[k].img;sImg.onload=()=>sImg.style.opacity=1;setTimeout(()=>sImg.style.opacity=1,300);},220);sK.textContent=data[k].k;sT.textContent=data[k].t;sD.textContent=data[k].d;sP.textContent=data[k].p;sO.textContent=data[k].o;nB.textContent=data[k].next;}
+tabs.forEach(b=>b.onclick=()=>setTab(b.dataset.tab));
+nB.onclick=()=>setTab(cur2==='discovery'?'product':cur2==='product'?'checkout':'discovery');
+document.getElementById('qPlus').onclick=()=>{qty=Math.min(9,qty+1);document.getElementById('qVal').textContent=qty;};
+document.getElementById('qMinus').onclick=()=>{qty=Math.max(1,qty-1);document.getElementById('qVal').textContent=qty;};
+const toast=document.getElementById('toast');
+document.getElementById('addBag').onclick=()=>{cart+=qty;document.getElementById('cartCount').textContent=cart;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2200);qty=1;document.getElementById('qVal').textContent=1;};
+
+const feat=document.getElementById('featuredCard');
+feat.addEventListener('mousemove',e=>{const r=feat.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-0.5,y=(e.clientY-r.top)/r.height-0.5;feat.style.transform=`perspective(1200px) rotateY(${x*4}deg) rotateX(${-y*4}deg)`;});
+feat.addEventListener('mouseleave',()=>feat.style.transform='');
+
+function tick(){const n=new Date();const f=t=>t.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});const s=f(n)+' LOCAL • '+new Date(n.toLocaleString('en-US',{timeZone:'America/New_York'})).toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'})+' NYC';const a=document.getElementById('clockM'),b=document.getElementById('clockC');if(a)a.textContent=s;if(b)b.textContent=s;}
+tick();setInterval(tick,20000);
+
+const form=document.getElementById('contactForm');
+form.addEventListener('submit',e=>{e.preventDefault();const name=document.getElementById('fName'),email=document.getElementById('fEmail');if(!name.value.trim()){name.focus();name.style.borderColor='#FF6B6B';return;}if(!/^\S+@\S+\.\S+$/.test(email.value)){email.focus();email.style.borderColor='#FF6B6B';return;}const btn=document.getElementById('submitBtn');btn.textContent='Sending...';btn.style.opacity='.7';setTimeout(()=>{document.getElementById('formFields').style.display='none';document.getElementById('formSuccess').style.display='block';},1100);});
+document.getElementById('resetForm').onclick=()=>{document.getElementById('formFields').style.display='flex';document.getElementById('formSuccess').style.display='none';const btn=document.getElementById('submitBtn');btn.textContent='Start Your Project →';btn.style.opacity='1';form.reset();};
+document.getElementById('toTop').onclick=()=>scrollTo({top:0,behavior:'smooth'});
+
+const track=document.getElementById('marq');track.innerHTML+=track.innerHTML;
+const v=document.getElementById('heroVideo');v.playbackRate=0.85;document.addEventListener('visibilitychange',()=>{if(document.hidden)v.pause();else v.play().catch(()=>{});});
+})();
 </script>
 </body>
 </html>
